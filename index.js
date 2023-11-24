@@ -42,7 +42,7 @@ function info()
     var desk = document.getElementById("desk_id");
     var desktex = document.getElementById("desk_tex");
     info_pane.style.visibility = "visible";
-    desk.textContent = "バナナ\nご利用できません";
+    desk.textContent = "このオプションは現在ご利用できません";
 
 }
 function info_close()
@@ -51,7 +51,7 @@ function info_close()
     var desk = document.getElementById("description");
     info_pane.style.visibility = "hidden";
     
-    desk.textContent = "バナナ";
+    desk.textContent = "このオプションは現在ご利用できません";
 }
 window.onload = function() {
     // 画面幅にiframeの幅を合わせる
