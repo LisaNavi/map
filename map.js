@@ -1,4 +1,4 @@
-let pictures = new Array("https://venicck.github.io/lisanv/img/1F.png","https://venicck.github.io/lisanv/img/2F.png","https://venicck.github.io/lisanv/img/3F.png","https://venicck.github.io/lisanv/img/4F.png");
+let pictures = new Array("https://lisanavi.github.io/map/img/1F.png","https://lisanavi.github.io/map/img/2F.png","https://lisanavi.github.io/map/img/3F.png","https://lisanavi.github.io/map/img/4F.png");
 let img_height = 1350;
 let img_width = 1651;
 var img = document.getElementById("image");
