@@ -39,8 +39,7 @@ function search(num)
 function info()
 {
     var info_pane = document.getElementById("information");
-    var desk = document.getElementById("desk_id");
-    var desktex = document.getElementById("desk_tex");
+    var desk = document.getElementById("desk");
     info_pane.style.visibility = "visible";
     desk.textContent = "このオプションは現在ご利用できません";
 
@@ -48,10 +47,8 @@ function info()
 function info_close()
 {
     var info_pane = document.getElementById("information");
-    var desk = document.getElementById("description");
+    var desk = document.getElementById("desk");
     info_pane.style.visibility = "hidden";
-    
-    desk.textContent = "このオプションは現在ご利用できません";
 }
 window.onload = function() {
     // 画面幅にiframeの幅を合わせる

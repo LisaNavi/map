@@ -38,9 +38,8 @@ div#title{
 	z-index:5;
 }
 
-cent#description{
-	color:#dddddd;
-	
+center{
+	white-space: pre-line;
 }
 
 
