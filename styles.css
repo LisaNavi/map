@@ -38,9 +38,30 @@ div#title{
 	z-index:5;
 }
 
+cent#description{
+	color:#dddddd;
+	
+}
+
+
+div#information{
+	width: 100vw;
+	height: 100vh;
+	top: 0%; left:0%;	
+	background: rgba(0,0,0, 0.4);
+	position: fixed;
+	visibility: hidden;
+	
+	z-index:10;
+}
+div#info-text{
+	text-align: center;
+	vertical-align: middle;
+}
+
 h3#floorid{
 	background: #ff9900;
-	margin: -2
+	margin: -2;
 }
 
 .btn--gray,

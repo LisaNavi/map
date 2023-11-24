@@ -35,6 +35,24 @@ function search(num)
         }
     }
 }
+
+function info()
+{
+    var info_pane = document.getElementById("information");
+    var desk = document.getElementById("desk_id");
+    var desktex = document.getElementById("desk_tex");
+    info_pane.style.visibility = "visible";
+    desk.textContent = "バナナ\nご利用できません";
+
+}
+function info_close()
+{
+    var info_pane = document.getElementById("information");
+    var desk = document.getElementById("description");
+    info_pane.style.visibility = "hidden";
+    
+    desk.textContent = "バナナ";
+}
 window.onload = function() {
     // 画面幅にiframeの幅を合わせる
     let frame = document.getElementById("map");
