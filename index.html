@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>LiSA Navi</title>
+
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  </head>
+  <body>
+  <div id="title">
+    <h3 style="line-height:0; margin-top: 1rem;">LiSA Navi</h3>
+    <h3 id="floorid">1F</h3>
+  </div>
+
+  <iframe id="map" src="map.html" width="1000" height="1000"></iframe>
+  <red>※当サイトは共有せず、代わりに</red><a href="https://sites.google.com/gl.pen-kanagawa.ed.jp/lisanv/%E3%83%9B%E3%83%BC%E3%83%A0">こちらのサイト</a><red>を共有してください。</red>
+  <div id="footer">
+    <a href="javascript:floor(0)" class="btn_01">1F</a>
+    <a href="javascript:floor(1)" class="btn_02">2F</a>
+    <a href="javascript:floor(2)" class="btn_03">3F</a>
+    <a href="javascript:floor(3)" class="btn_04">4F</a>
+    <input id="input" type="number" required minlength="3" maxlength="3" size="15"></input>
+    <a href="javascript:search(document.getElementById('input').value)" class="btn_05">Search</a>
+    <a href="https://forms.gle/JtgFR2PNiqghsprb6" class="link" target="_blank" rel="noopener noreferrer">アンケートに参加下さい</a>
+  </div>
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

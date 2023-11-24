@@ -1,0 +1,212 @@
+/* 謎の余白削除 */
+body,p,ul,td,th{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	font-size: 2vw;
+	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+red{
+    color:#ff8080;
+	font-weight: 1000;
+}
+
+div#title{
+	text-align: center;
+	width: 99.7vw;
+	z-index:1;
+	font-size: 2rem;
+	height: 7.5vh;
+}
+
+#image{
+	overflow-x: scroll;
+	width: 100vw;
+	z-index: 5;
+}
+#footer{
+	width: 100vw;
+	height: 3rem;
+	padding-top: 1rem;
+	background: rgba(0,0,0, 0.75);
+	position:fixed;
+	bottom: 0rem; left:0%;
+	justify-content:center;
+	z-index:5;
+}
+
+h3#floorid{
+	background: #ff9900;
+	margin: -2
+}
+
+.btn--gray,
+a.btn--gray {
+  color: #fff;
+  background-color: #d3d3d3;
+}
+.btn--gray:hover,
+a.btn--gray:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.link{
+	color:#6699ff;
+	font-weight: bold;
+	font-size: 1rem;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.show{
+	animation: fadein 300ms ease-out 0s 1 normal forwards;
+}
+
+@keyframes fadein{
+	0%{
+		background: rgba(255, 0, 0, 0);
+	}
+	100%{
+		background: rgba(255, 0, 0, 1);
+	}
+}
+
+#input{
+	width:75px; height: 2rem;
+	border: 2px solid #6699ff;
+}
+
+#map{
+	height: 80vh;
+	width: 100vw;
+	border-radius: 0;
+}
+
+#highlight{
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 0, 0, 1);
+  position:absolute;
+  left: 0px; top: 0px;
+  visibility: hidden;
+  margin: 0 0;
+  padding: 0 0;
+  vertical-align: top;
+}
+
+#arrow{
+	position:absolute;
+	left: 0px; top: 0px;
+	visibility: hidden;
+}
+
+/* https://web-camp.io/magazine/archives/94984 */
+
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+
+
+
+
+/* https://excellent.ne.jp/homepage/6562/より */
+
+/* 1F Orange*/
+a.btn_01 {
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 50px;
+	margin: auto;
+	padding: 0.3rem 0.5rem;
+	font-weight: bold;
+	border: 2px solid #ff9900;
+	color: #ff9900;
+	transition: 0.3s;
+}
+a.btn_01:hover {
+	color: #fff;
+	background: #ff9900;
+}
+
+/* 2F Blue*/
+a.btn_02 {
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 50px;
+	margin: auto;
+	padding: 0.3rem 0.5rem;
+	font-weight: bold;
+	border: 2px solid #6699ff;
+	color: #6699ff;
+	transition: 0.3s;
+}
+a.btn_02:hover {
+	color: #fff;
+	background: #6699ff;
+}
+
+/* 3F Green*/
+a.btn_03 {
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 50px;
+	margin: auto;
+	padding: 0.3rem 0.5rem;
+	font-weight: bold;
+	border: 2px solid #66cc33;
+	color: #66cc33;
+	transition: 0.3s;
+}
+a.btn_03:hover {
+	color: #fff;
+	background: #66cc33;
+}
+/* 4F Red*/
+a.btn_04 {
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 50px;
+	margin: auto;
+	padding: 0.3rem 0.5rem;
+	font-weight: bold;
+	border: 2px solid #ff3300;
+	color: #ff3300;
+	transition: 0.3s;
+}
+a.btn_04:hover {
+	color: #fff;
+	background: #ff3300;
+}
+/* Search*/
+a.btn_05 {
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 60px;
+	margin: auto;
+	padding: 0.3rem 0.5rem;
+	font-weight: bold;
+	border: 2px solid #9f9f9f;
+	color: #9f9f9f;
+	transition: 0.3s;
+}
+a.btn_05:hover {
+	color: #fff;
+	background: #9f9f9f;
+}
