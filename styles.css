@@ -40,6 +40,7 @@ div#title{
 
 center{
 	white-space: pre-line;
+	color: #9f9f9f;
 }
 
 
@@ -105,36 +106,6 @@ a.btn--gray:hover {
 	width: 100vw;
 	border-radius: 0;
 }
-
-#highlight{
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 0, 0, 1);
-  position:absolute;
-  left: 0px; top: 0px;
-  visibility: hidden;
-  margin: 0 0;
-  padding: 0 0;
-  vertical-align: top;
-}
-
-#arrow{
-	position:absolute;
-	left: 0px; top: 0px;
-	visibility: hidden;
-}
-
-/* https://web-camp.io/magazine/archives/94984 */
-
-.relative{
-  position: relative;
-}
-.absolute{
-  position: absolute;
-}
-
-
-
 
 /* https://excellent.ne.jp/homepage/6562/より */
 

@@ -41,7 +41,7 @@ function info()
     var info_pane = document.getElementById("information");
     var desk = document.getElementById("desk");
     info_pane.style.visibility = "visible";
-    desk.textContent = "このオプションは現在ご利用できません";
+    desk.textContent = "このオプションは現在ご利用できません\nテスト";
 
 }
 function info_close()
