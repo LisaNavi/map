@@ -24,13 +24,13 @@
     <a href="javascript:floor(3)" class="btn_04">4F</a>
     <input id="input" type="number" required minlength="3" maxlength="3" size="15"></input>
     <a href="javascript:search(document.getElementById('input').value)" class="btn_05">🔍</a>
-    <a href="javascript:info()" class="btn_05">Info</a>
+    <a href="javascript:info(document.getElementById('input').value)" id="info-btn" class="btn_05">Info</a>
     <a href="https://forms.gle/JtgFR2PNiqghsprb6" class="link" target="_blank" rel="noopener noreferrer">アンケートに参加下さい</a>
   </div>
   <div id="information">
-    <a href="javascript:info_close()" class="btn_05">×</a><br>
     <div id="info-text">
       <center id="desk">テスト</center>
+      <center style="font-size: 1vw; vertical-align: bottom;">パネルをタッチすると閉じます</center>
     </div>
   </div>
 

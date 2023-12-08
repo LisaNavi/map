@@ -1,6 +1,8 @@
 let colors = new Array("#ff9900","#6699ff","#66cc33","#ff3300");
 let map = document.getElementById("map");
 let dis_number = document.getElementById("floorid");
+let panel = document.getElementById("information");
+let inputbox = document.getElementById("input");
 
 function floor(num)
 {
@@ -32,22 +34,29 @@ function search(num)
             map.contentWindow.showup(num);
             dis_number.textContent = num[0] + "F";
             dis_number.style.background=colors[num[0] - 1];
+            if (data[num][4] != undefined)
+                document.getElementById("info-btn").style.visibility = "visible";
+            else
+                document.getElementById("info-btn").style.visibility = "hidden";
         }
     }
 }
 
-function info()
+function info(num)
 {
     var info_pane = document.getElementById("information");
     var desk = document.getElementById("desk");
     info_pane.style.visibility = "visible";
-    desk.textContent = "このオプションは現在ご利用できません\nテスト";
-
+    if (data[num][4] != undefined) {
+        desk.textContent = num + " 教室\n" +data[num][4];
+    } else {
+        desk.textContent = num + "\nこの教室のインフォメーションはありません";
+    }
 }
+
 function info_close()
 {
     var info_pane = document.getElementById("information");
-    var desk = document.getElementById("desk");
     info_pane.style.visibility = "hidden";
 }
 window.onload = function() {
@@ -56,3 +65,5 @@ window.onload = function() {
     let sitewidth = document.documentElement.clientWidth - 5;
     frame.style.width = sitewidth;
 }
+
+panel.addEventListener("click", function() {panel.style.visibility = "hidden";});
