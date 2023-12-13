@@ -46,11 +46,13 @@ function info(num)
 {
     var info_pane = document.getElementById("information");
     var desk = document.getElementById("desk");
+    var desk_num = document.getElementById("desk-num");
     info_pane.style.visibility = "visible";
     if (data[num][4] != undefined) {
-        desk.textContent = num + " 教室\n" +data[num][4];
+        desk_num.textContent = num + " 教室";
+        desk.textContent = data[num][4];
     } else {
-        desk.textContent = num + "\nこの教室のインフォメーションはありません";
+        desk.textContent = "この教室のインフォメーションはありません";
     }
 }
 

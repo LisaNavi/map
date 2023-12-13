@@ -38,9 +38,8 @@ div#title{
 	z-index:5;
 }
 
-center{
-	white-space: pre-line;
-	color: #ffffff;
+left{
+	text-align: left;
 }
 
 
@@ -56,9 +55,10 @@ div#information{
 	border-radius: 50px;
 }
 div#info-text{
-	text-align: center;
 	vertical-align: middle;
+	white-space: pre-line;
 	color:#ffffff;
+	margin-left: 3%;
 }
 #info-btn{
 	visibility: hidden;
