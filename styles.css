@@ -45,14 +45,15 @@ left{
 
 div#information{
 	width: 50vw;
-	height: 30vh;
+	height: 60vh;
 	top: 0%; left:0%;	
-	background: rgba(0,0,0, 0.4);
+	background: rgb(61, 61, 61, 0.9);
 	position: fixed;
 	visibility: hidden;
-	margin: 20% 25%;
+	margin: 10% 25%;
 	z-index:10;
 	border-radius: 50px;
+	font-weight: bold;
 }
 div#info-text{
 	vertical-align: middle;
