@@ -62,6 +62,7 @@ div#cls-table{
 	height: 100vh;
 	top: 0%; left:0%;	
 	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
 	position: fixed;
 	visibility: visible;
 	z-index:11;
@@ -70,11 +71,11 @@ div#cls-table{
 }
 
 table#cls-chart{
-	margin: 10% 11%;
+	margin: 10% 35%;
 	font-weight: bold;
 	align-items: center;
 	width: auto;
-	color: #fff;
+	color:#fff;
 }
 
 

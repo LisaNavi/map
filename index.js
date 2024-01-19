@@ -4,7 +4,7 @@ let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
-const cookie = {};
+const cookie = JSON.parse(document.cookie);
 const now_daystanp = new Date();
 now_daystanp.setHours(0);
 now_daystanp.setMinutes(0);
@@ -12,10 +12,6 @@ now_daystanp.setSeconds(0);
 var nowtime = (new Date().valueOf() - now_daystanp[Symbol.toPrimitive]('number'))/1000;
 var classtime = 1;
 var classday = new Date().getDay();
-
-if (document.cookie != "") {
-    cookie = JSON.parse(document.cookie);
-}
 
 function floor(num)
 {
@@ -70,18 +66,21 @@ function info(num)
 }
 
 function cls_close() {
-    var day = 1;
-    var time = 1;
     if (typeof cookie["schedule"] == "undefined")
         cookie["schedule"] = {};
-    for (day=1;day<=5;day++) {
-        for (time=1;time<=6;time++) {
+    for (var day=1;day<=5;day++) {
+        for (var time=1;time<=6;time++) {
             temp = document.getElementById("cls" + day + "-" + time).value;
-            if (typeof data[temp] != "undefined") {
+            if (typeof data[temp] != "undefined") { //教室データに存在する場合登録
                 cookie["schedule"][day + "-" + time] = temp;
             }
+            else if (temp == "" && typeof cookie["schedule"][day + "-" + time] != "undefined") {
+                delete cookie["schedule"][day + "-" + time];
+            }
         }
+    delete day, time;
     }
+    document.cookie = JSON.stringify(cookie);
     schedulebox.style.visibility = "hidden";
     
 }
@@ -108,7 +107,19 @@ window.onload = function() {
     let sitewidth = document.documentElement.clientWidth - 5;
     frame.style.width = sitewidth;
 }
+
 window.addEventListener('DOMContentLoaded', function(){
+    //クッキーのスケジュールを表の枠に代入する
+    if (typeof cookie["schedule"] != "undefined") {
+        for (var day=1;day<=5;day++) {
+            for (var time=1;time<=6;time++) {
+                if (typeof cookie["schedule"][day + "-" + time] != "undefined") {
+                    document.getElementById("cls" + day + "-" + time).value = cookie["schedule"][day + "-" + time];
+                }
+            }}
+    }
+
+
     // 1秒ごとに実行
     setInterval(() => {
         const now_daystanp = new Date();
