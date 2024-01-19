@@ -15,25 +15,30 @@ div#container{
     visibility: hidden;
     z-index: 1;
 }
+#cls-highlight{
+    width: 80px;
+    height: 80px;
+    background: rgb(125, 255, 127);
+    position: absolute;
+    left: 0px; top: 0px;
+    visibility: hidden;
+    z-index: 1;
+}
 img#image{
     position:absolute;
     left: 0%; top: 0%;
     width: 1651px; height: 1350px;
     z-index: 2;
 }
-#arrow{
-    position:absolute;
-    left: 0px; top: 0px;
-    visibility: hidden;
-}
+
 .show{
     animation: fadein 300ms ease-out 0s 1 normal forwards;
 }
 @keyframes fadein{
     0%{
-        background: rgba(255, 0, 0, 0);
+        opacity: 0;
     }
     100%{
-        background: rgba(125, 235, 255, 1);
+        opacity: 1;
     }
 }

@@ -5,7 +5,7 @@
     <title>LiSA Navi</title>
 
     <link rel="icon" type="image/png" href="img/icon.png" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
 
   </head>
   <body>
@@ -35,10 +35,9 @@
     <center style="font-size: 1vw; margin-bottom: 15%; color:#fff;">パネルをタッチすると閉じます</center>
   </div>
 
-  <!--
   <div id="cls-table">
-    <table border="2">
-      <tr><th>限\曜日</th> <th>月曜日</th> <th>火曜日</th> <th>水曜日</th> <th>木曜日</th> <th>金曜日</th></tr>
+    <table border="2" id="cls-chart">
+      <tr><th>限\曜</th> <th>月曜日</th> <th>火曜日</th> <th>水曜日</th> <th>木曜日</th> <th>金曜日</th></tr>
       <tr><th>1限</th><td><input id="cls1-1" size="3" maxlength="3"></td><td><input id="cls2-1" size="3" maxlength="3"><td><input id="cls3-1" size="3" maxlength="3"></td><td><input id="cls4-1" size="3" maxlength="3"></td><td><input id="cls5-1" size="3" maxlength="3"></td></tr>
       <tr><th>2限</th><td><input id="cls1-2" size="3" maxlength="3"></td><td><input id="cls2-2" size="3" maxlength="3"><td><input id="cls3-2" size="3" maxlength="3"></td><td><input id="cls4-2" size="3" maxlength="3"></td><td><input id="cls5-2" size="3" maxlength="3"></td></tr>
       <tr><th>3限</th><td><input id="cls1-3" size="3" maxlength="3"></td><td><input id="cls2-3" size="3" maxlength="3"><td><input id="cls3-3" size="3" maxlength="3"></td><td><input id="cls4-3" size="3" maxlength="3"></td><td><input id="cls5-3" size="3" maxlength="3"></td></tr>
@@ -46,10 +45,10 @@
       <tr><th>5限</th><td><input id="cls1-5" size="3" maxlength="3"></td><td><input id="cls2-5" size="3" maxlength="3"><td><input id="cls3-5" size="3" maxlength="3"></td><td><input id="cls4-5" size="3" maxlength="3"></td><td><input id="cls5-5" size="3" maxlength="3"></td></tr>
       <tr><th>6限</th><td><input id="cls1-6" size="3" maxlength="3"></td><td><input id="cls2-6" size="3" maxlength="3"><td><input id="cls3-6" size="3" maxlength="3"></td><td><input id="cls4-6" size="3" maxlength="3"></td><td><input id="cls5-6" size="3" maxlength="3"></td></tr>
     </table>
-    ※閉じるを押すと
-    <button type="button">閉じる</button>
+    ※閉じるを押すとcookieに保存されます。<br>
+    <button type="button" onclick="cls_close()">閉じる</button>
   </div>
-  -->
+
   <script src="data.js"></script>
   <script src="index.js"></script>
 </body>
