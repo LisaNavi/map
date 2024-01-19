@@ -3,6 +3,7 @@ let map = document.getElementById("map");
 let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
+let schedulebox = document.getElementById("cls-table");
 const cookie = {};
 const now_daystanp = new Date();
 now_daystanp.setHours(0);
@@ -79,9 +80,10 @@ function cls_close() {
             if (typeof data[temp] != "undefined") {
                 cookie["schedule"][day + "-" + time] = temp;
             }
-
         }
     }
+    schedulebox.style.visibility = "hidden";
+    
 }
 
 function info_close()
