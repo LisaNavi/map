@@ -58,15 +58,13 @@ div#info-text{
 }
 
 div#cls-table{
-	width: 50vw;
-	height: 50vh;
+	width: 100vw;
+	height: 100vh;
 	top: 0%; left:0%;	
 	background: rgb(61, 61, 61, 0.9);
-	
 	position: fixed;
-	margin: 10% 25%;
+	visibility: visible;
 	z-index:11;
-	border-radius: 50px;
 	font-weight: bold;
 	text-align: center;
 }
