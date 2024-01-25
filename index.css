@@ -64,7 +64,7 @@ div#cls-table{
 	background: rgb(61, 61, 61, 0.9);
 	color:#fff;
 	position: fixed;
-	visibility: visible;
+	visibility: hidden;
 	z-index:11;
 	font-weight: bold;
 	text-align: center;

@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-    <title>LiSA Navi</title>
+    <title>LiSA Navi</title><br>
 
     <link rel="icon" type="image/png" href="img/icon.png" />
     <link rel="stylesheet" type="text/css" href="index.css" />
@@ -10,11 +10,12 @@
   </head>
   <body>
   <div id="title">
-    <h3 style="line-height:0; margin-top: 1rem;">LiSA Navi</h3>
+    <h3 style="line-height:0; margin-top: 1rem; margin-bottom: 1vh;">LiSA Navi</h3>
+    <a href="https://forms.gle/JtgFR2PNiqghsprb6" class="link" target="_blank" rel="noopener noreferrer">アンケートに参加下さい</a>
     <h3 id="floorid">1F</h3>
   </div>
 
-  <iframe id="map" src="map.html" width="1000" height="1000"></iframe>
+  <iframe id="map" src="map.html" width="1000" height="1000" frameborder=0></iframe>
   <red>※当サイトは共有せず、代わりに</red><a href="https://sites.google.com/gl.pen-kanagawa.ed.jp/lisanv/%E3%83%9B%E3%83%BC%E3%83%A0">こちらのサイト</a><red>を共有してください。</red>
 
   <div id="footer">
@@ -25,7 +26,7 @@
     <input id="input" type="number" minlength="3" maxlength="3" size="15"></input>
     <a href="javascript:search(document.getElementById('input').value)" class="btn_05">🔍</a>
     <a href="javascript:info(document.getElementById('input').value)" id="info-btn" class="btn_05">Info</a>
-    <a href="https://forms.gle/JtgFR2PNiqghsprb6" class="link" target="_blank" rel="noopener noreferrer">アンケートに参加下さい</a>
+    <a href="javascript:cls_open()" class="btn_05">週程表</a>
   </div>
   <div id="information">
     <div id="info-text">
@@ -46,7 +47,9 @@
       <tr><th>6限</th><td><input id="cls1-6" size="1" maxlength="3"></td><td><input id="cls2-6" size="1" maxlength="3"><td><input id="cls3-6" size="1" maxlength="3"></td><td><input id="cls4-6" size="1" maxlength="3"></td><td><input id="cls5-6" size="1" maxlength="3"></td></tr>
     </table>
     ※閉じるを押すとcookieに保存されます。<br>
-    <button type="button" onclick="javascript:cls_close()">閉じる</button>
+    <div class="cls-buttons">
+      <button type="button" onclick="javascript:cls_close()">閉じる
+    </div>
   </div>
 
   <script src="data.js"></script>

@@ -1,10 +1,14 @@
-let colors = new Array("#ff9900","#6699ff","#66cc33","#ff3300");
+const colors = new Array("#ff9900","#6699ff","#66cc33","#ff3300");
 let map = document.getElementById("map");
 let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
-const cookie = JSON.parse(document.cookie);
+let cookie = {};
+if (document.cookie != "")
+{
+    cookie = JSON.parse(document.cookie);
+}
 const now_daystanp = new Date();
 now_daystanp.setHours(0);
 now_daystanp.setMinutes(0);
@@ -82,7 +86,10 @@ function cls_close() {
     }
     document.cookie = JSON.stringify(cookie);
     schedulebox.style.visibility = "hidden";
-    
+}
+
+function cls_open() {
+    schedulebox.style.visibility = "visible";
 }
 
 function info_close()
