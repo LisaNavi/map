@@ -1,4 +1,4 @@
-const colors = new Array("#ff9900","#6699ff","#66cc33","#ff3300");
+let colors = new Array("#ff9900","#6699ff","#66cc33","#ff3300");
 let map = document.getElementById("map");
 let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
@@ -9,11 +9,11 @@ if (document.cookie != "")
 {
     cookie = JSON.parse(document.cookie);
 }
-const now_daystanp = new Date();
-now_daystanp.setHours(0);
-now_daystanp.setMinutes(0);
-now_daystanp.setSeconds(0);
-var nowtime = (new Date().valueOf() - now_daystanp[Symbol.toPrimitive]('number'))/1000;
+const now_daystamp = new Date();
+now_daystamp.setHours(0);
+now_daystamp.setMinutes(0);
+now_daystamp.setSeconds(0);
+var nowtime = (new Date().valueOf() - now_daystamp[Symbol.toPrimitive]('number'))/1000;
 var classtime = 1;
 var classday = new Date().getDay();
 
@@ -102,7 +102,7 @@ function TimelineChange()
 {
     if (typeof cookie["schedule"] != "undefined" && typeof cookie["schedule"][classday + "-" + classtime] != "undefined") //その時間に教室配置が登録されていれば
     {
-        map.contentWindow.clschange(cookie["schedule"][classday + "-" + classtime]);
+        document.getElementById("map").contentWindow.dayroom = cookie["schedule"][classday + "-" + classtime];
         // 週程ハイライトの教室番号を変更
     }
     
@@ -125,43 +125,37 @@ window.addEventListener('DOMContentLoaded', function(){
                 }
             }}
     }
-
-
+    
     // 1秒ごとに実行
     setInterval(() => {
-        const now_daystanp = new Date();
-        now_daystanp.setHours(0);
-        now_daystanp.setMinutes(0);
-        now_daystanp.setSeconds(0);
-        nowtime = (new Date().valueOf() - now_daystanp[Symbol.toPrimitive]('number'))/1000;
-        if (nowtime == 0 && classday != new Date().getDay()) { //日付変更=曜日変更
-            classday = new Date().getDay();
-            TimelineChange();
+        let now_daystamp = new Date();
+        now_daystamp.setHours(0);
+        now_daystamp.setMinutes(0);
+        now_daystamp.setSeconds(0);
+        nowtime = (new Date().valueOf() - now_daystamp[Symbol.toPrimitive]('number'))/1000;
+        if (classday != new Date().getDay()) { 
+            classday = new Date().getDay(); //日付変更=曜日変更
         }
         else if (nowtime >= 54000) {
             classtime = 6;
-            TimelineChange();
         }
         else if (nowtime >= 45300) {
             classtime = 5;
-            TimelineChange();
         }
         else if (nowtime >= 41700) {
             classtime = 4;
-            TimelineChange();
         }
         else if (nowtime >= 38400) {
             classtime = 3;
-            TimelineChange();
         }
         else if (nowtime >= 34800) {
             classtime = 2;
-            TimelineChange();
         }
-        else if (classtime != 1) {
+        else {
             classtime = 1;
-            TimelineChange();
         }
+        TimelineChange();
     }, 1000);
 });
+
 panel.addEventListener("click", function() {panel.style.visibility = "hidden";});

@@ -39,16 +39,18 @@ function flchange(num)
     img.src=pictures[floornum];
 
     // ハイライトと同じ階になったら表示
-    if (room != "" && room[0] == floornum+1 && h1.style.visibility == "hidden")
+    if (room != "" && room[0] == floornum+1)
     {
-        // 大きさを計算して座標配置
-        h1.style.width = ( data[room][2] - data[room][0] ) + "px";
-        h1.style.height = ( data[room][3] - data[room][1] ) + "px";
-        h1.style.left = data[room][0] + "px";
-        h1.style.top = data[room][1] + "px";
-        h1.style.visibility = "visible";
-        h1.classList.add("show");
-        h1.style.zIndex = 1;
+        if (h1.style.visibility == "hidden") {
+            // 大きさを計算して座標配置
+            h1.style.width = ( data[room][2] - data[room][0] ) + "px";
+            h1.style.height = ( data[room][3] - data[room][1] ) + "px";
+            h1.style.left = data[room][0] + "px";
+            h1.style.top = data[room][1] + "px";
+            h1.style.visibility = "visible";
+            h1.classList.add("show");
+            h1.style.zIndex = 1;
+        }
     }
     // 別の階になったら非表示
     else
@@ -58,16 +60,18 @@ function flchange(num)
     }
 
     // 週程ハイライトと同じ階になったら表示
-    if (dayroom != "" && dayroom[0] == floornum+1 && h2.style.visibility == "hidden")
+    if (dayroom[0] == floornum+1)
     {
-        // 大きさを計算して座標配置
-        h2.style.width = ( data[dayroom][2] - data[dayroom][0] ) + "px";
-        h2.style.height = ( data[dayroom][3] - data[dayroom][1] ) + "px";
-        h2.style.left = data[dayroom][0] + "px";
-        h2.style.top = data[dayroom][1] + "px";
-        h2.style.visibility = "visible";
-        h2.classList.add("show");
-        h2.style.zIndex = 1;
+        if (h2.style.visibility == "hidden") {
+            // 大きさを計算して座標配置
+            h2.style.width = ( data[dayroom][2] - data[dayroom][0] ) + "px";
+            h2.style.height = ( data[dayroom][3] - data[dayroom][1] ) + "px";
+            h2.style.left = data[dayroom][0] + "px";
+            h2.style.top = data[dayroom][1] + "px";
+            h2.style.visibility = "visible";
+            h2.classList.add("show");
+            h2.style.zIndex = 1;
+        }
     }
     else
     {
