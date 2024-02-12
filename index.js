@@ -4,6 +4,7 @@ let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
+<<<<<<< Updated upstream
 let cookie = {};
 if (document.cookie != "")
 {
@@ -14,19 +15,27 @@ now_daystamp.setHours(0);
 now_daystamp.setMinutes(0);
 now_daystamp.setSeconds(0);
 var nowtime = (new Date().valueOf() - now_daystamp[Symbol.toPrimitive]('number'))/1000;
+=======
+const userdata = JSON.parse(document.cookie);
+const now_daystanp = new Date();
+now_daystanp.setHours(0);
+now_daystanp.setMinutes(0);
+now_daystanp.setSeconds(0);
+var nowtime = (new Date().valueOf() - now_daystanp[Symbol.toPrimitive]('number'))/1000;
+var floornum = 0;
+>>>>>>> Stashed changes
 var classtime = 1;
 var classday = new Date().getDay();
 
 function floor(num)
 {
+    floornum = num;
     dis_number.textContent = (num+1) + "F";
     dis_number.style.background=colors[num];
     map.contentWindow.flchange(num);
 }
 
-function search(num)
-{
-    
+function search(num){
     if (Number.isInteger(num)){
         alert("部屋番号を入力してください。");
     }
@@ -55,8 +64,7 @@ function search(num)
     }
 }
 
-function info(num)
-{
+function info(num) {
     var info_pane = document.getElementById("information");
     var desk = document.getElementById("desk");
     var desk_num = document.getElementById("desk-num");
@@ -70,40 +78,47 @@ function info(num)
 }
 
 function cls_close() {
-    if (typeof cookie["schedule"] == "undefined")
-        cookie["schedule"] = {};
+    if (typeof userdata["schedule"] == "undefined")
+         userdata["schedule"] = {};
     for (var day=1;day<=5;day++) {
         for (var time=1;time<=6;time++) {
             temp = document.getElementById("cls" + day + "-" + time).value;
             if (typeof data[temp] != "undefined") { //教室データに存在する場合登録
-                cookie["schedule"][day + "-" + time] = temp;
+                userdata["schedule"][day + "-" + time] = temp;
             }
-            else if (temp == "" && typeof cookie["schedule"][day + "-" + time] != "undefined") {
-                delete cookie["schedule"][day + "-" + time];
+            else if (temp == "" && typeof userdata["schedule"][day + "-" + time] != "undefined") {
+                delete userdata["schedule"][day + "-" + time];
             }
         }
     delete day, time;
     }
-    document.cookie = JSON.stringify(cookie);
+    document.cookie = JSON.stringify(userdata);
     schedulebox.style.visibility = "hidden";
+<<<<<<< Updated upstream
 }
 
 function cls_open() {
     schedulebox.style.visibility = "visible";
+=======
+>>>>>>> Stashed changes
 }
 
-function info_close()
-{
+function info_close() {
     var info_pane = document.getElementById("information");
     info_pane.style.visibility = "hidden";
 }
 
-function TimelineChange()
-{
-    if (typeof cookie["schedule"] != "undefined" && typeof cookie["schedule"][classday + "-" + classtime] != "undefined") //その時間に教室配置が登録されていれば
+function TimelineChange() {
+    if (typeof userdata["schedule"] != "undefined" && typeof userdata["schedule"][classday + "-" + classtime] != "undefined") //その時間に教室配置が登録されていれば
     {
+<<<<<<< Updated upstream
         document.getElementById("map").contentWindow.dayroom = cookie["schedule"][classday + "-" + classtime];
+=======
+        map.contentWindow.clschange(userdata["schedule"][classday + "-" + classtime]);
+>>>>>>> Stashed changes
         // 週程ハイライトの教室番号を変更
+        dis_number.textContent = (floornum+1) + "F  次の授業教室:" + userdata["schedule"][classday + "-" + classtime];
+        dis_number.style.background=colors[floornum];
     }
     
 }
@@ -115,13 +130,13 @@ window.onload = function() {
     frame.style.width = sitewidth;
 }
 
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function() {
     //クッキーのスケジュールを表の枠に代入する
-    if (typeof cookie["schedule"] != "undefined") {
+    if (typeof userdata["schedule"] != "undefined") {
         for (var day=1;day<=5;day++) {
             for (var time=1;time<=6;time++) {
-                if (typeof cookie["schedule"][day + "-" + time] != "undefined") {
-                    document.getElementById("cls" + day + "-" + time).value = cookie["schedule"][day + "-" + time];
+                if (typeof userdata["schedule"][day + "-" + time] != "undefined") {
+                    document.getElementById("cls" + day + "-" + time).value = userdata["schedule"][day + "-" + time];
                 }
             }}
     }
