@@ -4,7 +4,6 @@ let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
-<<<<<<< Updated upstream
 let cookie = {};
 if (document.cookie != "")
 {
@@ -15,15 +14,7 @@ now_daystamp.setHours(0);
 now_daystamp.setMinutes(0);
 now_daystamp.setSeconds(0);
 var nowtime = (new Date().valueOf() - now_daystamp[Symbol.toPrimitive]('number'))/1000;
-=======
-const userdata = JSON.parse(document.cookie);
-const now_daystanp = new Date();
-now_daystanp.setHours(0);
-now_daystanp.setMinutes(0);
-now_daystanp.setSeconds(0);
-var nowtime = (new Date().valueOf() - now_daystanp[Symbol.toPrimitive]('number'))/1000;
 var floornum = 0;
->>>>>>> Stashed changes
 var classtime = 1;
 var classday = new Date().getDay();
 
@@ -94,13 +85,10 @@ function cls_close() {
     }
     document.cookie = JSON.stringify(userdata);
     schedulebox.style.visibility = "hidden";
-<<<<<<< Updated upstream
 }
 
 function cls_open() {
     schedulebox.style.visibility = "visible";
-=======
->>>>>>> Stashed changes
 }
 
 function info_close() {
@@ -111,11 +99,7 @@ function info_close() {
 function TimelineChange() {
     if (typeof userdata["schedule"] != "undefined" && typeof userdata["schedule"][classday + "-" + classtime] != "undefined") //その時間に教室配置が登録されていれば
     {
-<<<<<<< Updated upstream
-        document.getElementById("map").contentWindow.dayroom = cookie["schedule"][classday + "-" + classtime];
-=======
         map.contentWindow.clschange(userdata["schedule"][classday + "-" + classtime]);
->>>>>>> Stashed changes
         // 週程ハイライトの教室番号を変更
         dis_number.textContent = (floornum+1) + "F  次の授業教室:" + userdata["schedule"][classday + "-" + classtime];
         dis_number.style.background=colors[floornum];
