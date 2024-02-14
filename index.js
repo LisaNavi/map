@@ -4,10 +4,10 @@ let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
-let cookie = {};
+let userdata = {};
 if (document.cookie != "")
 {
-    cookie = JSON.parse(document.cookie);
+    userdata = JSON.parse(document.cookie);
 }
 const now_daystamp = new Date();
 now_daystamp.setHours(0);
