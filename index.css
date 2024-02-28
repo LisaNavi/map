@@ -9,11 +9,6 @@ body{
 	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 
-red{
-    color:#ff8080;
-	font-weight: 1000;
-}
-
 div#title{
 	text-align: center;
 	width: 99.7vw;

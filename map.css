@@ -31,6 +31,11 @@ img#image{
     z-index: 2;
 }
 
+red{
+    color:#ff8080;
+	font-weight: 1000;
+}
+
 .show{
     animation: fadein 300ms ease-out 0s 1 normal forwards;
 }
