@@ -36,6 +36,12 @@ red{
 	font-weight: 1000;
 }
 
+div#link{
+    position: absolute;
+    display:inline;
+    left:0px; top:5px;
+}
+
 .show{
     animation: fadein 300ms ease-out 0s 1 normal forwards;
 }
