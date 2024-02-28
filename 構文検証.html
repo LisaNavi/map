@@ -6,17 +6,70 @@
         <div id="container">
             <center>だから開発者ツール開けって書いてあんだろ<br>
             文字も読めないのか？</center>
+            <button onclick="javascript:InputCSV">読み込み</button>
+            <button onclick="javascript:OutputCSV">保存</button>
         </div>
         
     
     <script>
-        let csv = "講時/曜日,月,火,水,木,金\n1,,,,,\n2,,,,,\n3,,,,,\n4,,,,,\n5,,,,,\n6,,,,,";
-        var list = csv.split("\n");
-        var num;
-        var element="";
-        list.forEach(element => {
-            element.split(",");
-        });
+        // CSVファイルへのパス
+        let csv = "講時/曜日,月,火,水,木,金\n1,,,331,,\n2,,225,,,\n3,,,331,,\n4,,,,,\n5,,,,,\n6,,,,,";
+
+
+        // csvファイル読み込み失敗時のエラー対応
+        try {
+        csv.send(null);
+        } catch (err) {
+        console.log(err);
+        }
+
+        // 配列を定義
+        let csvArray = [];
+        var csvReadError = "";
+
+        // 改行ごとに配列化
+        // let lines = csv.responseText.split(/\r\n|\n/);
+        let lines = csv.split("\n");
+        if (lines.length < 7) {
+            csvReadError = "wrongformat";
+        }
+        else {
+            // 1行ごとに処理
+            for (let i = 0; i < lines.length; ++i) {
+                let cells = lines[i].split(",");
+                for (let i=0 ;i < 6;i++) {
+                    if (typeof cells[i] == "undefined") {
+                        cells[i] = "";
+                    }
+                }
+                csvArray.push(cells);
+            if (csvArray[0][0] != "講時/曜日") {
+                csvReadError = "unavailabledata";
+            }
+            // コンソールに配列を出力
+            console.log(csvArray);
+
+        }
+        if (csvReadError != "") {
+            console.log("エラーが発生しました:" + csvReadError);
+        } else {
+            let userdata = {};
+            userdata["schedule"] = {}
+            for (let d=0; d<5; d++) {
+                for (let t=0; t<6; t++) {
+                    if (csvArray[t+1][d+1] != "") {
+                        userdata["schedule"][d + "-" + t] = csvArray[t+1][d+1];
+                    }
+                }
+            }
+            console.log(userdata);
+        }
+
+            
+        }
+
+        
+        
     </script>
 
 </body>
