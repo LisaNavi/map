@@ -21,7 +21,6 @@ div#container{
     background: rgb(125, 255, 127);
     position: absolute;
     left: 0px; top: 0px;
-    visibility: hidden;
     z-index: 1;
 }
 img#image{
@@ -29,17 +28,6 @@ img#image{
     left: 0%; top: 0%;
     width: 1651px; height: 1350px;
     z-index: 2;
-}
-
-red{
-    color:#ff8080;
-	font-weight: 1000;
-}
-
-div#link{
-    position: absolute;
-    display:inline;
-    left:0px; top:5px;
 }
 
 .show{

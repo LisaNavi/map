@@ -60,7 +60,7 @@ function flchange(num)
     }
 
     // 週程ハイライトと同じ階になったら表示
-    if (dayroom[0] == floornum+1)
+    if (dayroom != "" && dayroom[0] == floornum+1)
     {
         if (h2.style.visibility == "hidden") {
             // 大きさを計算して座標配置
