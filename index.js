@@ -167,13 +167,12 @@ function importCSV() {
             } else {
                 for (let d=1; d<6; d++) {
                     for (let t=1; t<7; t++) {
-                        if (csvArray[t][d] != "") {
-                            // 存在しない部屋はスキップ
-                            if (typeof data[csvArray[t][d]] == "undefined") {
-                                skippedroom++;
-                            } else {
-                                document.getElementById("cls" + d + "-" + t).value = csvArray[t][d];
-                            }
+                        // 存在しない部屋はスキップ
+                        if (typeof data[csvArray[t][d]] == "undefined") {
+                            document.getElementById("cls" + d + "-" + t).value =  "";
+                            skippedroom++;
+                        } else {
+                            document.getElementById("cls" + d + "-" + t).value = csvArray[t][d];
                         }
                     }
                 }
@@ -188,15 +187,20 @@ function importCSV() {
 function exportCSV() {
     let exportArray = csvformat;
     let cell = "";
+    let skippedroom = 0;
     for (let d=1; d<6; d++) {
         for(let t=1; t<7; t++) {
             cell = document.getElementById("cls" + d + "-" + t).value;
             if (typeof data[cell] == "undefined") {
                 exportArray[t][d] = "";
+                skippedroom++;
             } else {
                 exportArray[t][d] = cell;
             }
         }
+    }
+    if (skippedroom != 0) {
+        alert("存在しない教室が"+ skippedroom + "個あったためスキップされました。");
     }
     let exportTmp = [];
     for (let t=0; t<7; t++) {
