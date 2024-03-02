@@ -108,6 +108,7 @@ a.btn--gray:hover {
 }
 
 #map{
+	padding-top: 1%;
 	height: 80vh;
 	width: 99.9vw;
 	border-radius: 0;

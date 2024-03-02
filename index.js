@@ -5,6 +5,7 @@ let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
 let userdata = {};
+let zoomlevel = 1;
 if (document.cookie != "")
 {
     userdata = JSON.parse(document.cookie);

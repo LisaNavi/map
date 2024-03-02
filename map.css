@@ -3,12 +3,12 @@
     padding: 0;
 }*/
 body {
-    height: 2000px;
-    width: 3000px;
+    transform-origin:0 0;
 }
 div#container{
     position:relative;
     width: 1651px; height:1350px;
+    left: 0px; top:0px;
 }
 #highlight{
     width: 80px;
