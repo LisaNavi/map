@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }*/
+body {
+    height: 2000px;
+    width: 3000px;
+}
 div#container{
     position:relative;
     width: 1651px; height:1350px;
