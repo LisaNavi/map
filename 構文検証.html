@@ -4,17 +4,27 @@
     </head>
     <body>
         <div id="container">
-            <center>だから開発者ツール開いてね！！<br></center>
-            <label for="csvupload" style="outline:auto; padding:3px; outline-width: 3px; border-radius: 0;">週程表を読み込む</label>
-            <input type="file" id="csvupload" accept=".csv" style="opacity:0;">
-            <button onclick="javascript:OutputCSV">保存</button>
+            <center>だから開発者ツール開いてね！！<br>
+                <button onclick="document.getElementById('csvupload').click()">週程表を読み込む</button>
+                <input type="file" id="csvupload" accept=".csv" style="display:none;">
+                <button onclick="exportCSV()">保存</button>
+            </center>
         </div>
         
     
     <script>
+        let csvformat = [["校時/曜日","月","火","水","木","金"],
+                        ["1","","","","",""],
+                        ["2","","","","",""],
+                        ["3","","","","",""],
+                        ["4","","","","",""],
+                        ["5","","","","",""],
+                        ["6","","","","",""]];
         var upload = document.getElementById("csvupload");
-        upload.addEventListener("change", get_csv)
-        function get_csv() {
+        upload.addEventListener("change", importCSV);
+        let userdata = {};
+        userdata["schedule"] = {};
+        function importCSV() {
             if (upload.files.length == 0) {
                 console.log("No file selected");
                 return;
@@ -54,7 +64,7 @@
                             cells[5] = cells[5].replace("\r","");
                             csvArray.push(cells);
                         }
-                        if (csvArray[0][0] != "校時/曜日") {
+                        if (csvArray[0][0] != "講時/曜日") {
                             csvReadError = "unavailabledata";
                         }
                         // コンソールに配列を出力
@@ -65,8 +75,6 @@
                     if (csvReadError != "") {
                         console.log("エラーが発生しました:" + csvReadError);
                     } else {
-                        let userdata = {};
-                        userdata["schedule"] = {}
                         for (let d=0; d<5; d++) {
                             for (let t=0; t<6; t++) {
                                 if (csvArray[t+1][d+1] != "") {
@@ -78,6 +86,14 @@
                     }
                 }
             reader.readAsText(file);
+        }
+
+        function exportCSV() {
+            console.log(userdata.schedule.length);
+            if (typeof userdata.schedule.length == undefined) {
+                console.log(2);
+                alert("教室番号が含まれていないため、エクスポートできません。");
+            }
         }
     </script>
 
