@@ -107,18 +107,123 @@ function TimelineChange() {
     
 }
 
+let csvformat = [["講時/曜日","月","火","水","木","金"],
+                        ["1","","","","",""],
+                        ["2","","","","",""],
+                        ["3","","","","",""],
+                        ["4","","","","",""],
+                        ["5","","","","",""],
+                        ["6","","","","",""]];
+let upload = document.getElementById("csvupload");
+upload.addEventListener("change", importCSV);
+function importCSV() {
+    if (upload.files.length == 0) {
+        console.log("No file selected");
+        return;
+    }
+    else if (upload.files.length > 1) {
+        console.log("Uploaded too many files");
+        return;
+    }
+
+    // 配列を定義
+    let csvArray = [];
+    let csvReadError = "";
+    
+
+    // CSVファイルへのパス
+    const file = upload.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+        let csv = reader.result;
+        console.log(reader.result);
+
+        // 改行ごとに配列化
+        let lines = csv.split("\r\n");
+        let skippedroom = 0;
+
+        if (lines.length < 7) {
+            csvReadError = "wrongformat";
+        }
+        else {
+                // 1行ごとに処理
+                for (let i = 0; i < lines.length; ++i) {
+                    let cells = lines[i].split(",");
+                    for (let i=0 ;i < 6;i++) {
+                        if (typeof cells[i] == "undefined") {
+                            cells[i] = "";
+                        }
+                    }
+                    csvArray.push(cells);
+                }
+                if (csvArray[0][0] != "講時/曜日") {
+                    csvReadError = "対応していないファイル内容です。";
+                }
+
+            }
+            
+            if (csvReadError != "") {
+                alert("エラーが発生しました: " + csvReadError);
+            } else {
+                for (let d=1; d<6; d++) {
+                    for (let t=1; t<7; t++) {
+                        if (csvArray[t][d] != "") {
+                            // 存在しない部屋はスキップ
+                            if (typeof data[csvArray[t][d]] == "undefined") {
+                                skippedroom++;
+                            } else {
+                                document.getElementById("cls" + d + "-" + t).value = csvArray[t][d];
+                            }
+                        }
+                    }
+                }
+                if (skippedroom != 0) {
+                    alert(skippedroom + "個の部屋は存在しないため読み込みませんでした。");
+                }
+            }
+        }
+    reader.readAsText(file);
+}
+
+function exportCSV() {
+    let exportArray = csvformat;
+    let cell = "";
+    for (let d=1; d<6; d++) {
+        for(let t=1; t<7; t++) {
+            cell = document.getElementById("cls" + d + "-" + t).value;
+            if (typeof data[cell] == "undefined") {
+                exportArray[t][d] = "";
+            } else {
+                exportArray[t][d] = cell;
+            }
+        }
+    }
+    let exportTmp = [];
+    for (let t=0; t<7; t++) {
+        exportTmp[t] = exportArray[t].join(',');
+    }
+    let exportStr = exportTmp.join("\r\n");
+    const bom = new Uint8Array([0xef, 0xbb, 0xbf]);
+    let blob = new Blob([bom, exportStr],{type:"text/csv"});
+    let link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = "週程表.csv";
+    link.click();
+}
+
+
 window.onload = function() {
     // 画面幅にiframeの幅を合わせる
     let frame = document.getElementById("map");
-    let sitewidth = document.documentElement.clientWidth - 5;
+    let sitewidth = document.documentElement.clientWidth;
     frame.style.width = sitewidth;
 }
 
 window.addEventListener('DOMContentLoaded', function() {
     //クッキーのスケジュールを表の枠に代入する
     if (typeof userdata["schedule"] != "undefined") {
-        for (var day=1;day<=5;day++) {
-            for (var time=1;time<=6;time++) {
+        for (let day=1;day<=5;day++) {
+            for (let time=1;time<=6;time++) {
                 if (typeof userdata["schedule"][day + "-" + time] != "undefined") {
                     document.getElementById("cls" + day + "-" + time).value = userdata["schedule"][day + "-" + time];
                 }
