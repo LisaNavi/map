@@ -4,12 +4,14 @@ let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
+
+// クッキーから読み込み
 let userdata = {};
-let zoomlevel = 1;
 if (document.cookie != "")
 {
     userdata = JSON.parse(document.cookie);
 }
+
 const now_daystamp = new Date();
 now_daystamp.setHours(0);
 now_daystamp.setMinutes(0);
@@ -108,6 +110,7 @@ function TimelineChange() {
     
 }
 
+// CSV関係
 let csvformat = [["講時/曜日","月","火","水","木","金"],
                         ["1","","","","",""],
                         ["2","","","","",""],

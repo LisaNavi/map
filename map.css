@@ -2,10 +2,9 @@
     margin: 0;
     padding: 0;
 }*/
-body {
-    transform-origin:0 0;
-}
 div#container{
+    transform-origin:0 0;
+    scale: 1;
     position:relative;
     width: 1651px; height:1350px;
     left: 0px; top:0px;

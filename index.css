@@ -109,12 +109,35 @@ a.btn--gray:hover {
 
 #map{
 	padding-top: 1%;
-	height: 80vh;
+	height: 81vh;
 	width: 99.9vw;
 	border-radius: 0;
 }
 
+div#zooms{
+	display: none;
+}
+
 /* https://excellent.ne.jp/homepage/6562/より */
+
+@media screen and (max-width:480px) {
+
+	/*　画面サイズが480px以下の場合ここの記述が適用される = スマホ用表示*/
+	div#zooms{
+		display:flex;
+		opacity: 70%;
+		position:absolute;
+		bottom:10%; right:8%;
+		scale: 1.5;
+	}
+
+	#map{
+		padding-top: 1.5%;
+		height: 90vh;
+		width: 99.9vw;
+		border-radius: 0;
+	}
+}
 
 /* 1F Orange*/
 a.btn_01 {

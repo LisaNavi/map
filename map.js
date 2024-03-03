@@ -1,12 +1,14 @@
 let pictures = new Array("https://lisanavi.github.io/map/img/1F.png","https://lisanavi.github.io/map/img/2F.png","https://lisanavi.github.io/map/img/3F.png","https://lisanavi.github.io/map/img/4F.png");
 let img_height = 1350;
 let img_width = 1651;
-var img = document.getElementById("image");
-var room = "";
-var dayroom = "";
-var floornum = 1;
-var h1 = document.getElementById("highlight");
-var h2 = document.getElementById("cls-highlight");
+let zoomlevel = 1;
+let img = document.getElementById("image");
+let room = "";
+let dayroom = "";
+let floornum = 1;
+let container = document.getElementById("container");
+let h1 = document.getElementById("highlight");
+let h2 = document.getElementById("cls-highlight");
 
 h1.onanimationend = function () {
     h1.classList.remove("show");
@@ -93,6 +95,20 @@ function clschange(num)
         h2.style.visibility = "visible";
         h2.classList.add("show");
         h2.style.zIndex = 1;
+    }
+}
+
+function zoomin() {
+    if (zoomlevel < 2) {
+        zoomlevel += 0.05;
+        container.style.scale = zoomlevel;
+    }
+}
+
+function zoomout() {
+    if (zoomlevel > 0.5) {
+        zoomlevel -= 0.05;
+        container.style.scale = zoomlevel;
     }
 }
 
