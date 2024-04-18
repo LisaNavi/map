@@ -29,7 +29,7 @@ div#title{
 }
 
 div#left-side {
-	height: 8rem;
+	height: 12rem;
 	background: rgba(0, 0, 0, 0.75);
 	padding: 5 5 5 5;
 	position:fixed;
@@ -177,7 +177,7 @@ a.btn_01 {
 	text-decoration: none;
 	width: 20px;
 	margin: auto;
-	padding: 0.3rem 0.5rem;
+	padding: 0.5rem 0.7rem;
 	font-weight: bold;
 	border: 2px solid #ff9900;
 	color: #ff9900;
@@ -196,7 +196,7 @@ a.btn_02 {
 	text-decoration: none;
 	width: 20px;
 	margin: auto;
-	padding: 0.3rem 0.5rem;
+	padding: 0.5rem 0.7rem;
 	font-weight: bold;
 	border: 2px solid #6699ff;
 	color: #6699ff;
@@ -215,7 +215,7 @@ a.btn_03 {
 	text-decoration: none;
 	width: 20px;
 	margin: auto;
-	padding: 0.3rem 0.5rem;
+	padding: 0.5rem 0.7rem;
 	font-weight: bold;
 	border: 2px solid #66cc33;
 	color: #66cc33;
@@ -233,7 +233,7 @@ a.btn_04 {
 	text-decoration: none;
 	width: 20px;
 	margin: auto;
-	padding: 0.3rem 0.5rem;
+	padding: 0.5rem 0.7rem;
 	font-weight: bold;
 	border: 2px solid #ff3300;
 	color: #ff3300;
