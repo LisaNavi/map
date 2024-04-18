@@ -86,7 +86,7 @@ function cls_close() {
         }
     delete day, time;
     }
-    document.cookie = JSON.stringify(userdata);
+    Cookies.set("data",JSON.stringify(userdata), {expires: 180});
     schedulebox.style.visibility = "hidden";
 }
 
