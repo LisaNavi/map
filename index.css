@@ -37,11 +37,11 @@ div#left-side {
 	display: flex;
 	flex-flow: column;
 	justify-content: left;
-	z-index:5
+	z-index:5;
 }
 
 div#right-side {
-	height:10rem;
+	height:12rem;
 	padding: 5 5 5 5;
 	background: rgba(0, 0, 0, 0.75);
 	position:fixed;
@@ -49,7 +49,7 @@ div#right-side {
 	display: flex;
 	flex-flow: column;
 	justify-content: right;
-	z-index:5
+	z-index:5;
 }
 
 left{
