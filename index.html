@@ -4,9 +4,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, user-scalable=no">
     <title>LiSA Navi</title><br>
 
-    <link rel="icon" type="image/png" href="/img/icon.png" />
-    <link rel="shortcut icon" type="image/png" href="/img/icon.png">
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" type="image/png" href="https://lisanavi.github.io/map/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="https://lisanavi.github.io/map/icon.png">
     
     <meta property="og:title" content="LiSA Navi (LiSA校内マップ)">
     <meta property="og:description" content="LiSA校の校内マップを表示するだけでなく、教室を3桁番号で検索したり、週程表を登録して時間帯に応じて強調表示する機能もあります！">
@@ -16,65 +15,67 @@
     <meta property="og:image:height" content="700">
 
   </head>
+
+  
   <body>
-  <div id="title">
-    <h3 style="line-height:0; margin-top: 1rem; margin-bottom: 1vh;">LiSA Navi</h3>
-    <a href="https://forms.gle/JtgFR2PNiqghsprb6" class="link" target="_blank" rel="noopener noreferrer">情報提供お願いします</a>
-    <h3 id="floorid">1F</h3>
-  </div>
-
-  <iframe id="map" src="map.html" width="1000" height="1000" frameborder=0></iframe>
-  <div id="zooms">
-    <button onclick="map.contentWindow.zoomin()">大</button>
-    <button onclick="map.contentWindow.zoomout()">小</button>
-  </div>
-
-  <div id="left-side">
-    <a href="javascript:floor(0)" class="btn_01">1F</a>
-    <a href="javascript:floor(1)" class="btn_02">2F</a>
-    <a href="javascript:floor(2)" class="btn_03">3F</a>
-    <a href="javascript:floor(3)" class="btn_04">4F</a>
-  </div>
-  <div id="right-side">
-    <input id="input" type="number" min="100" max="431" placeholder="教室番号" style="text-align: center; width: 4.2rem;"></input>
-    <a href="javascript:search(document.getElementById('input').value)" class="btn_05">🔍</a>
-    <a href="javascript:info(document.getElementById('input').value)" id="info-btn" class="btn_05">Info</a>
-    <br>
-    <a href="javascript:cls_open()" class="btn_05">週程表</a>
-  </div>
-  <div id="information">
-    <div id="info-text">
-      <left id="desk-num">教室番号</left>
-      <left id="desk">テスト</left>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <div id="title">
+      <h3 style="line-height:0; margin-top: 1rem; margin-bottom: 1vh;">LiSA Navi</h3>
+      <a href="https://forms.gle/JtgFR2PNiqghsprb6" class="link" target="_blank" rel="noopener noreferrer">情報提供お願いします</a>
+      <h3 id="floorid">1F</h3>
     </div>
-    <br>
-    <center style="font-size: 80%; margin-bottom: 15%; color:#fff;">パネルをタッチすると閉じます</center>
-  </div>
 
-  <div id="cls-table">
-    <table border="2" id="cls-chart">
-      <tr><th>限\曜</th> <th>月曜日</th> <th>火曜日</th> <th>水曜日</th> <th>木曜日</th> <th>金曜日</th></tr>
-      <tr><th>1限</th><td><input id="cls1-1" size="2" maxlength="3"></td><td><input id="cls2-1" size="2" maxlength="3"><td><input id="cls3-1" size="2" maxlength="3"></td><td><input id="cls4-1" size="2" maxlength="3"></td><td><input id="cls5-1" size="2" maxlength="3"></td></tr>
-      <tr><th>2限</th><td><input id="cls1-2" size="2" maxlength="3"></td><td><input id="cls2-2" size="2" maxlength="3"><td><input id="cls3-2" size="2" maxlength="3"></td><td><input id="cls4-2" size="2" maxlength="3"></td><td><input id="cls5-2" size="2" maxlength="3"></td></tr>
-      <tr><th>3限</th><td><input id="cls1-3" size="2" maxlength="3"></td><td><input id="cls2-3" size="2" maxlength="3"><td><input id="cls3-3" size="2" maxlength="3"></td><td><input id="cls4-3" size="2" maxlength="3"></td><td><input id="cls5-3" size="2" maxlength="3"></td></tr>
-      <tr><th>4限</th><td><input id="cls1-4" size="2" maxlength="3"></td><td><input id="cls2-4" size="2" maxlength="3"><td><input id="cls3-4" size="2" maxlength="3"></td><td><input id="cls4-4" size="2" maxlength="3"></td><td><input id="cls5-4" size="2" maxlength="3"></td></tr>
-      <tr><th>5限</th><td><input id="cls1-5" size="2" maxlength="3"></td><td><input id="cls2-5" size="2" maxlength="3"><td><input id="cls3-5" size="2" maxlength="3"></td><td><input id="cls4-5" size="2" maxlength="3"></td><td><input id="cls5-5" size="2" maxlength="3"></td></tr>
-      <tr><th>6限</th><td><input id="cls1-6" size="2" maxlength="3"></td><td><input id="cls2-6" size="2" maxlength="3"><td><input id="cls3-6" size="2" maxlength="3"></td><td><input id="cls4-6" size="2" maxlength="3"></td><td><input id="cls5-6" size="2" maxlength="3"></td></tr>
-    </table>
-    ※閉じるを押すとcookieに保存されます。<br>
-    <div class="cls-buttons">
-      <center>
-        <button onclick="document.getElementById('csvupload').click()">インポート</button>
-        <input type="file" id="csvupload" accept=".csv" style="display:none;">
-        <button onclick="exportCSV()">エクスポート</button>
-      </center>
+    <iframe id="map" src="map.html" width="1000" height="1000" frameborder=0></iframe>
+    <div id="zooms">
+      <button onclick="map.contentWindow.zoomin()">大</button>
+      <button onclick="map.contentWindow.zoomout()">小</button>
+    </div>
+
+    <div id="left-side">
+      <a href="javascript:floor(0)" class="btn_01">1F</a>
+      <a href="javascript:floor(1)" class="btn_02">2F</a>
+      <a href="javascript:floor(2)" class="btn_03">3F</a>
+      <a href="javascript:floor(3)" class="btn_04">4F</a>
+    </div>
+    <div id="right-side">
+      <input id="input" type="number" min="100" max="431" placeholder="教室番号" style="text-align: center; width: 4.2rem;"></input>
+      <a href="javascript:search(document.getElementById('input').value)" class="btn_05">🔍</a>
+      <a href="javascript:info(document.getElementById('input').value)" id="info-btn" class="btn_05">Info</a>
       <br>
-      <button type="button" onclick="javascript:cls_close()">閉じる
+      <a href="javascript:cls_open()" class="btn_05">週程表</a>
     </div>
-  </div>
+    <div id="information">
+      <div id="info-text">
+        <left id="desk-num">教室番号</left>
+        <left id="desk">テスト</left>
+      </div>
+      <br>
+      <center style="font-size: 80%; margin-bottom: 15%; color:#fff;">パネルをタッチすると閉じます</center>
+    </div>
 
+    <div id="cls-table">
+      <table border="2" id="cls-chart">
+        <tr><th>限\曜</th> <th>月曜日</th> <th>火曜日</th> <th>水曜日</th> <th>木曜日</th> <th>金曜日</th></tr>
+        <tr><th>1限</th><td><input id="cls1-1" size="2" maxlength="3"></td><td><input id="cls2-1" size="2" maxlength="3"><td><input id="cls3-1" size="2" maxlength="3"></td><td><input id="cls4-1" size="2" maxlength="3"></td><td><input id="cls5-1" size="2" maxlength="3"></td></tr>
+        <tr><th>2限</th><td><input id="cls1-2" size="2" maxlength="3"></td><td><input id="cls2-2" size="2" maxlength="3"><td><input id="cls3-2" size="2" maxlength="3"></td><td><input id="cls4-2" size="2" maxlength="3"></td><td><input id="cls5-2" size="2" maxlength="3"></td></tr>
+        <tr><th>3限</th><td><input id="cls1-3" size="2" maxlength="3"></td><td><input id="cls2-3" size="2" maxlength="3"><td><input id="cls3-3" size="2" maxlength="3"></td><td><input id="cls4-3" size="2" maxlength="3"></td><td><input id="cls5-3" size="2" maxlength="3"></td></tr>
+        <tr><th>4限</th><td><input id="cls1-4" size="2" maxlength="3"></td><td><input id="cls2-4" size="2" maxlength="3"><td><input id="cls3-4" size="2" maxlength="3"></td><td><input id="cls4-4" size="2" maxlength="3"></td><td><input id="cls5-4" size="2" maxlength="3"></td></tr>
+        <tr><th>5限</th><td><input id="cls1-5" size="2" maxlength="3"></td><td><input id="cls2-5" size="2" maxlength="3"><td><input id="cls3-5" size="2" maxlength="3"></td><td><input id="cls4-5" size="2" maxlength="3"></td><td><input id="cls5-5" size="2" maxlength="3"></td></tr>
+        <tr><th>6限</th><td><input id="cls1-6" size="2" maxlength="3"></td><td><input id="cls2-6" size="2" maxlength="3"><td><input id="cls3-6" size="2" maxlength="3"></td><td><input id="cls4-6" size="2" maxlength="3"></td><td><input id="cls5-6" size="2" maxlength="3"></td></tr>
+      </table>
+      ※閉じるを押すとcookieに保存されます。<br>
+      <div class="cls-buttons">
+        <center>
+          <button onclick="document.getElementById('csvupload').click()">インポート</button>
+          <input type="file" id="csvupload" accept=".csv" style="display:none;">
+          <button onclick="exportCSV()">エクスポート</button>
+        </center>
+        <br>
+        <button type="button" onclick="javascript:cls_close()">閉じる
+      </div>
+    </div>
+  </body>
   <script src="data.js"></script>
   <script src="js.cookie.js"></script>
   <script src="index.js"></script>
-</body>
 </html>
