@@ -7,9 +7,9 @@ let schedulebox = document.getElementById("cls-table");
 
 // クッキーから読み込み
 let userdata = {};
-if (document.cookie != "")
+if (Cookies.get("data") != "")
 {
-    userdata = JSON.parse(document.cookie);
+    userdata = JSON.parse(Cookies.get("data"));
 }
 
 const now_daystamp = new Date();
