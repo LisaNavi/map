@@ -7,7 +7,7 @@ let schedulebox = document.getElementById("cls-table");
 
 // クッキーから読み込み
 let userdata = {};
-if (Cookies.get("data") != "")
+if (Cookies.get("data") != undefined)
 {
     userdata = JSON.parse(Cookies.get("data"));
 }
@@ -120,6 +120,7 @@ let csvformat = [["講時/曜日","月","火","水","木","金"],
                         ["6","","","","",""]];
 let upload = document.getElementById("csvupload");
 upload.addEventListener("change", importCSV);
+
 function importCSV() {
     if (upload.files.length == 0) {
         console.log("No file selected");
