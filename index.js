@@ -220,12 +220,19 @@ function exportCSV() {
     link.click();
 }
 
-
-window.onload = function() {
+function ResizeFrame() {
     // 画面幅にiframeの幅を合わせる
     let frame = document.getElementById("map");
     let sitewidth = document.documentElement.clientWidth;
     frame.style.width = sitewidth;
+}
+
+
+window.onload = function() {
+    ResizeFrame();
+}
+window.onresize = function() {
+    ResizeFrame();
 }
 
 window.addEventListener('DOMContentLoaded', function() {
