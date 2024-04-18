@@ -28,6 +28,30 @@ div#title{
 	z-index:5;
 }
 
+div#left-side {
+	height: 8rem;
+	background: rgba(0, 0, 0, 0.75);
+	padding: 5 5 5 5;
+	position:fixed;
+	bottom: 0rem; left:0;
+	display: flex;
+	flex-flow: column;
+	justify-content: left;
+	z-index:5
+}
+
+div#right-side {
+	height:10rem;
+	padding: 5 5 5 5;
+	background: rgba(0, 0, 0, 0.75);
+	position:fixed;
+	bottom: 0; right:0;
+	display: flex;
+	flex-flow: column;
+	justify-content: right;
+	z-index:5
+}
+
 left{
 	text-align: left;
 }
@@ -118,6 +142,7 @@ div#zooms{
 	display: none;
 }
 
+
 /* https://excellent.ne.jp/homepage/6562/より */
 
 @media screen and (max-width:480px) {
@@ -125,15 +150,15 @@ div#zooms{
 	/*　画面サイズが480px以下の場合ここの記述が適用される = スマホ用表示*/
 	div#zooms{
 		display:flex;
-		opacity: 70%;
+		opacity: 80%;
 		position:absolute;
-		bottom:10%; right:8%;
+		top: 15vh; right:8%;
 		scale: 1.5;
 	}
 
 	#map{
 		padding-top: 1.5%;
-		height: 82vh;
+		height: 88vh;
 		width: 99.9vw;
 		border-radius: 0;
 	}
@@ -150,7 +175,7 @@ a.btn_01 {
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	width: 50px;
+	width: 20px;
 	margin: auto;
 	padding: 0.3rem 0.5rem;
 	font-weight: bold;
@@ -169,7 +194,7 @@ a.btn_02 {
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	width: 50px;
+	width: 20px;
 	margin: auto;
 	padding: 0.3rem 0.5rem;
 	font-weight: bold;
@@ -188,7 +213,7 @@ a.btn_03 {
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	width: 50px;
+	width: 20px;
 	margin: auto;
 	padding: 0.3rem 0.5rem;
 	font-weight: bold;
@@ -206,7 +231,7 @@ a.btn_04 {
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	width: 50px;
+	width: 20px;
 	margin: auto;
 	padding: 0.3rem 0.5rem;
 	font-weight: bold;
@@ -218,15 +243,15 @@ a.btn_04:hover {
 	color: #fff;
 	background: #ff3300;
 }
-/* Search*/
+/* Search and Schedulechart */
 a.btn_05 {
 	display: inline;
 	text-align: center;
 	vertical-align: middle;
 	text-decoration: none;
-	width: 60px;
+	width: 45px;
 	margin: auto;
-	padding: 0.3rem 0.5rem;
+	padding: 0.2rem 0.3rem;
 	font-weight: bold;
 	border: 2px solid #9f9f9f;
 	color: #9f9f9f;
