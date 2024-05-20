@@ -281,3 +281,17 @@ window.addEventListener('DOMContentLoaded', function() {
 panel.addEventListener("click", function() {panel.style.visibility = "hidden";});
 
 
+//ポップアップ関連
+const modal = $('#how-btn');
+const img = modal.find('img');
+
+$('img.popup').each(function(index) {
+  $(this).click(function() {
+    img.attr('src', $(this).attr('src'));
+    modal.show();
+  })
+});
+
+modal.click(function() {
+  $(this).hide();
+});
