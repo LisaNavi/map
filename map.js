@@ -39,6 +39,7 @@ function flchange(num)
 {
     floornum = num;
     img.src=pictures[floornum];
+    
 
     // ハイライトと同じ階になったら表示
     if (room != "" && room[0] == floornum+1)
