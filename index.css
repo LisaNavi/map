@@ -158,6 +158,13 @@ div#tutorial{
 	
 }
 
+img#cls-tutorial{
+	margin: 5% auto;
+	font-weight: bold;
+	align-items: center;
+	width: auto;
+	color:#fff;
+}
 
 
 /* https://excellent.ne.jp/homepage/6562/より */
