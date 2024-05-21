@@ -4,6 +4,7 @@ let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
+let tutorial = document.getElementById("cls-tutorial");
 
 // クッキーから読み込み
 let userdata = {};
@@ -112,7 +113,7 @@ function TimelineChange() {
 
 //tutorial
 function cls_tutorialopen (){
-    schedulebox.style.visibility = "visible";
+    tutorial.style.visibility = "visible";
 }
 
 function cls_tutorialclose() {
