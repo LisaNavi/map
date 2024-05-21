@@ -144,7 +144,7 @@ div#zooms{
 }
 
 
-div#tutorial{ 
+div#cls-tutorial{ 
 	width: 100vw;
 	height: 100vh;
 	top: 0%; left:0%;
@@ -158,7 +158,7 @@ div#tutorial{
 	
 }
 
-img#cls-tutorial{
+img#ctutorial{
 	margin: 5% auto;
 	font-weight: bold;
 	align-items: center;
