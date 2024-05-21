@@ -4,7 +4,7 @@ let dis_number = document.getElementById("floorid");
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
-let tutorial = document.getElementById("img/5F.png");
+let tutorial = document.getElementById("cls_tutorial");
 
 // クッキーから読み込み
 let userdata = {};
