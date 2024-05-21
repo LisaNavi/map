@@ -145,8 +145,8 @@ div#zooms{
 
 
 div#tutorial{ 
-	width: 100vw;
-	height: 100vh;
+	width: 50vw;
+	height: 50vh;
 	top: 0%; left:0%;
 	background: rgb(61, 61, 61, 0.9);
 	color:#fff;
