@@ -151,15 +151,13 @@ div#tutorial{
 	background: rgb(61, 61, 61, 0.9);
 	
 	
-	visibility: hidden;
-	z-index:11;
-	font-weight: bold;
+	
 	
 	
 }
 
 img#cls-tutorial{
-	position:absolute;
+	
     left: 0%; top: 0%;
     width: 100px; height: 100px;
     z-index: 2;
