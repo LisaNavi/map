@@ -1,9 +1,10 @@
 let colors = new Array("#ff9900","#6699ff","#66cc33","#ff3300");
 let map = document.getElementById("map");
-let dis_number = document.getElementById("floorid");
+let dis_number = document.getElementById("floorid"); 
 let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
+let tutorial = document.getElementById("cls_tutorial");
 
 // クッキーから読み込み
 let userdata = {};
@@ -109,6 +110,19 @@ function TimelineChange() {
     }
     
 }
+
+//tutorial
+function cls_tutorialopen(){
+    tutorial.style.visibility = "visible";
+}
+
+function cls_tutorialclose() {
+    var info_pane = document.getElementById("information");
+    info_pane.style.visibility = "hidden";
+}
+
+
+
 
 // CSV関係
 let csvformat = [["講時/曜日","月","火","水","木","金"],
