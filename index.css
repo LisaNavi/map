@@ -193,6 +193,34 @@ img#cls-tutorial{
 		width: 90%;
 		margin: 40% 5%;
 	}
+
+
+
+	
+	div#tutorial{ 
+		display: flex;
+		width: 50vh;
+		height: 50vh;
+		top: 0%; left:0%;
+		background: rgb(61, 61, 61, 0.9);
+		color:#fff;
+		position: fixed;
+		visibility: hidden;
+		z-index:11;
+		font-weight: bold;
+		text-align: center;
+		
+	}
+	
+	img#cls-tutorial{
+		object-fit: contain;
+		width: auto;
+		height: auto;
+		font-weight: bold;
+		align-items: center;
+		color:#fff;
+	}
+
 }
 
 /* 1F Orange*/
