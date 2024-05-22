@@ -117,8 +117,7 @@ function cls_tutorialopen(){
 }
 
 function cls_tutorialclose() {
-    var info_pane = document.getElementById("information");
-    info_pane.style.visibility = "hidden";
+    tutorial.style.visibility = "hidden";
 }
 
 
