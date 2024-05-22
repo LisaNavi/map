@@ -76,7 +76,7 @@ div#info-text{
 	margin-left: 3%;
 }
 
-div#cls-table{
+div#cls-table{ 
 	width: 100vw;
 	height: 100vh;
 	top: 0%; left:0%;
@@ -87,6 +87,7 @@ div#cls-table{
 	z-index:11;
 	font-weight: bold;
 	text-align: center;
+	
 }
 
 table#cls-chart{
@@ -143,6 +144,32 @@ div#zooms{
 }
 
 
+div#tutorial{ 
+	display: flex;
+	width: 50vh;
+	height: 50vh;
+	top: 0%; left:0%;
+	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
+	position: fixed;
+	visibility: hidden;
+	z-index:11;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+img#cls-tutorial{
+	margin: 5% auto;
+	object-fit: contain;
+	width: auto;
+	height: auto;
+	font-weight: bold;
+	align-items: center;
+	color:#fff;
+}
+
+
 /* https://excellent.ne.jp/homepage/6562/より */
 
 @media screen and (max-width:480px) {
@@ -167,6 +194,8 @@ div#zooms{
 		width: 90%;
 		margin: 40% 5%;
 	}
+
+
 }
 
 /* 1F Orange*/

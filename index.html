@@ -38,15 +38,29 @@
       <a href="javascript:floor(3)" class="btn_04">4F</a>
     </div>
     <div id="right-side">
-      <input id="input" type="number" min="100" max="431" placeholder="教室番号" style="text-align: center; width: 4.2rem;"></input>
+      <input id="input" type="number" min="100" max="431" placeholder="教室検索" style="text-align: center; width: 4.2rem;"></input>
       <a href="javascript:search(document.getElementById('input').value)" class="btn_05">🔍</a>
       <a href="javascript:info(document.getElementById('input').value)" id="info-btn" class="btn_05">Info</a>
       <br>
 
-      <a href="img/Lisanavi_tutorial_1.png" id="how-btn" class="btn_05">使い方</a>
+      <a href="javascript:cls_tutorialopen()" class="btn_05">使い方</a>
+
 
       <a href="javascript:cls_open()" class="btn_05">週程表</a>
     </div>
+
+    <div id="tutorial">
+      <img src="img/5F.png"  id="cls_tutorial">
+    
+      <br>
+        <button type="button" onclick="javascript:cls_close()">閉じる</button>
+        
+    
+  </div>
+
+
+
+
     <div id="information">
       <div id="info-text">
         <left id="desk-num">教室番号</left>
