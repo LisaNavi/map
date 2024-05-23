@@ -27,8 +27,8 @@
 
     <iframe id="map" src="map.html" width="1000" height="1000" frameborder=0></iframe>
     <div id="zooms">
-      <button onclick="map.contentWindow.zoomin()">大</button>
-      <button onclick="map.contentWindow.zoomout()">小</button>
+      <button onclick="map.contentWindow.zoomin()">+</button>
+      <button onclick="map.contentWindow.zoomout()">-</button>
     </div>
 
     <div id="left-side">
@@ -38,7 +38,7 @@
       <a href="javascript:floor(3)" class="btn_04">4F</a>
     </div>
     <div id="right-side">
-      <input id="input" type="number" min="100" max="431" placeholder="教室番号" style="text-align: center; width: 4.2rem;"></input>
+      <input id="input" type="number" min="100" max="431" placeholder="教室検索" style="text-align: center; width: 4.2rem;"></input>
       <a href="javascript:search(document.getElementById('input').value)" class="btn_05">🔍</a>
       <a href="javascript:info(document.getElementById('input').value)" id="info-btn" class="btn_05">Info</a>
       <br>
@@ -50,10 +50,20 @@
     </div>
 
     <div id="tutorial">
+<<<<<<< HEAD
       <img src="img/5F.png" id="cls_tutorial">
 
 
     </div>
+=======
+      <img src="img/Lisanavi_tutorial_2.png"  id="cls_tutorial">
+    
+      <br>
+        <button type="button" onclick="javascript:cls_close()">閉じる</button>
+        
+    
+  </div>
+>>>>>>> 5f4279dfc1ff9383b67c1aaf72441f9abf05a7ef
 
 
 
