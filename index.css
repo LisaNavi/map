@@ -195,16 +195,7 @@ img#cls-tutorial{
 		width: 90%;
 		margin: 40% 5%;
 	}
-	img#cls-tutorial{
-		margin: 10% auto;
-		object-fit: contain;
-		width: auto;
-		height: auto;
-		font-weight: bold;
-		align-items: center;
-		color:#fff;
-		background: rgb(61, 61, 61, 0.9);
-	}
+	
 	
 
 }
