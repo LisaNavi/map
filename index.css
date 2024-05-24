@@ -162,8 +162,6 @@ div#tutorial{
 img#cls-tutorial{
 	margin: 10% auto;
 	object-fit: contain;
-	width: 10px;
-	height: 10px;
 	font-weight: bold;
 	align-items: center;
 	color:#fff;
