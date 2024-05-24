@@ -153,15 +153,15 @@ div#tutorial{
 	color:#fff;
 	position: fixed;
 	visibility: hidden;
-	z-index:11;
+	z-index:4;
 	font-weight: bold;
 	text-align: center;
 	
 }
 
-img#cls-tutorial{
-	width: 50%;
-	margin: 10% auto;
+img#cls_tutorial{
+	height: 100vh;
+    margin: auto;
 	object-fit: contain;
 	font-weight: bold;
 	align-items: center;
