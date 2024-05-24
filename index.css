@@ -259,7 +259,7 @@ left{
 button {
 	border: 0;
 	border-radius: 5px;
-	padding: 3px 5px 2px 5px;
+	padding: 3px 10px;
 }
 button:active {
 	background-color: rgb(170, 170, 170);

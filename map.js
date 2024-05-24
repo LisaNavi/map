@@ -129,7 +129,7 @@ function getImages(){
 
 //ピンチ機能（仮）
 const touchContainer = document.getElementById('display');
-const image3 = document.getElementById('container');
+const image = document.getElementById('container');
 let touchScale = 1;
 let initialDistance = 0;
 let initialScale = 1;
