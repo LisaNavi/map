@@ -54,7 +54,7 @@ div#left-side {
 
 div#right-side {
 	height:12rem;
-	padding: 5 5 5 5;
+	padding: 5px 5px 5px 5px;
 	background: rgba(0, 0, 0, 0.75);
 	position:fixed;
 	bottom: 0; right:0;
@@ -219,8 +219,9 @@ table#cls-chart{
 /* 使い方説明 */
 
 div#tutorial{ 
-    display: flex;
-	width: 50vh;
+    display: grid;
+	align-items: center;
+	width: 100vw;
 	height: 100vh;
 	top: 0%; left: 0%;
 	background: rgb(61, 61, 61, 0.9);
@@ -241,6 +242,10 @@ img#cls_tutorial{
 	font-weight: bold;
 	align-items: center;
 	color:#fff;
+}
+
+.cls-buttons {
+	align-self: center;
 }
 
 /* 左寄せ専用タグ */
