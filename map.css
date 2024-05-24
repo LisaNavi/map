@@ -53,17 +53,3 @@ img#image{
         opacity: 1;
     }
 }
-
-  /* ピンチ機能（仮） */
-  #touchContainer {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  #img {
-    position: absolute;
-    transform-origin: center;
-    transition: transform 0.3s;
-  }
