@@ -129,7 +129,7 @@ function getImages(){
 
 //ピンチ機能（仮）
 const touchContainer = document.getElementById('touchContainer');
-const image3 = document.getElementById('img');
+const image3 = document.getElementById('image');
 let touchScale = 1;
 let initialDistance = 0;
 let initialScale = 1;
@@ -148,7 +148,7 @@ touchContainer.addEventListener('touchmove', function (event) {
     const scaleChange = distance / initialDistance;
 
     touchScale = initialScale * scaleChange;
-    image3.style.transform = `scale(${touchScale})`;
+    image.style.transform = `scale(${touchScale})`;
 
     event.preventDefault();
   }
