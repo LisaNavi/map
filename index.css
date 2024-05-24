@@ -223,7 +223,9 @@ table#cls-chart{
 /* 使い方説明 */
 
 div#tutorial{ 
-    display: grid;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
@@ -239,12 +241,8 @@ div#tutorial{
 }
 
 img#cls_tutorial{
-	height: 70vh;
-    margin: auto;
-	left:-40;
+	height: 50vh;
 	object-fit: contain;
-	font-weight: bold;
-	align-items: center;
 	color:#fff;
 }
 
