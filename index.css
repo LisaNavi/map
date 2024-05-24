@@ -199,7 +199,11 @@ div#info-text{
 
 /* Schedule (週程表) */
 
-div#cls-table{ 
+div#cls-table{
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	align-items: center;
 	width: 100vw;
 	height: 100vh;
 	top: 0%; left:0%;
@@ -213,7 +217,7 @@ div#cls-table{
 }
 
 table#cls-chart{
-	margin: 5% auto;
+	margin: 3% 0;
 	font-weight: bold;
 	align-items: center;
 	width: auto;
