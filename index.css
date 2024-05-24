@@ -248,10 +248,19 @@ left{
 	text-align: left;
 }
 
+/* 上記以外のボタン 「閉じる」など */
+button {
+	border: 0;
+	border-radius: 5px;
+	padding: 3px 5px 2px 5px;
+}
+button:active {
+	background-color: rgb(170, 170, 170);
+}
+
 /* https://excellent.ne.jp/homepage/6562/より */
 
 @media screen and (max-width:480px) {
-
 	/*　画面サイズが480px以下の場合ここの記述が適用される = スマホ用表示*/
 	div#zooms{
 		display:flex;
@@ -272,7 +281,4 @@ left{
 		width: 90%;
 		margin: 40% 5%;
 	}
-	
-	
-
 }
