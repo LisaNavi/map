@@ -292,3 +292,4 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 panel.addEventListener("click", function() {panel.style.visibility = "hidden";});
+
