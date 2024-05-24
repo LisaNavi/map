@@ -131,7 +131,6 @@ function getImages(){
 const touchContainer = document.getElementById('touchContainer');
 const image3 = document.getElementById('img');
 let touchScale = 1;
-
 let initialDistance = 0;
 let initialScale = 1;
 
