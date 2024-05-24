@@ -9,6 +9,7 @@ body{
 	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 
+/* Header (上部) */
 div#title{
 	text-align: center;
 	width: 99.7vw;
@@ -17,17 +18,28 @@ div#title{
 	height: 7.5vh;
 }
 
-#footer{
-	width: 100vw;
-	height: 3rem;
-	padding-top: 1rem;
-	background: rgba(0,0,0, 0.75);
-	position:fixed;
-	bottom: 0rem; left:0%;
-	justify-content:center;
-	z-index:5;
+.link{
+	color:#6699ff;
+	font-weight: bold;
+	font-size: 1rem;
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
 }
 
+/* map */
+#map{
+	height: 88vh;
+	width: 99.9vw;
+	border-radius: 0;
+	z-index: 0;
+}
+
+h3#floorid{
+	background: #ff9900;
+	margin: -2;
+}
+
+/* UI */
 div#left-side {
 	height: 12rem;
 	background: rgba(0, 0, 0, 0.75);
@@ -52,151 +64,32 @@ div#right-side {
 	z-index:5;
 }
 
-left{
-	text-align: left;
-}
-
-
-div#information{
-	width: 50vw;
-	height: fit-content;
-	top: 0%; left:0%;	
-	background: rgb(61, 61, 61, 0.9);
-	position: fixed;
-	visibility: hidden;
-	margin: 20% 25%;
-	z-index:10;
-	border-radius: 10px;
-	font-weight: bold;
-}
-div#info-text{
-	vertical-align: middle;
-	white-space: pre-line;
-	color:#ffffff;
-	margin-left: 3%;
-}
-
-div#cls-table{ 
-	width: 100vw;
-	height: 100vh;
-	top: 0%; left:0%;
-	background: rgb(61, 61, 61, 0.9);
-	color:#fff;
-	position: fixed;
-	visibility: hidden;
-	z-index:11;
-	font-weight: bold;
-	text-align: center;
-	
-}
-
-table#cls-chart{
-	margin: 5% auto;
-	font-weight: bold;
-	align-items: center;
-	width: auto;
-	color:#fff;
-}
-
-
-#info-btn{
-	visibility: hidden;
-}
-
-h3#floorid{
-	background: #ff9900;
-	margin: -2;
-}
-
-.btn--gray,
-a.btn--gray {
-  color: #fff;
-  background-color: #d3d3d3;
-}
-.btn--gray:hover,
-a.btn--gray:hover {
-  color: #fff;
-  background: #f56500;
-}
-
-.link{
-	color:#6699ff;
-	font-weight: bold;
-	font-size: 1rem;
-	margin-right: 0.5rem;
-	margin-left: 0.5rem;
-}
-
 #input{
 	width:75px; height: 2rem;
 	border: 2px solid #6699ff;
 }
 
-#map{
-	padding-top: 1.5%;
-	height: 85vh;
-	width: 99.9vw;
-	border-radius: 0;
-}
-
 div#zooms{
-	display: none;
+	display: none; /* スマホ専用表示のためデフォルトは非表示 */
 }
 
-
-div#tutorial{ 
-    display: flex;
-	width: 50vh;
-	height: 100vh;
-	top: 0%; left: 0%;
-	background: rgb(61, 61, 61, 0.9);
-	color:#fff;
-	position: fixed;
-	visibility: hidden;
-	z-index:11;
-	font-weight: bold;
+/* 「検索」「週程表」ボタン */
+a.btn_05 {
+	display: inline;
 	text-align: center;
-	
-}
-
-img#cls_tutorial{
-	height: 70vh;
-    margin: auto;
-	left:-40;
-	object-fit: contain;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 45px;
+	margin: auto;
+	padding: 0.2rem 0.3rem;
 	font-weight: bold;
-	align-items: center;
-	color:#fff;
+	border: 2px solid #9f9f9f;
+	color: #9f9f9f;
+	transition: 0.3s;
 }
-
-
-/* https://excellent.ne.jp/homepage/6562/より */
-
-@media screen and (max-width:480px) {
-
-	/*　画面サイズが480px以下の場合ここの記述が適用される = スマホ用表示*/
-	div#zooms{
-		display:flex;
-		opacity: 80%;
-		position:absolute;
-		top: 15vh; right:8%;
-		scale: 1.5;
-	}
-
-	#map{
-		padding-top: 1.5%;
-		height: 88vh;
-		width: 99.9vw;
-		border-radius: 0;
-	}
-
-	div#information{
-		width: 90%;
-		margin: 40% 5%;
-	}
-	
-	
-
+a.btn_05:hover {
+	color: #fff;
+	background: #9f9f9f;
 }
 
 /* 1F Orange*/
@@ -273,21 +166,113 @@ a.btn_04:hover {
 	color: #fff;
 	background: #ff3300;
 }
-/* Search and Schedulechart */
-a.btn_05 {
-	display: inline;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 45px;
-	margin: auto;
-	padding: 0.2rem 0.3rem;
+
+/* Room Information */
+
+div#information{
+	width: 50vw;
+	height: fit-content;
+	top: 0%; left:0%;	
+	background: rgb(61, 61, 61, 0.9);
+	position: fixed;
+	visibility: hidden;
+	margin: 20% 25%;
+	z-index:10;
+	border-radius: 10px;
 	font-weight: bold;
-	border: 2px solid #9f9f9f;
-	color: #9f9f9f;
-	transition: 0.3s;
 }
-a.btn_05:hover {
-	color: #fff;
-	background: #9f9f9f;
+
+div#info-text{
+	vertical-align: middle;
+	white-space: pre-line;
+	color:#ffffff;
+	margin-left: 3%;
+}
+
+#info-btn{
+	visibility: hidden;
+}
+
+/* Schedule (週程表) */
+
+div#cls-table{ 
+	width: 100vw;
+	height: 100vh;
+	top: 0%; left:0%;
+	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
+	position: fixed;
+	visibility: hidden;
+	z-index:11;
+	font-weight: bold;
+	text-align: center;
+}
+
+table#cls-chart{
+	margin: 5% auto;
+	font-weight: bold;
+	align-items: center;
+	width: auto;
+	color:#fff;
+}
+
+/* 使い方説明 */
+
+div#tutorial{ 
+    display: flex;
+	width: 50vh;
+	height: 100vh;
+	top: 0%; left: 0%;
+	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
+	position: fixed;
+	visibility: hidden;
+	z-index:11;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+img#cls_tutorial{
+	height: 70vh;
+    margin: auto;
+	left:-40;
+	object-fit: contain;
+	font-weight: bold;
+	align-items: center;
+	color:#fff;
+}
+
+/* 左寄せ専用タグ */
+left{
+	text-align: left;
+}
+
+/* https://excellent.ne.jp/homepage/6562/より */
+
+@media screen and (max-width:480px) {
+
+	/*　画面サイズが480px以下の場合ここの記述が適用される = スマホ用表示*/
+	div#zooms{
+		display:flex;
+		opacity: 80%;
+		position:absolute;
+		top: 15vh; right:8%;
+		scale: 1.5;
+	}
+
+	#map{
+		padding-top: 1.5%;
+		height: 88vh;
+		width: 99.9vw;
+		border-radius: 0;
+	}
+
+	div#information{
+		width: 90%;
+		margin: 40% 5%;
+	}
+	
+	
+
 }
