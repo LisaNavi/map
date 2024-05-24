@@ -128,3 +128,36 @@ function getImages(){
 }
 
 //ピンチ機能（仮）
+const touchContainer = document.getElementById('touchContainer');
+const image3 = document.getElementById('img');
+let touchScale = 1;
+
+let initialDistance = 0;
+let initialScale = 1;
+
+touchContainer.addEventListener('touchstart', function (event) {
+  if (event.touches.length === 2) {
+    initialDistance = getDistance(event.touches[0], event.touches[1]);
+    initialScale = touchScale;
+    event.preventDefault();
+  }
+});
+
+touchContainer.addEventListener('touchmove', function (event) {
+  if (event.touches.length === 2) {
+    const distance = getDistance(event.touches[0], event.touches[1]);
+    const scaleChange = distance / initialDistance;
+
+    touchScale = initialScale * scaleChange;
+    image3.style.transform = `scale(${touchScale})`;
+
+    event.preventDefault();
+  }
+});
+
+function getDistance(touch1, touch2) {
+  const x = touch1.pageX - touch2.pageX;
+  const y = touch1.pageY - touch2.pageY;
+
+  return Math.sqrt(x * x + y * y);
+}
