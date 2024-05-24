@@ -160,7 +160,7 @@ div#tutorial{
 }
 
 img#cls-tutorial{
-	width: auto;
+	width: 50%;
 	margin: 10% auto;
 	object-fit: contain;
 	font-weight: bold;
