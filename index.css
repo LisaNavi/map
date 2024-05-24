@@ -146,9 +146,9 @@ div#zooms{
 
 div#tutorial{ 
 	display: flex;
-	width: 50vh;
-	height: 50vh;
-	top: 30%; left: 43%;
+	width: 100vh;
+	height: 100vh;
+	top: 0%; left: 0%;
 	background: rgb(61, 61, 61, 0.9);
 	color:#fff;
 	position: fixed;
@@ -160,7 +160,7 @@ div#tutorial{
 }
 
 img#cls-tutorial{
-	margin: 20% auto;
+	margin: 5% auto;
 	object-fit: contain;
 	width: auto;
 	height: auto;
