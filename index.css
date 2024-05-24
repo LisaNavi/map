@@ -10,12 +10,15 @@ body{
 }
 
 /* Header (上部) */
-div#title{
+.title{
 	text-align: center;
-	width: 99.7vw;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
 	z-index:1;
 	font-size: 2rem;
-	height: 7.5vh;
+	padding: 0px 0px 0.1vh 0px;
+
 }
 
 .link{
@@ -28,7 +31,7 @@ div#title{
 
 /* map */
 #map{
-	height: 88vh;
+	height: 90vh;
 	width: 99.9vw;
 	border-radius: 0;
 	z-index: 0;
@@ -36,7 +39,8 @@ div#title{
 
 h3#floorid{
 	background: #ff9900;
-	margin: -2;
+	border-radius: 10px;
+	margin: 0;
 }
 
 /* UI */
