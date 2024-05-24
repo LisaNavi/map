@@ -1,4 +1,4 @@
-let pictures = new Array("https://lisanavi.github.io/map/img/1F.png","https://lisanavi.github.io/map/img/2F.png","https://lisanavi.github.io/map/img/3F.png","https://lisanavi.github.io/map/img/4F.png","https://LisaNavi.github.io/map/img/5F.png");
+let pictures = new Array("https://lisanavi.github.io/map/img/1F.png","https://lisanavi.github.io/map/img/2F.png","https://lisanavi.github.io/map/img/3F.png","https://lisanavi.github.io/map/img/4F.png");
 let img_height = 1350;
 let img_width = 1651;
 let zoomlevel = 1;
@@ -125,4 +125,39 @@ function getImages(){
         var img = document.createElement('img');
         img.src = pictures[i];
     }
+}
+
+//ピンチ機能（仮）
+const touchContainer = document.getElementById('container');
+const image3 = document.getElementById('image');
+let touchScale = 1;
+let initialDistance = 0;
+let initialScale = 1;
+
+touchContainer.addEventListener('touchstart', function (event) {
+  if (event.touches.length === 2) {
+    initialDistance = getDistance(event.touches[0], event.touches[1]);
+    initialScale = touchScale;
+    event.preventDefault();
+  }
+});
+
+touchContainer.addEventListener('touchmove', function (event) {
+  if (event.touches.length === 2) {
+    const distance = getDistance(event.touches[0], event.touches[1]);
+    const scaleChange = distance / initialDistance;
+
+    touchScale = initialScale * scaleChange;
+    // image.style.transform = `scale(${touchScale})`;
+    image.style.scale = touchScale;
+
+    event.preventDefault();
+  }
+});
+
+function getDistance(touch1, touch2) {
+  const x = touch1.pageX - touch2.pageX;
+  const y = touch1.pageY - touch2.pageY;
+
+  return Math.sqrt(x * x + y * y);
 }
