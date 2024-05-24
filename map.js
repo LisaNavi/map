@@ -135,29 +135,31 @@ let initialDistance = 0;
 let initialScale = 1;
 
 touchContainer.addEventListener('touchstart', function (event) {
-  if (event.touches.length === 2) {
-    initialDistance = getDistance(event.touches[0], event.touches[1]);
-    initialScale = touchScale;
-    event.preventDefault();
-  }
+    if (event.touches.length === 2) {
+        initialDistance = getDistance(event.touches[0], event.touches[1]);
+        initialScale = touchScale;
+        event.preventDefault();
+    }
 });
 
 touchContainer.addEventListener('touchmove', function (event) {
-  if (event.touches.length === 2) {
+    if (event.touches.length === 2) {
     const distance = getDistance(event.touches[0], event.touches[1]);
     const scaleChange = distance / initialDistance;
 
-    touchScale = initialScale * scaleChange;
-    // image.style.transform = `scale(${touchScale})`;
-    image.style.scale = touchScale;
+    if (initialScale * scaleChange >= 0.2 && initialScale * scaleChange <= 5.0) { // 拡大縮小制限
+        touchScale = initialScale * scaleChange;
+        // image.style.transform = `scale(${touchScale})`;
+        image.style.scale = touchScale;
 
-    event.preventDefault();
-  }
+        event.preventDefault();
+        }
+    }
 });
 
 function getDistance(touch1, touch2) {
-  const x = touch1.pageX - touch2.pageX;
-  const y = touch1.pageY - touch2.pageY;
+    const x = touch1.pageX - touch2.pageX;
+    const y = touch1.pageY - touch2.pageY;
 
-  return Math.sqrt(x * x + y * y);
+    return Math.sqrt(x * x + y * y);
 }
