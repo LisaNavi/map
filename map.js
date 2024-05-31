@@ -127,7 +127,7 @@ function getImages(){
     }
 }
 
-//ピンチ機能（仮）
+//ピンチ機能
 const touchContainer = document.getElementById('display');
 const image = document.getElementById('container');
 let touchScale = 1;
@@ -147,7 +147,7 @@ touchContainer.addEventListener('touchmove', function (event) {
     const distance = getDistance(event.touches[0], event.touches[1]);
     const scaleChange = distance / initialDistance;
 
-    if (initialScale * scaleChange >= 0.2 && initialScale * scaleChange <= 5.0) { // 拡大縮小制限
+    if (initialScale * scaleChange >= 0.2 && initialScale * scaleChange <= 4.0) { // 拡大縮小制限
         touchScale = initialScale * scaleChange;
         // image.style.transform = `scale(${touchScale})`;
         image.style.scale = touchScale;
