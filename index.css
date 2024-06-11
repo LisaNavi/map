@@ -264,6 +264,7 @@ button {
 	border: 0;
 	border-radius: 5px;
 	padding: 3px 10px;
+ user-select: none;
 }
 button:active {
 	background-color: rgb(170, 170, 170);
