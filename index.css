@@ -17,7 +17,7 @@ body{
 	width: 100vw;
 	z-index:1;
 	font-size: 2rem;
-	padding: 0px 0px 0.1vh 0px;
+	padding: 1vh 0px 0.1vh 0px;
 
 }
 
@@ -35,6 +35,7 @@ body{
 	width: 99.9vw;
 	border-radius: 0;
 	z-index: 0;
+	user-select: none;
 }
 
 h3#floorid{
@@ -89,7 +90,7 @@ a.btn_05 {
 	font-weight: bold;
 	border: 2px solid #9f9f9f;
 	color: #9f9f9f;
- user-select: none;
+	user-select: none;
 	transition: 0.3s;
 }
 a.btn_05:hover {
@@ -109,7 +110,7 @@ a.btn_01 {
 	font-weight: bold;
 	border: 2px solid #ff9900;
 	color: #ff9900;
- user-select: none;
+	user-select: none;
 	transition: 0.3s;
 }
 a.btn_01:hover {
@@ -129,7 +130,7 @@ a.btn_02 {
 	font-weight: bold;
 	border: 2px solid #6699ff;
 	color: #6699ff;
- user-select: none;
+	user-select: none;
 	transition: 0.3s;
 }
 a.btn_02:hover {
@@ -149,7 +150,7 @@ a.btn_03 {
 	font-weight: bold;
 	border: 2px solid #66cc33;
 	color: #66cc33;
- user-select: none;
+	user-select: none;
 	transition: 0.3s;
 }
 a.btn_03:hover {
@@ -168,7 +169,7 @@ a.btn_04 {
 	font-weight: bold;
 	border: 2px solid #ff3300;
 	color: #ff3300;
- user-select: none;
+	user-select: none;
 	transition: 0.3s;
 }
 a.btn_04:hover {
@@ -219,6 +220,7 @@ div#cls-table{
 	z-index:11;
 	font-weight: bold;
 	text-align: center;
+	user-select: none;
 }
 
 table#cls-chart{
@@ -269,7 +271,7 @@ button {
 	border: 0;
 	border-radius: 5px;
 	padding: 3px 10px;
- user-select: none;
+	user-select: none;
 }
 button:active {
 	background-color: rgb(170, 170, 170);
