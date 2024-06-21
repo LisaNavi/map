@@ -70,7 +70,19 @@ function info(num) {
     } else {
         desk.textContent = "この教室のインフォメーションはありません";
     }
+
+
+  
 }
+
+
+
+
+
+
+
+
+
 
 function cls_close() {
     if (typeof userdata["schedule"] == "undefined")
@@ -248,6 +260,12 @@ window.onresize = function() {
     ResizeFrame();
 }
 
+
+
+    
+
+
+
 window.addEventListener('DOMContentLoaded', function() {
     //クッキーのスケジュールを表の枠に代入する
     if (typeof userdata["schedule"] != "undefined") {
@@ -259,6 +277,10 @@ window.addEventListener('DOMContentLoaded', function() {
             }}
     }
     
+
+
+    
+
     // 1秒ごとに実行
     setInterval(() => {
         let now_daystamp = new Date();
