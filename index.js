@@ -49,6 +49,7 @@ function search(num){
             map.contentWindow.room = num;
             map.contentWindow.flchange(num-1);
             map.contentWindow.showup(num);
+            floornum = num[0] - 1;
             dis_number.textContent = num[0] + "F";
             dis_number.style.background=colors[num[0] - 1];
             if (data[num][4] != undefined)
