@@ -13,11 +13,8 @@ if (Cookies.get("data") != undefined)
     userdata = JSON.parse(Cookies.get("data"));
 }
 
-const now_daystamp = new Date();
-now_daystamp.setHours(0);
-now_daystamp.setMinutes(0);
-now_daystamp.setSeconds(0);
-var nowtime = (new Date().valueOf() - now_daystamp[Symbol.toPrimitive]('number'))/1000;
+var now = new Date();
+var nowtime = (now.getHours() * 3600) + (now.getMinutes() * 60) + now.getSeconds();
 var floornum = 0;
 var classtime = 1;
 var classday = new Date().getDay();
@@ -25,9 +22,9 @@ var classday = new Date().getDay();
 function floor(num)
 {
     floornum = num;
-    dis_number.textContent = (num+1) + "F";
-    dis_number.style.background=colors[num];
-    map.contentWindow.flchange(num);
+    dis_number.textContent = (floornum+1) + "F";
+    dis_number.style.background=colors[floornum];
+    map.contentWindow.flchange(floornum);
 }
 
 function search(num){
@@ -47,9 +44,9 @@ function search(num){
         }
         else {
             map.contentWindow.room = num;
+            floornum = num[0] - 1;
             map.contentWindow.flchange(num-1);
             map.contentWindow.showup(num);
-            floornum = num[0] - 1;
             dis_number.textContent = num[0] + "F";
             dis_number.style.background=colors[num[0] - 1];
             if (data[num][4] != undefined)
@@ -263,7 +260,7 @@ window.onresize = function() {
 
 
 
-    
+
 
 
 
@@ -284,11 +281,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // 1秒ごとに実行
     setInterval(() => {
-        let now_daystamp = new Date();
-        now_daystamp.setHours(0);
-        now_daystamp.setMinutes(0);
-        now_daystamp.setSeconds(0);
-        nowtime = (new Date().valueOf() - now_daystamp[Symbol.toPrimitive]('number'))/1000;
+        var now = new Date();
+        // 一日内時間を整数化 (0:00の場合0, 12:00の場合43200が返される)
+        nowtime = (now.getHours() * 3600) + (now.getMinutes() * 60) + now.getSeconds();
+
         if (classday != new Date().getDay()) { 
             classday = new Date().getDay(); //日付変更=曜日変更
         }
@@ -310,6 +306,7 @@ window.addEventListener('DOMContentLoaded', function() {
         else {
             classtime = 1;
         }
+        
         TimelineChange();
     }, 1000);
 });
