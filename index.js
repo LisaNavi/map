@@ -111,7 +111,7 @@ function info_close() {
 }
 
 function TimelineChange() {
-    if (typeof userdata["schedule"] != "undefined" && typeof userdata["schedule"][classday + "-" + classtime] != "undefined") //その時間に教室配置が登録されていれば
+    if (typeof userdata["schedule"][classday + "-" + classtime] != "undefined") //その時間に教室配置が登録されていれば
     {
         map.contentWindow.clschange(userdata["schedule"][classday + "-" + classtime]);
         // 週程ハイライトの教室番号を変更
@@ -257,7 +257,6 @@ window.onload = function() {
 window.onresize = function() {
     ResizeFrame();
 }
-
 
 
 
