@@ -52,7 +52,7 @@ function search(num){
             if (data[num][4] != undefined)
                 document.getElementById("info-btn").style.display = "inline";
             else
-                document.getElementById("info-btn").style.display = "hidden";
+                document.getElementById("info-btn").style.display = "none";
         }
     }
 }
@@ -71,17 +71,8 @@ function info(num) {
 
 
   
-}
-
-
-
-
-
-
-
-
-
-
+}
+
 function cls_close() {
     if (typeof userdata["schedule"] == "undefined")
          userdata["schedule"] = {};
