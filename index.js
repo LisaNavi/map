@@ -71,7 +71,7 @@ function info(num) {
 
 
   
-};
+}
 
 
 
