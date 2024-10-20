@@ -71,8 +71,10 @@ function info(num) {
 
 
   
-}
-
+};
+
+
+
 function cls_close() {
     if (typeof userdata["schedule"] == "undefined")
          userdata["schedule"] = {};
