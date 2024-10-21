@@ -50,9 +50,9 @@ function search(num){
             dis_number.textContent = num[0] + "F";
             dis_number.style.background=colors[num[0] - 1];
             if (data[num][4] != undefined)
-                document.getElementById("info-btn").style.display = "inline";
+                document.getElementById("info-btn").style.visibility = "visible";
             else
-                document.getElementById("info-btn").style.display = "none";
+                document.getElementById("info-btn").style.visibility = "hidden";
         }
     }
 }
