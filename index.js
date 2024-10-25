@@ -243,6 +243,14 @@ function ResizeFrame() {
     frame.style.width = sitewidth;
 }
 
+function Menu_Toggle() {
+    let menu_panel = document.getElementById("menu");
+    if (menu_panel.style.display == "none") {
+        menu_panel.style.display = "flex";
+    } else {
+        menu_panel.style.display = "none";
+    }
+}
 
 window.onload = function() {
     ResizeFrame();
