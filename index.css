@@ -91,7 +91,7 @@ body,p,ul,td,th{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 10px auto;
+	margin: 5px auto;
 }
 div.booth-item .booth-img {
 	margin: auto;
@@ -99,10 +99,13 @@ div.booth-item .booth-img {
 	height: auto;
 }
 div.booth-item .booth-text {
-	text-align: center;
-	vertical-align: middle;
+	text-align: left;
+	vertical-align: top;
 	line-height: 1.5rem;
-	margin: auto;
+	margin: auto 1em;
+}
+div.booth-item .delete-space {
+	margin: -3px;
 }
 div.booth-item button {
 	height: 10rem;
