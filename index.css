@@ -183,8 +183,9 @@ a.btn_05:hover {
 	color: #fff;
 	background: #9f9f9f;
 }
-a#info-btn {
-	display:none;
+
+#info-btn{
+	visibility: hidden;
 }
 
 /* 1F Orange*/
@@ -288,9 +289,7 @@ div#info-text{
 	margin-left: 3%;
 }
 
-#info-btn {
-	display:none;
-}
+
 
 /* 使い方説明 */
 
@@ -335,7 +334,7 @@ div#cls-table{
 	color:#fff;
 	position: fixed;
 	visibility: hidden;
-	z-index:11;
+	z-index:100;
 	font-weight: bold;
 	text-align: center;
 	user-select: none;
