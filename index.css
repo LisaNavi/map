@@ -331,7 +331,7 @@ div#cls-table{
 	color:#fff;
 	position: fixed;
 	visibility: hidden;
-	z-index:11;
+	z-index:100;
 	font-weight: bold;
 	text-align: center;
 	user-select: none;
