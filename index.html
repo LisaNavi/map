@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, user-scalable=no">
-    <title>LiSA Navi</title>
+    <title>LiSA Navi</title><br>
 
     <link rel="icon" type="image/png" href="icon.png">
     
@@ -15,14 +15,45 @@
   </head>
 
   
-  <body>
-    
+  <body style="overflow-y: hidden;">
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <div class="title">
-      <h3 style="line-height:0; margin-top: 1rem; margin-bottom: 1vh;">LiSA Navi</h3>
-      <a href="https://forms.gle/JtgFR2PNiqghsprb6" class="link" target="_blank" rel="noopener noreferrer">情報提供お願いします</a>
-      <h3 id="floorid">1F</h3>
+      <div style="padding: 10px 10px;">LiSA Navi</div>
+      <div id="floorid">1F</div>
+      <button style="font-weight: bold; font-size: 2rem;" onclick="Menu_Toggle()">≡</button>
+    </div>
+    <div id="menu">
+      <div style="height: 1rem;"></div>
+      <div>Menu</div>
+      <button onclick="Menu_Toggle()" class="spreadbtn">閉じる</button>
+      <div class="booth">
+        <div style="display: flex; justify-content: space-between; width: 80vw; margin:10px auto;">
+          <input id="booth-input" placeholder="団体名、企画名、階で検索できます 未入力ですべて表示"/>
+          <button>検索</button>
+        </div>
+        <div id="booth-list">
+          <div class="booth-item"> <!--ここでブース一個-->
+            <img class="booth-img" src="https://www.eventbiz.net/wp-content/uploads/2021/12/sub2.jpg">
+            <div class="booth-text">LiSA Archive<br><br><a href="https://lisanavi/github.io/archive/">ここにジャンプ</a><br>▶サイト説明◀<br>校内の写真を360°で見れるサイトです。</div>
+            <button onclick="search('insert here')" style="height:2rem; margin: auto; width:4rem;">GO</button>
+          </div>
+          <div class="booth-item"> <!--ここでブース一個-->
+            <img class="booth-img" src="img/icon.png">
+            <div class="booth-text">LiSA Navi<br><br><a href="https://lisanavi.github.io/map/">ここにジャンプ</a><br>▶サイト説明◀<br>LiSA校内のマップを見ることや、<br>教室の検索等ができるサイトです。</div>
+            <button onclick="search('insert here')" style="height:2rem; margin: auto; width:4rem;">GO</button>
+          </div>
+          <div class="booth-item"> <!--ここでブース一個-->
+            <img class="booth-img" src="https://www.eventbiz.net/wp-content/uploads/2021/12/sub2.jpg">
+            <div class="booth-text">▶企画名◀<br>これは一例<br>▶団体名◀<br><a href="https://gray-code.com/javascript/create-new-html-element/">ここを参考に複製する？</a><br>▶企画説明◀<br>insertAdjacentHTMLがよろし</div>
+            <button onclick="search('insert here')" style="height:2rem; margin: auto; width:4rem;">GO</button>
+          </div>
+        </div>
+      </div>
+      <button class="spreadbtn" style="height:3rem; font-size: larger; font-weight: bolder;" onclick="Url('https://docs.google.com/forms/d/e/1FAIpQLSfvY96CIyt1S9YSQlqNMndoUyvr1QrgFMBg1-6q8fglPAxoOA/viewform', false)">！！アンケートにご参加ください！！</button>
+      <button onclick="Url('https://lisanavi.github.io/map/', true)" class="spreadbtn">生徒用LiSA Navi</button>
     </div>
 
+    <br><br> <!--ここはマップ用の空白-->
     <iframe id="map" src="map.html" width="1000" height="1000" frameborder=0></iframe>
     <div id="zooms">
       <button onclick="map.contentWindow.zoomin()">+</button>

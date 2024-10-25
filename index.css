@@ -2,9 +2,6 @@
 body,p,ul,td,th{
     margin: 0;
     padding: 0;
-}
-
-body{
 	font-size: 15px;
 	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
@@ -13,12 +10,15 @@ body{
 .title{
 	text-align: center;
 	display: flex;
-	flex-direction: column;
+	position: fixed;
 	width: 100vw;
-	z-index:1;
+	height: 3rem;
+	z-index:20;
 	font-size: 2rem;
-	padding: 1vh 0px 0.1vh 0px;
-
+	font-weight: bold;
+	box-shadow: 0px 10px 15px black; 
+	margin: -1.1rem 0rem 0rem 0rem;
+	background: linear-gradient(rgb(196, 191, 191), white);
 }
 
 .link{
@@ -28,20 +28,103 @@ body{
 	margin-right: 0.5rem;
 	margin-left: 0.5rem;
 }
+/* menu */
+#menu {
+	top: 3rem;
+	height: 97rem;
+	width: 100vw;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	display: none;
+	z-index:10;
+	white-space: 10;
+	background: linear-gradient(rgb(207, 207, 207), white);
+	animation-name: left_slidein;
+	animation-duration: 0.3s;
+	animation-timing-function: cubic-bezier(0,0,0,1);
+}
+#menu .spreadbtn {
+	margin: 10px auto;
+	width: 80vw;
+	height: auto;
+}
+
+#menu .booth {
+	background: linear-gradient(#aaa, #fff);
+	margin: 10px auto;
+	width: 80vw;
+	height: 75vh;
+	border-radius: 5px;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+#menu .booth input {
+	width: 65vw;
+	margin: 10px auto;
+	height: 1.5rem;
+	font-size: 1rem;
+	text-align: center;
+}
+
+#menu .booth button {
+	width: 3rem;
+	margin: 10px auto;
+	height: 1.5rem;
+}
+
+#menu #booth-list {
+	display: flex;
+	flex-direction: column;
+}
+
+#booth-list div.booth-item {
+	background: #00000068;
+	color: #fff;
+	margin: 10px auto;
+	width: 75vw;
+	height: fit-content;
+	border-radius: 5px;
+	padding: 10px 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px auto;
+}
+div.booth-item .booth-img {
+	margin: auto;
+	width: 20vw;
+	height: auto;
+}
+div.booth-item .booth-text {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1.5rem;
+	margin: auto;
+}
+div.booth-item button {
+	height: 10rem;
+	width: 10rem;
+	margin: 10px auto;
+}
 
 /* map */
 #map{
-	height: 90vh;
+	height: 95vh;
 	width: 99.9vw;
 	border-radius: 0;
 	z-index: 0;
 	user-select: none;
 }
 
-h3#floorid{
+#floorid{
 	background: #ff9900;
 	border-radius: 10px;
-	margin: 0;
+	width: 5rem;
+	padding: 0.5rem 10px;
+	margin: 0 auto;
 }
 
 /* UI */
@@ -50,7 +133,7 @@ div#left-side {
 	background: rgba(0, 0, 0, 0.75);
 	padding: 5 5 5 5;
 	position:fixed;
-	bottom: 0rem; left:0;
+	bottom: 1rem; left:1rem;
 	display: flex;
 	flex-flow: column;
 	justify-content: left;
@@ -58,11 +141,11 @@ div#left-side {
 }
 
 div#right-side {
-	height:12rem;
+	height:auto;
 	padding: 5px 5px 5px 5px;
 	background: rgba(0, 0, 0, 0.75);
 	position:fixed;
-	bottom: 0; right:0;
+	bottom: 1rem; right:1rem;
 	display: flex;
 	flex-flow: column;
 	justify-content: right;
@@ -96,6 +179,9 @@ a.btn_05 {
 a.btn_05:hover {
 	color: #fff;
 	background: #9f9f9f;
+}
+a#info-btn {
+	display:none;
 }
 
 /* 1F Orange*/
@@ -199,36 +285,8 @@ div#info-text{
 	margin-left: 3%;
 }
 
-#info-btn{
-	visibility: hidden;
-}
-
-/* Schedule (週程表) */
-
-div#cls-table{
-	display: flex;
-	flex-direction: column;
-	justify-content: top;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	top: 0%; left:0%;
-	background: rgb(61, 61, 61, 0.9);
-	color:#fff;
-	position: fixed;
-	visibility: hidden;
-	z-index:11;
-	font-weight: bold;
-	text-align: center;
-	user-select: none;
-}
-
-table#cls-chart{
-	margin: 3% 0;
-	font-weight: bold;
-	align-items: center;
-	width: auto;
-	color:#fff;
+#info-btn {
+	display:none;
 }
 
 /* 使い方説明 */
@@ -298,6 +356,17 @@ button:active {
 
 	div#information{
 		width: 90%;
-		margin: 40% 5%;
+		margin: 10% 5%;
+	}
+}
+
+/* Animations */
+
+@keyframes left_slidein {
+	from {
+		left: 100vw;
+	} 
+	to {
+		left: 0vw;
 	}
 }
