@@ -69,6 +69,9 @@ function info(num) {
         desk.textContent = "この教室のインフォメーションはありません";
     }
 
+    if (Number.isInteger(num)){
+        document.getElementById("information").style.visibility = "hidden";
+    }
 
     
 }

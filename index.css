@@ -182,6 +182,10 @@ a.btn_05:hover {
 }
 
 #info-btn{
+	visibility: visible;
+}
+
+#information{
 	visibility: hidden;
 }
 
