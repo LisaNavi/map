@@ -184,9 +184,7 @@ a.btn_05:hover {
 	background: #9f9f9f;
 }
 
-#info-btn{
-	visibility: hidden;
-}
+
 
 /* 1F Orange*/
 a.btn_01 {
@@ -267,6 +265,10 @@ a.btn_04:hover {
 	background: #ff3300;
 }
 
+
+
+
+
 /* Room Information */
 
 div#information{
@@ -282,12 +284,22 @@ div#information{
 	font-weight: bold;
 }
 
+#info-pane{
+
+	visibility: hidden;
+}
+
 div#info-text{
 	vertical-align: middle;
 	white-space: pre-line;
 	color:#ffffff;
 	margin-left: 3%;
 }
+
+#info-btn{
+	visibility: hidden;
+}
+
 
 
 

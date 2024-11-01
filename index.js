@@ -50,10 +50,13 @@ function search(num){
             dis_number.textContent = num[0] + "F";
             dis_number.style.background=colors[num[0] - 1];
             if (data[num][4] != undefined)
-                document.getElementById("info-btn").style.visibility = "visible";
+                document.getElementById("info").style.visibility = "hidden";
+            if (data[num][4] != undefined)
+                document.getElementById("info-btn").style.visibility = "visible"
             else
-                document.getElementById("info-btn").style.visibility = "hidden";
+                document.getElementById("info-btn").style.visibility = "none";
         }
+        
     }
 }
 
@@ -69,10 +72,15 @@ function info(num) {
         desk.textContent = "この教室のインフォメーションはありません";
     }
 
-
-    
 }
 
+function inf(){
+
+    
+        alert("部屋番号を入力してください。");
+    
+
+}
 
 
 function cls_close() {
