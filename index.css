@@ -325,24 +325,7 @@ div#info-text{
 	background: #9f9f9f;
 }
 
-#btn_06 {
-	height: auto;
-	padding: 5px 5px 5px 5px;
-	background: rgba(0, 0, 0, 0.75);
-	position:absolute;
-	bottom: 1rem; right:1rem;
-	display: flex;
-	flex-flow: column;
-	justify-content: right;
-	top: 60px;
-	
-	z-index: 6;
-}
 
-#input{
-	width:75px; height: 2rem;
-	border: 2px solid #6699ff;
-}
 
 /* 使い方説明 */
 
