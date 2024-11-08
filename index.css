@@ -274,7 +274,7 @@ a.btn_04:hover {
 div#information{
 	width: 50vw;
 	height: fit-content;
-	top: 0%; left:0%;	
+	top: -150px; left:0%;	
 	background: rgb(61, 61, 61, 0.9);
 	position: fixed;
 	visibility: hidden;
@@ -300,6 +300,30 @@ div#info-text{
 	visibility: hidden;
 }
 
+#info {
+	position: relative;
+	display: inline;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 45px;
+	margin: auto;
+	padding: 0.2rem 0.3rem;
+	font-weight: bold;
+	border: 2px solid #9f9f9f;
+	color: #9f9f9f;
+	user-select: none;
+	transition: 0.3s;
+	left:center;
+	bottom: center;
+    z-index: 6;
+	top: -27;
+
+}
+#info:hover {
+	color: #9f9f9f;
+	background: #9f9f9f;
+}
 
 
 
