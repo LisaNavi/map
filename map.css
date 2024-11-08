@@ -53,3 +53,55 @@ img#image{
         opacity: 1;
     }
 }
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 10px;
+  }
+  
+  body {
+    margin: 0;
+    background: #fff;
+    color: #333;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 1em;
+    background-color: #fff;
+  }
+  
+  .outer {
+    position: relative;
+    width: clamp(300px, 100%, 600px);
+    height: 400px;
+    overflow: hidden;
+    border: 3px solid #555;
+    border-radius: 5px;
+    background-color: #eee;
+  }
+  
+  #panzoom {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #panzoom img {
+    width: auto;
+    height: auto;
+    vertical-align: bottom;
+  }
