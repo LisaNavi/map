@@ -1,0 +1,11 @@
+a.roombuttons{
+color: aqua;
+display: inline;
+visibility: visible;
+z-index: 6;
+}
+
+a.a{
+    position:relative;
+    top: -150px;
+}
