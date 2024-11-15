@@ -125,9 +125,10 @@ div.booth-item button {
 #floorid{
 	background: #ff9900;
 	border-radius: 10px;
-	width: 5rem;
+	width: auto;
 	padding: 0.5rem 10px;
 	margin: 0 auto;
+	vertical-align: top;
 }
 
 /* UI */
