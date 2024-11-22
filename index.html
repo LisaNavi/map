@@ -24,7 +24,7 @@
     </div>
     <div id="menu">
       <div style="height: 1rem;"></div>
-      <h1>Menu</h1>
+      <h1 class="delete-space;">Menu</h1>
       <button onclick="Menu_Toggle()" class="spreadbtn">閉じる</button>
       <div class="booth">
         <div style="display: flex; justify-content: space-between; width: 80vw; margin:10px auto;">
@@ -48,7 +48,7 @@
               <h4 class="delete-space">サイト説明</h4>
               校内の写真を360°で見れるサイトです。<br>現在開発中...<br>
             </div>
-            <button onclick="location.href='https://lisanavi.github.io/archive/'" style="height:2rem; margin: auto; width:4rem;">GO</button>
+            <button onclick="location.href='https://lisanavi.github.io/map/'" style="height:2rem; margin: auto; width:4rem;">GO</button>
           </div>
           <div class="booth-item"> <!--ここでブース一個-->
             <img class="booth-img" src="img/icon.png">
@@ -106,14 +106,12 @@
       <div id="info-text">
         <left id="desk-num">教室番号</left>
         <left id="desk">テスト</left>
+        <img href="javascript:data[num][5]"  id="png">
       </div>
+      
       <br>
       <center style="font-size: 80%; margin-bottom: 15%; color:#fff;">パネルをタッチすると閉じます</center>
     </div>
-
-    <div id="roombuttons">
-      <button type="button" id="a" onclicl="javascript:info(document.getElementById('222').value)" >aaa</button>
-    </div>  
 
     <div id="cls-table">
       <table border="2" id="cls-chart">
@@ -137,7 +135,7 @@
       </div>
     </div>
   </body>
-  <link rel="stylesheet" type="text/css" href="roombuttons.css">
+  
   <link rel="stylesheet" type="text/css" href="index.css" />
   <script src="data.js"></script>
   <script src="js.cookie.js"></script>
