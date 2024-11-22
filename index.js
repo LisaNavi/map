@@ -76,7 +76,6 @@ function info(num) {
 
 }
 
-//img.textcontent =data [num][4];   htmlに画像表示関連の新規id等を追加//
 
 function inf(){
 
