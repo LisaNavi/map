@@ -64,10 +64,12 @@ function info(num) {
     var info_pane = document.getElementById("information");
     var desk = document.getElementById("desk");
     var desk_num = document.getElementById("desk-num");
+    var img = document.getElementById("png");
     info_pane.style.visibility = "visible";
     if (data[num][4] != undefined) {
         desk_num.textContent = num + " 教室";
         desk.textContent = data[num][4];
+        img.src=data[num][5];
     } else {
         desk.textContent = "この教室のインフォメーションはありません";
     }
