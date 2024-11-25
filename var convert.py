@@ -372,6 +372,8 @@ base_data = {'101': [1451,63,1548,170,"この教室の説明はありません",
   '音楽準備室':[1011,670,1064,755]}
 # ここに元データ
 
+import json
+
 converted_data = {} # 変換後データ
 for room in base_data:
     tmp = base_data[room]
@@ -381,4 +383,4 @@ for room in base_data:
         converted_data[room]["info"] = tmp[4]
         if len(tmp) >= 6:
             converted_data[room]["img"] = tmp[5]
-print(converted_data)
+print(json.dumps(converted_data,ensure_ascii=False,indent=4))
