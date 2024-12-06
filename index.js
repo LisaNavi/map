@@ -209,7 +209,7 @@ function importCSV() {
                     }
                 }
                 if (skippedroom != 0) {
-                    alert(skippedroom + "個の部屋は存在しないため読み込みませんでした。");
+                    alert(skippedroom + "この部屋は存在しないため読み込みませんでした。");
                 }
             }
         }
