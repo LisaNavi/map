@@ -73,8 +73,8 @@ function info(num) {
     } else {
         desk.textContent = "この教室のインフォメーションはありません";
     }
-
 }
+
 
 
 function inf(){
