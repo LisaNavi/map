@@ -128,78 +128,34 @@ function getImages(){
 }
 
 //ピンチ機能
-const panzoomEl = document.getElementById('panzoom');
-const instance = panzoom(panzoomEl, {
-  smoothScroll: true,
-  //transformOrigin: {x: 0.5, y: 0.5}, // change center point of wheel zoom.
-  bounds: true,
-  boundsPadding: 0.05,
-  maxZoom: 2.5,
-  minZoom: 0.2,
-  initialZoom: 1,
-  zoomDoubleClickSpeed: 1 // disable doubleclick zoom
-  //beforeWheel: function(e) {return true;} // disable wheel zoom
-});
+const touchContainer = document.getElementById('container');
+const image = document.getElementById('image');
+let touchScale = 1;
+let initialDistance = 0;
+let initialScale = 1;
+touchContainer.addEventListener('touchstart', function (event) {
+    if (event.touches.length === 2) {
+      initialDistance = getDistance(event.touches[0], event.touches[1]);
+      initialScale = touchScale;
+      event.preventDefault();
+    }
+  });
 
-// cancel a-tag event when pan.
-let isPan = false;
-instance.on('pan', function (e) {
-  isPan = true;
-});
-instance.on('panend', function (e) {
-  setTimeout(function () {
-    isPan = false;
-  }, 1);
-});
+  touchContainer.addEventListener('touchmove', function (event) {
+    if (event.touches.length === 2) {
+      const distance = getDistance(event.touches[0], event.touches[1]);
+      const scaleChange = distance / initialDistance;
 
-panzoomEl.addEventListener('click', function (e) {
-  if (isPan && e.srcElement.nodeName === 'A') e.preventDefault();
-});
+      touchScale = initialScale * scaleChange;
+      image3.style.transform = `scale(${touchScale})`;
 
-// zoom events
-const zoomInEl = document.getElementById('zoomIn');
-const zoomOutEl = document.getElementById('zoomOut');
-const zoomInOut = (isIn) => {
-  const tf = instance.getTransform();
-  const scale = 1 + 0.25 * (isIn ? 1 : -1);
-  instance.zoomTo(panzoomEl.clientWidth / 2, panzoomEl.clientHeight / 2, scale);
-};
-zoomInEl.addEventListener('click', (e) => {
-  e.preventDefault();
-  zoomInOut(true);
-});
+      event.preventDefault();
+    }
+  });
 
-zoomInEl.addEventListener('touchend', () => {
-  zoomInOut(true);
-});
+  function getDistance(touch1, touch2) {
+    const x = touch1.pageX - touch2.pageX;
+    const y = touch1.pageY - touch2.pageY;
 
-zoomOutEl.addEventListener('click', (e) => {
-  e.preventDefault();
-  zoomInOut(false);
-});
-
-zoomOutEl.addEventListener('touchend', () => {
-  zoomInOut(false);
-});
-
-// zoom adjustment after img loaded.
-const imgEl = panzoomEl.getElementsByTagName('img')[0];
-const image = new Image();
-image.onload = function () {
-  const dw = panzoomEl.clientWidth / this.naturalWidth;
-  const dh = panzoomEl.clientHeight / this.naturalHeight;
-  const scale = Math.min(dw, dh);
-  instance.zoomAbs(
-    panzoomEl.clientWidth / 2,
-    panzoomEl.clientHeight / 2,
-    scale
-  );
-  //instance.zoomAbs(dw > dh ? (panzoomEl.clientWidth) / 2 : 0, dw < dh ? panzoomEl.clientHeight / 2 : 0, scale);
-};
-image.src = imgEl.src;
-
-// output zoom string.
-const printZoomEl = document.getElementById('print-zoom');
-instance.on('zoom', function (e) {
-  printZoomEl.innerText = instance.getTransform().scale;
-});
+    return Math.sqrt(x * x + y * y);
+  }
