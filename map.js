@@ -136,7 +136,7 @@ let initialDistance = 0;
 let initialScale = 1;
 
 touchContainer.addEventListener('touchstart', function (event) {
-    if (event.touches.length == 2) {
+    if (event.touches.length === 2) {
       initialDistance = getDistance(event.touches[0], event.touches[1]);
       initialScale = touchScale;
       event.preventDefault();
@@ -144,7 +144,7 @@ touchContainer.addEventListener('touchstart', function (event) {
   });
 
   touchContainer.addEventListener('touchmove', function (event) {
-    if (event.touches.length == 2) {
+    if (event.touches.length === 2) {
       const distance = getDistance(event.touches[0], event.touches[1]);
       const scaleChange = distance / initialDistance;
 
