@@ -288,6 +288,7 @@ div#information{
 #info-pane{
 
 	visibility: hidden;
+	
 }
 
 div#info-text{
@@ -423,6 +424,7 @@ button:active {
 	div#information{
 		width: 90%;
 		margin: 10% 5%;
+		top:45px;
 	}
 }
 
