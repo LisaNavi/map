@@ -426,6 +426,13 @@ button:active {
 		margin: 10% 5%;
 		top:45px;
 	}
+
+	#png{
+
+		width: 330px;
+		height: 280px;
+	
+	}
 }
 
 /* Animations */
