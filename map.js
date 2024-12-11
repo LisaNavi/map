@@ -131,7 +131,6 @@ function getImages(){
 const touchContainer = document.getElementById('display');
 const image = document.getElementById('container');
 let touchScale = 1;
-
 let initialDistance = 0;
 let initialScale = 1;
 
@@ -149,7 +148,7 @@ touchContainer.addEventListener('touchstart', function (event) {
       const scaleChange = distance / initialDistance;
 
       touchScale = initialScale * scaleChange;
-      image.style.transform = `scale(${touchScale})`;
+      image.style.transform = touchScale;
 
       event.preventDefault();
     }
