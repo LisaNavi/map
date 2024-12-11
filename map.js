@@ -148,7 +148,7 @@ touchContainer.addEventListener('touchstart', function (event) {
       const scaleChange = distance / initialDistance;
 
       touchScale = initialScale * scaleChange;
-      image.style.transform = touchScale;
+      image.style.scale = touchScale;
 
       event.preventDefault();
     }
