@@ -91,21 +91,27 @@ body,p,ul,td,th{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 5px 3em;
+	margin: 5px auto;
 }
 div.booth-item .booth-img {
+	text-align: left;
 	margin: auto;
+	margin-left:1vw;
 	width: 10vw;
 	height: auto;
 }
 div.booth-item .booth-text {
+	width: 60vw;
+	height: fit-content;
 	text-align: left;
-	vertical-align: top;
+	vertical-align: middle;
 	line-height: 1.5rem;
-	margin: auto 1em;
+	margin: auto;
+	margin-left: 1vw;
 }
 div.booth-item .delete-space {
-	margin: -3px;
+	margin-top: -3px;
+	margin-bottom: -3px;
 }
 div.booth-item button {
 	height: 10rem;
