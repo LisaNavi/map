@@ -167,6 +167,7 @@ div#left-side {
 	flex-flow: column;
 	justify-content: left;
 	z-index:5;
+	border-radius: 0.5rem;
 }
 
 div#right-side {
@@ -179,6 +180,7 @@ div#right-side {
 	flex-flow: column;
 	justify-content: right;
 	z-index:5;
+	border-radius: 0.5rem;
 }
 
 #input{
@@ -204,6 +206,7 @@ a.btn_05 {
 	color: #9f9f9f;
 	user-select: none;
 	transition: 0.3s;
+	border-radius: 0.5rem;
 }
 a.btn_05:hover {
 	color: #fff;
@@ -226,6 +229,7 @@ a.btn_01 {
 	color: #ff9900;
 	user-select: none;
 	transition: 0.3s;
+	border-radius: 0.5rem;
 }
 a.btn_01:hover {
 	color: #fff;
@@ -246,6 +250,7 @@ a.btn_02 {
 	color: #6699ff;
 	user-select: none;
 	transition: 0.3s;
+	border-radius: 0.5rem;
 }
 a.btn_02:hover {
 	color: #fff;
@@ -266,6 +271,7 @@ a.btn_03 {
 	color: #66cc33;
 	user-select: none;
 	transition: 0.3s;
+	border-radius: 0.5rem;
 }
 a.btn_03:hover {
 	color: #fff;
@@ -285,6 +291,7 @@ a.btn_04 {
 	color: #ff3300;
 	user-select: none;
 	transition: 0.3s;
+	border-radius: 0.5rem;
 }
 a.btn_04:hover {
 	color: #fff;
