@@ -50,9 +50,9 @@ function search(num){
             map.contentWindow.showup(num);
             dis_number.textContent = num[0] + "F";
             dis_number.style.background=colors[num[0] - 1];
-            if (data[num][4] != undefined)
+            if (data[num]["info"] != undefined)
                 document.getElementById("info").style.visibility = "hidden";
-            if (data[num][4] != undefined)
+            if (data[num]["info"] != undefined)
                 document.getElementById("info-btn").style.visibility = "visible"
             else
                 document.getElementById("info-btn").style.visibility = "none";
@@ -67,10 +67,10 @@ function info(num) {
     var desk_num = document.getElementById("desk-num");
     var img = document.getElementById("png");
     info_pane.style.visibility = "visible";
-    if (data[num][4] != undefined) {
+    if (data[num]["info"] != undefined) {
         desk_num.textContent = num + " 教室";
-        desk.textContent = data[num][4];
-        img.src=data[num][5];
+        desk.textContent = data[num]["info"];
+        img.src=data[num]["img"];
     } else {
         desk.textContent = "この教室のインフォメーションはありません";
     }

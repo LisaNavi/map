@@ -25,10 +25,10 @@ function showup(rn)
 
     // lefttop y - rightbottom y = height
     
-    h1.style.width = ( data[room][2] - data[room][0] ) + "px";
-    h1.style.height = ( data[room][3] - data[room][1] ) + "px";
-    h1.style.left = data[room][0] + "px";
-    h1.style.top = data[room][1] + "px";
+    h1.style.width = ( data[room]["pos"][2] - data[room]["pos"][0] ) + "px";
+    h1.style.height = ( data[room]["pos"][3] - data[room]["pos"][1] ) + "px";
+    h1.style.left = data[room]["pos"][0] + "px";
+    h1.style.top = data[room]["pos"][1] + "px";
     h1.style.visibility = "visible";
     h1.classList.add("show");
     h1.style.zIndex = 1;
@@ -46,10 +46,10 @@ function flchange(num)
     {
         if (h1.style.visibility == "hidden") {
             // 大きさを計算して座標配置
-            h1.style.width = ( data[room][2] - data[room][0] ) + "px";
-            h1.style.height = ( data[room][3] - data[room][1] ) + "px";
-            h1.style.left = data[room][0] + "px";
-            h1.style.top = data[room][1] + "px";
+            h1.style.width = ( data[room]["pos"][2] - data[room]["pos"][0] ) + "px";
+            h1.style.height = ( data[room]["pos"][3] - data[room]["pos"][1] ) + "px";
+            h1.style.left = data[room]["pos"][0] + "px";
+            h1.style.top = data[room]["pos"][1] + "px";
             h1.style.visibility = "visible";
             h1.classList.add("show");
             h1.style.zIndex = 1;
@@ -67,10 +67,10 @@ function flchange(num)
     {
         if (h2.style.visibility == "hidden") {
             // 大きさを計算して座標配置
-            h2.style.width = ( data[dayroom][2] - data[dayroom][0] ) + "px";
-            h2.style.height = ( data[dayroom][3] - data[dayroom][1] ) + "px";
-            h2.style.left = data[dayroom][0] + "px";
-            h2.style.top = data[dayroom][1] + "px";
+            h2.style.width = ( data[dayroom]["pos"][2] - data[dayroom]["pos"][0] ) + "px";
+            h2.style.height = ( data[dayroom]["pos"][3] - data[dayroom]["pos"][1] ) + "px";
+            h2.style.left = data[dayroom]["pos"][0] + "px";
+            h2.style.top = data[dayroom]["pos"][1] + "px";
             h2.style.visibility = "visible";
             h2.classList.add("show");
             h2.style.zIndex = 1;
@@ -89,10 +89,10 @@ function clschange(num)
     if (dayroom != "" && dayroom[0] == floornum+1 && h2.style.visibility == "hidden")
     {
         // 大きさを計算して座標配置
-        h2.style.width = ( data[dayroom][2] - data[dayroom][0] ) + "px";
-        h2.style.height = ( data[dayroom][3] - data[dayroom][1] ) + "px";
-        h2.style.left = data[dayroom][0] + "px";
-        h2.style.top = data[dayroom][1] + "px";
+        h2.style.width = ( data[dayroom]["pos"][2] - data[dayroom]["pos"][0] ) + "px";
+        h2.style.height = ( data[dayroom]["pos"][3] - data[dayroom]["pos"][1] ) + "px";
+        h2.style.left = data[dayroom]["pos"][0] + "px";
+        h2.style.top = data[dayroom]["pos"][1] + "px";
         h2.style.visibility = "visible";
         h2.classList.add("show");
         h2.style.zIndex = 1;
