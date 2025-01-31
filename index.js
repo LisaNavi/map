@@ -5,6 +5,7 @@ let panel = document.getElementById("information");
 let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
 let tutorial = document.getElementById("tutorial");
+let notify_text = document.getElementById("notify-text");
 
 // クッキーから読み込み
 let userdata = {};
@@ -14,9 +15,9 @@ if (Cookies.get("data") != undefined)
 }
 
 var now = new Date();
-var nowtime = (now.getHours() * 3600) + (now.getMinutes() * 60) + now.getSeconds();
+var nowtime = 0;
 var floornum = 0;
-var classtime = 1;
+var classtime = 0;
 var classday = new Date().getDay();
 
 function floor(num)
@@ -119,7 +120,8 @@ function TimelineChange() {
     {
         map.contentWindow.clschange(userdata["schedule"][classday + "-" + classtime]);
         // 週程ハイライトの教室番号を変更
-        dis_number.textContent = (floornum+1) + "F  次の授業教室:" + userdata["schedule"][classday + "-" + classtime];
+        notify_text.textContent = "次の授業教室は " + userdata["schedule"][classday + "-" + classtime] + " です";
+        Notify_Toggle(true);
         dis_number.style.background=colors[floornum];
     }
     
@@ -263,6 +265,15 @@ function Menu_Toggle() {
     }
 }
 
+function Notify_Toggle(which) {
+    let notify = document.getElementById("notify");
+    if (which == true) {
+        notify.style.display = "flex";
+    } else if (which == false){
+        notify.style.display = "none";
+    }
+}
+
 window.onload = function() {
     ResizeFrame();
 }
@@ -285,7 +296,6 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
             }}
     }
-    
 
 
     
@@ -293,6 +303,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // 1秒ごとに実行
     setInterval(() => {
         var now = new Date();
+        var tmp = classtime + " " + classday;
         // 一日内時間を整数化 (0:00の場合0, 12:00の場合43200が返される)
         nowtime = (now.getHours() * 3600) + (now.getMinutes() * 60) + now.getSeconds();
 
@@ -318,7 +329,7 @@ window.addEventListener('DOMContentLoaded', function() {
             classtime = 1;
         }
         
-        TimelineChange();
+        if (tmp != classtime + " " + classday) TimelineChange(); /* 変更があったら表示 */
     }, 1000);
 });
 
