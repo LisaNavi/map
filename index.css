@@ -404,18 +404,20 @@ div#cls-table{
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	width: 25rem;
-	height: 25rem;
-	top: 4rem;
+	width: 22rem;
+	height: 23rem;
+	top: 8rem;
 	background: rgb(61, 61, 61, 0.9);
 	color:#fff;
-	position: absolute;
+	position: fixed;
 	visibility: hidden;
 	z-index:100;
 	font-weight: bold;
 	text-align: center;
 	user-select: none;
 	border-radius: 1rem;
+	left: 50%;
+  	transform: translateX(-50%);
 }
 
 /* 左寄せ専用タグ */
