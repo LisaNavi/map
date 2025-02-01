@@ -258,7 +258,7 @@ function exportCSV() {
     let blob = new Blob([bom, exportStr],{type:"text/csv"});
     let link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = "週程表.csv";
+    link.download = "lisanavi_schedule.csv";
     link.click();
 }
 
