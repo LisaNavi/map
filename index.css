@@ -401,20 +401,21 @@ img#cls_tutorial{
 /*週程表*/
 div#cls-table{
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
-	justify-content: top;
 	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	top: 0%; left:0%;
+	width: 25rem;
+	height: 25rem;
+	top: 4rem;
 	background: rgb(61, 61, 61, 0.9);
 	color:#fff;
-	position: fixed;
+	position: absolute;
 	visibility: hidden;
 	z-index:100;
 	font-weight: bold;
 	text-align: center;
 	user-select: none;
+	border-radius: 1rem;
 }
 
 /* 左寄せ専用タグ */

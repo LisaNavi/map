@@ -91,7 +91,12 @@ function cls_close() {
     if (typeof userdata["schedule"] == "undefined")
          userdata["schedule"] = {};
     for (var day=1;day<=5;day++) {
-        for (var time=1;time<=6;time++) {
+        for (var time=1;time<=4;time++) {
+            if (time == 4){
+                if (day==1 || day==2 || day==3){
+                    continue;
+                }
+            }
             temp = document.getElementById("cls" + day + "-" + time).value;
             if (typeof data[temp] != "undefined") { //教室データに存在する場合登録
                 userdata["schedule"][day + "-" + time] = temp;
@@ -144,9 +149,7 @@ let csvformat = [["講時/曜日","月","火","水","木","金"],
                         ["1","","","","",""],
                         ["2","","","","",""],
                         ["3","","","","",""],
-                        ["4","","","","",""],
-                        ["5","","","","",""],
-                        ["6","","","","",""]];
+                        ["4","","","","",""],];
 let upload = document.getElementById("csvupload");
 upload.addEventListener("change", importCSV);
 
@@ -176,16 +179,16 @@ function importCSV() {
         let lines = csv.split("\r\n");
         let skippedroom = 0;
 
-        if (lines.length < 7) {
+        if (lines.length < 5) {
             csvReadError = "wrongformat";
         }
         else {
                 // 1行ごとに処理
                 for (let i = 0; i < lines.length; ++i) {
                     let cells = lines[i].split(",");
-                    for (let i=0 ;i < 6;i++) {
-                        if (typeof cells[i] == "undefined") {
-                            cells[i] = "";
+                    for (let j=0 ;j < 5;j++) {
+                        if (typeof cells[j] == "undefined") {
+                            cells[j] = "";
                         }
                     }
                     csvArray.push(cells);
@@ -200,8 +203,13 @@ function importCSV() {
                 alert("エラーが発生しました: " + csvReadError);
             } else {
                 for (let d=1; d<6; d++) {
-                    for (let t=1; t<7; t++) {
+                    for (let t=1; t<5; t++) {
                         // 存在しない部屋はスキップ
+                        if (t == 4){
+                            if (d==1 || d==2 || d==3){
+                                continue;
+                            }
+                        }
                         if (typeof data[csvArray[t][d]] == "undefined") {
                             document.getElementById("cls" + d + "-" + t).value =  "";
                             skippedroom++;
@@ -223,7 +231,12 @@ function exportCSV() {
     let cell = "";
     let skippedroom = 0;
     for (let d=1; d<6; d++) {
-        for(let t=1; t<7; t++) {
+        for(let t=1; t<5; t++) {
+            if (t == 4){
+                if (d==1 || d==2 || d==3){
+                    continue;
+                }
+            }
             cell = document.getElementById("cls" + d + "-" + t).value;
             if (typeof data[cell] == "undefined") {
                 exportArray[t][d] = "";
@@ -237,7 +250,7 @@ function exportCSV() {
         alert("存在しない教室が"+ skippedroom + "個あったためスキップされました。");
     }
     let exportTmp = [];
-    for (let t=0; t<7; t++) {
+    for (let t=0; t<5; t++) {
         exportTmp[t] = exportArray[t].join(',');
     }
     let exportStr = exportTmp.join("\r\n");
@@ -290,7 +303,12 @@ window.addEventListener('DOMContentLoaded', function() {
     //クッキーのスケジュールを表の枠に代入する
     if (typeof userdata["schedule"] != "undefined") {
         for (let day=1;day<=5;day++) {
-            for (let time=1;time<=6;time++) {
+            for (let time=1;time<=4;time++) {
+                if (time == 4){
+                    if (day==1 || day==2 || day==3){
+                        continue;
+                    }
+                }
                 if (typeof userdata["schedule"][day + "-" + time] != "undefined") {
                     document.getElementById("cls" + day + "-" + time).value = userdata["schedule"][day + "-" + time];
                 }
@@ -311,18 +329,12 @@ window.addEventListener('DOMContentLoaded', function() {
             classday = new Date().getDay(); //日付変更=曜日変更
         }
         else if (nowtime >= 54000) {
-            classtime = 6;
-        }
-        else if (nowtime >= 45300) {
-            classtime = 5;
-        }
-        else if (nowtime >= 41700) {
             classtime = 4;
         }
-        else if (nowtime >= 38400) {
+        else if (nowtime >= 45300) {
             classtime = 3;
         }
-        else if (nowtime >= 34800) {
+        else if (nowtime >= 38400) {
             classtime = 2;
         }
         else {

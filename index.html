@@ -103,7 +103,7 @@
       <a href="javascript:cls_tutorialopen()" class="btn_05" style="margin-bottom: 0.5rem; margin-top: -2.8rem;">使い方</a>
 
 
-      <a href="javascript:cls_open()" class="btn_05" style="margin-bottom: 0.5rem;">週程表</a>
+      <a href="javascript:cls_open()" class="btn_05" style="margin-bottom: 0.5rem;">時間割</a>
     </div>
     
 
@@ -115,7 +115,6 @@
       </div>
     </div> 
     
-  </div>
    <div id="information">
       <div id="info-text">
         <left id="desk-num">教室番号</left>
@@ -128,23 +127,23 @@
     </div>
 
     <div id="cls-table">
-      <table border="2" id="cls-chart">
+      <p style="text-align: center; font-size: 1.5rem; padding: 0%; margin-bottom: -2rem; margin-top: -0.5rem;">時間割</p>
+      <table border="2" id="cls-chart" style="margin-top: 2rem; color: #FFF;">
         <tr><th>限\曜</th> <th>月曜日</th> <th>火曜日</th> <th>水曜日</th> <th>木曜日</th> <th>金曜日</th></tr>
-        <tr><th>1限</th><td><input id="cls1-1" size="2" maxlength="3"></td><td><input id="cls2-1" size="2" maxlength="3"><td><input id="cls3-1" size="2" maxlength="3"></td><td><input id="cls4-1" size="2" maxlength="3"></td><td><input id="cls5-1" size="2" maxlength="3"></td></tr>
-        <tr><th>2限</th><td><input id="cls1-2" size="2" maxlength="3"></td><td><input id="cls2-2" size="2" maxlength="3"><td><input id="cls3-2" size="2" maxlength="3"></td><td><input id="cls4-2" size="2" maxlength="3"></td><td><input id="cls5-2" size="2" maxlength="3"></td></tr>
-        <tr><th>3限</th><td><input id="cls1-3" size="2" maxlength="3"></td><td><input id="cls2-3" size="2" maxlength="3"><td><input id="cls3-3" size="2" maxlength="3"></td><td><input id="cls4-3" size="2" maxlength="3"></td><td><input id="cls5-3" size="2" maxlength="3"></td></tr>
-        <tr><th>4限</th><td><input id="cls1-4" size="2" maxlength="3"></td><td><input id="cls2-4" size="2" maxlength="3"><td><input id="cls3-4" size="2" maxlength="3"></td><td><input id="cls4-4" size="2" maxlength="3"></td><td><input id="cls5-4" size="2" maxlength="3"></td></tr>
-        <tr><th>5限</th><td><input id="cls1-5" size="2" maxlength="3"></td><td><input id="cls2-5" size="2" maxlength="3"><td><input id="cls3-5" size="2" maxlength="3"></td><td><input id="cls4-5" size="2" maxlength="3"></td><td><input id="cls5-5" size="2" maxlength="3"></td></tr>
-        <tr><th>6限</th><td><input id="cls1-6" size="2" maxlength="3"></td><td><input id="cls2-6" size="2" maxlength="3"><td><input id="cls3-6" size="2" maxlength="3"></td><td><input id="cls4-6" size="2" maxlength="3"></td><td><input id="cls5-6" size="2" maxlength="3"></td></tr>
+        <tr><th>1限</th><td><input id="cls1-1" size="2" maxlength="3" placeholder="1a"></td><td><input id="cls2-1" size="2" maxlength="3" placeholder="4a"></td><td><input id="cls3-1" size="2" maxlength="3" placeholder="2b"></td><td><input id="cls4-1" size="2" maxlength="3" placeholder="3b"></td><td><input id="cls5-1" size="2" maxlength="3" placeholder="6b"></td></tr>
+        <tr><th>2限</th><td><input id="cls1-2" size="2" maxlength="3" placeholder="2a"></td><td><input id="cls2-2" size="2" maxlength="3" placeholder="5a"></td><td><input id="cls3-2" size="2" maxlength="3" placeholder="1b"></td><td><input id="cls4-2" size="2" maxlength="3" placeholder="4b"></td><td><input id="cls5-2" size="2" maxlength="3" placeholder="7b"></td></tr>
+        <tr><th>3限</th><td><input id="cls1-3" size="2" maxlength="3" placeholder="3a"></td><td><input id="cls2-3" size="2" maxlength="3" placeholder="6a"></td><td><input id="cls3-3" size="2" maxlength="3" placeholder="7a"></td><td><input id="cls4-3" size="2" maxlength="3" placeholder="5b"></td><td><input id="cls5-3" size="2" maxlength="3" placeholder="8a"></td></tr>
+        <tr><th>4限</th><td>                                                           </td><td><td>                                                                                                                           </td><td><input id="cls4-4" size="2" maxlength="3" placeholder="LHR"></td><td><input id="cls5-4" size="2" maxlength="3" placeholder="課研"></td></tr>
       </table>
       ※閉じるを押すとcookieに保存されます。<br>
+      ※旧週程表との互換性はありません。
       <div class="cls-buttons">
         <center style="padding: 20px 0;">
           <button onclick="document.getElementById('csvupload').click()">インポート</button>
           <input type="file" id="csvupload" accept=".csv" style="display:none;">
           <button onclick="exportCSV()">エクスポート</button>
         </center>
-        <button type="button" onclick="javascript:cls_close()" style="padding: 5px 75px;">閉じる
+        <button type="button" onclick="javascript:cls_close()" style="padding: 5px 75px;">閉じる</button>
         
       </div>
     </div>
