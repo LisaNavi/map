@@ -64,13 +64,13 @@ div#notify{
 	animation-duration: 0.3s;
 	animation-timing-function: cubic-bezier(0,0,0,1);
 }
-#menu .spreadbtn {
+#menu > .spreadbtn {
 	margin: 10px auto;
 	width: 80vw;
 	height: auto;
 }
 
-#menu .booth {
+#menu > .booth {
 	background: linear-gradient(#aaa, #fff);
 	margin: 10px auto;
 	width: 80vw;
@@ -80,7 +80,7 @@ div#notify{
 	overflow-y: auto;
 }
 
-#menu .booth input {
+#menu > .booth input {
 	width: 65vw;
 	margin: 10px auto;
 	height: 1.5rem;
@@ -88,7 +88,7 @@ div#notify{
 	text-align: center;
 }
 
-#menu .booth button {
+#menu .booth #booth-push {
 	width: 3rem;
 	margin: 10px auto;
 	height: 1.5rem;
@@ -132,10 +132,11 @@ div.booth-item .delete-space {
 	margin-top: -3px;
 	margin-bottom: -3px;
 }
-div.booth-item button {
-	height: 10rem;
-	width: 10rem;
-	margin: 10px auto;
+div.booth-item > button {
+	height:2rem; 
+	margin: auto; 
+	margin-right:5vw; 
+	width:4rem;
 }
 
 /* map */
