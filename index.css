@@ -368,6 +368,27 @@ div#info-text{
 
 }
 
+div#route-panel{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 22rem;
+	height: 10rem;
+	top: 8rem;
+	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
+	position: fixed;
+	visibility: hidden;
+	z-index:100;
+	font-weight: bold;
+	text-align: center;
+	user-select: none;
+	border-radius: 1rem;
+	left: 50%;
+  	transform: translateX(-50%);
+}
+
 
 /* 使い方説明 */
 

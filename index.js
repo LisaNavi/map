@@ -6,6 +6,9 @@ let inputbox = document.getElementById("input");
 let schedulebox = document.getElementById("cls-table");
 let tutorial = document.getElementById("tutorial");
 let notify_text = document.getElementById("notify-text");
+let route_panel = document.getElementById('route-panel')
+let inputS = document.getElementById("input-start");
+let inputG = document.getElementById("input-goal");
 
 // クッキーから読み込み
 let userdata = {};
@@ -142,6 +145,70 @@ function cls_tutorialclose() {
 }
 
 
+//経路検索
+function open_route(){
+    var route_pane = document.getElementById("route-panel");
+    route_pane.style.visibility = "visible";
+    
+}
+
+function close_route(){
+    var close_pane = document.getElementById("route-panel");
+    close_pane.style.visibility = "hidden";
+}
+
+
+function search_route(Snum, Gnum) {
+    if (Number.isInteger(Snum)){
+        alert("部屋番号を入力してください。");
+    }
+    else if (!(Snum > 100 && Snum < 1000)) {
+        alert("3桁である必要があります。");
+    }
+    else if (!(Snum[0] < 5 && Snum[0] > 0))
+    {
+        alert(Snum[0] + "階は存在しません。");
+    }
+    else {
+        if (typeof data[Snum] == "undefined"){
+            alert("指定された部屋番号は登録されていません。");
+        }
+        else {
+            var Sx = path[Snum][0];
+            var Sy = path[Snum][1];
+            map.contentWindow.room = Snum;
+            map.contentWindow.flchange(Snum-1);
+            map.contentWindow.showup(Snum);
+            dis_number.textContent = Snum[0] + "F";
+            dis_number.style.background=colors[Snum[0] - 1];
+        }
+    }
+    if (Number.isInteger(Gnum)){
+        alert("部屋番号を入力してください。");
+    }
+    else if (!(Gnum > 100 && Gnum < 1000)) {
+        alert("3桁である必要があります。");
+    }
+    else if (!(Gnum[0] < 5 && Gnum[0] > 0))
+    {
+        alert(Gnum[0] + "階は存在しません。");
+    }
+    else {
+        if (typeof data[Gnum] == "undefined"){
+            alert("指定された部屋番号は登録されていません。");
+        }
+        else {
+            var Gx = path[Gnum][0];
+            var Gy = path[Gnum][1];
+            map.contentWindow.room = Gnum;
+            map.contentWindow.flchange(Gnum-1);
+            map.contentWindow.showup(Gnum);
+            dis_number.textContent = Gnum[0] + "F";
+            dis_number.style.background=colors[Gnum[0] - 1];
+        }
+    }
+    map.contentWindow.draw(Sx,Sy,Gx,Gy);
+}
 
 
 // CSV関係

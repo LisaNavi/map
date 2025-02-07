@@ -9,6 +9,8 @@ let floornum = 1;
 let container = document.getElementById("container");
 let h1 = document.getElementById("highlight");
 let h2 = document.getElementById("cls-highlight");
+var canvas = document.getElementById('canvas');
+var fig = canvas.getContext("2d");
 
 h1.onanimationend = function () {
     h1.classList.remove("show");
@@ -98,6 +100,164 @@ function clschange(num)
         h2.style.zIndex = 1;
     }
 }
+
+//経路検索
+function line(Sx,Sy,Gx,Gy){
+    fig.beginPath();
+    fig.lineWidth = 8;
+    fig.strokeStyle = "red";
+    fig.moveTo(Sx,Sy);
+    fig.lineTo(Gx,Gy);
+    fig.stroke();
+}
+
+function draw(Sx, Sy, Gx, Gy){
+    fig.clearRect(0,0,1651,1350);
+    var work;
+    if(Gx < Sx){
+        work = Gx;
+        Gx = Sx;
+        Sx = work;
+
+        work = Gy;
+        Gy = Sy;
+        Sy = work;
+    }
+    //東棟から移動するとき
+    if(Sy == 181){
+        if(Gy == Sy){
+            line(Sx,Sy,Gx,Gy);
+        }
+        else if(Gy == 658){
+            if(Sx < 366){
+                line(Sx,Sy,366,Sy);
+                line(366,Sy,366,Gy);
+                line(Gx,Gy,366,Gy);
+            }
+            else{
+                if(Math.abs(1182 - Sx) + 477 + Math.abs(1182 -Gx) < Math.abs(Sx - 366) + 477 + Math.abs(Gx - 366)){
+                    line(Sx,Sy,1182,Sy);
+                    line(1182,Sy,1182,Gy);
+                    line(Gx,Gy,1182,Gy);
+                }
+                else{
+                    line(Sx,Sy,366,Sy);
+                    line(366,Sy,366,Gy);
+                    line(Gx,Gy,366,Gy);
+                }
+            }
+        }
+        //117,118へ移動するとき
+        else if(Gx == 366){
+            line(Sx,Sy,Gx,Sy);
+            line(Gx,Sy,Gx,Gy);
+        }
+        //事務室へ移動するとき
+        else if(Gy == 300){
+            line(Sx,Sy,1182,Sy);
+            line(Gx,Sy,Gx,Gy);
+        }
+        //校長室側へ移動するとき
+        else if(Gy == 256){
+            if(Math.abs(938 - Sx) < Math.abs(1182 - Sx)){
+                line(Sx,Sy,938,Sy);
+                line(938,Sy,938,Gy);
+                line(938,Gy,Gx,Gy);
+            }
+            else{
+                line(Sx,Sy,1182,Sy);
+                line(1182,Sy,1182,Gy);
+                line(Gx,Gy,1182,Gy);
+            }
+        }
+    }
+    //西棟から移動するとき
+    else if(Sy == 658){
+        if(Gy == Sy){
+            line(Sx,Sy,Gx,Gy);
+        }
+        else if(Gy == 181){
+            if(Sx < 366){
+                line(Sx,Sy,366,Sy);
+                line(366,Sy,366,Gy);
+                line(Gx,Gy,366,Gy);
+            }
+            else if(1182 < Gx){
+                line(Sx,Sy,1182,Sy);
+                line(1182,Sy,1182,Gy);
+                line(Gx,Gy,1182,Gy);
+            }
+            else{
+                if(Math.abs(1182 - Sx) + 477 + Math.abs(1182 -Gx) < Math.abs(Sx - 366) + 477 + Math.abs(Gx - 366)){
+                    line(Sx,Sy,1182,Sy);
+                    line(1182,Sy,1182,Gy);
+                    line(Gx,Gy,1182,Gy);
+                }
+                else{
+                    line(Sx,Sy,366,Sy);
+                    line(366,Sy,366,Gy);
+                    line(Gx,Gy,366,Gy);
+                }
+            }
+        }
+        //117,118へ移動するとき
+        else if(Gx == 366){
+            line(Sx,Sy,Gx,Sy);
+            line(Gx,Sy,Gx,Gy);
+        }
+        //事務室へ移動するとき
+        else if(Gy == 300){
+            line(Sx,Sy,1182,Sy);
+            line(Gx,Sy,Gx,Gy);
+        }
+        //校長室側へ移動するとき
+        else if(Gy == 256){
+            if(Math.abs(366 - Sx) + 572 + Math.abs(Gx - 938) < Math.abs(1182 - Sx) + Math.abs(1182 - Gx)){
+                line(Sx,Sy,336,Sy);
+                line(336,Sy,336,181);
+                line(336,181,938,181);
+                line(938,181,938,Gy);
+                line(938,Gy,Gx,Gy);
+            }
+            else{
+                line(Sx,Sy,1182,Sy);
+                line(1182,Sy,1182,Gy);
+                line(Gx,Gy,1182,Gy);
+            }
+        }
+    }
+    //117,118から移動するとき
+    else if(Sx == 366){
+        if(Gy == 300){
+            line(Sx,Sy,Sx,181);
+            line(Sx,181,1182,181);
+            line(1182,181,1182,300);
+        }
+        else if(Gy != 256){
+            line(Sx,Sy,Sx,Gy);
+            line(Sx,Gy,Gx,Gy);
+        }
+        else{
+            line(Sx,Sy,Sx,181);
+            line(Sx,181,938,181);
+            line(938,181,938,Gy);
+            line(938,Gy,Gx,Gy);
+        }
+    }
+    //事務室から移動するとき
+    else if(Sy == 300){
+        line(Sx,Sy,Sx,Gy);
+        line(Sx,Gy,Gx,Gy);
+    }
+    //校長室側から移動するとき
+    else if(Sy == 256){
+        line(Sx,Sy,1182,Sy);
+        line(1182,Sy,1182,Gy);
+        line(1182,Gy,Gx,Gy);
+    }
+}
+
+
 
 function zoomin() {
     if (zoomlevel < 2) {
