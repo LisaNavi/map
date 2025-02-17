@@ -26,6 +26,24 @@ div#container{
     left: 0px; top: 0px;
     z-index: 1;
 }
+#start-highlight{
+  width: 80px;
+  height: 80px;
+  background: rgb(125, 129, 255);
+  position: absolute;
+  left: 0px; top: 0px;
+  visibility: hidden;
+  z-index: 1;
+}
+#goal-highlight{
+  width: 80px;
+  height: 80px;
+  background: rgb(255, 125, 125);
+  position: absolute;
+  left: 0px; top: 0px;
+  visibility: hidden;
+  z-index: 1;
+}
 img#image{
     position:absolute;
     left: 0%; top: 0%;

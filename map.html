@@ -5,12 +5,14 @@
     <link rel="stylesheet" type="text/css" href="map.css" />
   </head>
   <body>
-    <canvas id="canvas" width="1651" height="1350" style="background-color: rgb(0 0 0 / 0); z-index: 1;"></canvas>
-    <div id="display" style="margin-top: -1350px;">
+    <div id="display">
       <div id="container">
+        <canvas id="canvas" width="1651" height="1350" style="background-color: rgb(0 0 0 / 0); z-index: 1;"></canvas>
         <img id="image" src="img/1F.png" alt="階層画像">
         <div id="highlight" style="visibility: hidden;"></div>
         <div id="cls-highlight" style="visibility: hidden;"></div>
+        <div id="start-highlight" style="visibility: hidden;"></div>
+        <div id="goal-highlight" style="visibility: hidden;"></div>
       </div>
     </div>
   <script src="path.js"></script>
