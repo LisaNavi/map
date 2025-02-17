@@ -106,10 +106,10 @@ function flchange(num)
     if (Sroom != "" && Sroom[0] == floornum+1){
         if (h3.style.visibility == "hidden") {
             // 大きさを計算して座標配置
-            h3.style.width = ( data[Sroom][2] - data[Sroom][0] ) + "px";
-            h3.style.height = ( data[Sroom][3] - data[Sroom][1] ) + "px";
-            h3.style.left = data[Sroom][0] + "px";
-            h3.style.top = data[Sroom][1] + "px";
+            h3.style.width = ( data[Sroom]["pos"][2] - data[Sroom]["pos"][0] ) + "px";
+            h3.style.height = ( data[Sroom]["pos"][3] - data[Sroom]["pos"][1] ) + "px";
+            h3.style.left = data[Sroom]["pos"][0] + "px";
+            h3.style.top = data[Sroom]["pos"][1] + "px";
             h3.style.visibility = "visible";
             h3.classList.add("show");
             h3.style.zIndex = 1;
@@ -125,10 +125,10 @@ function flchange(num)
     if (Groom != "" && Groom[0] == floornum+1){
         if (h4.style.visibility == "hidden") {
             // 大きさを計算して座標配置
-            h4.style.width = ( data[Groom][2] - data[Groom][0] ) + "px";
-            h4.style.height = ( data[Groom][3] - data[Groom][1] ) + "px";
-            h4.style.left = data[Groom][0] + "px";
-            h4.style.top = data[Groom][1] + "px";
+            h4.style.width = ( data[Groom]["pos"][2] - data[Groom]["pos"][0] ) + "px";
+            h4.style.height = ( data[Groom]["pos"][3] - data[Groom]["pos"][1] ) + "px";
+            h4.style.left = data[Groom]["pos"][0] + "px";
+            h4.style.top = data[Groom]["pos"][1] + "px";
             h4.style.visibility = "visible";
             h4.classList.add("show");
             h4.style.zIndex = 1;
@@ -167,7 +167,6 @@ function download(S1,S2,G1,G2,S3,G3,fl){
     Sf = S3;
     Gf = G3;
     floor1 = fl;
-    console.log(floor1)
 }
 
 function showupS(rn)
@@ -177,10 +176,10 @@ function showupS(rn)
 
     // lefttop y - rightbottom y = height
     
-    h3.style.width = ( data[Sroom][2] - data[Sroom][0] ) + "px";
-    h3.style.height = ( data[Sroom][3] - data[Sroom][1] ) + "px";
-    h3.style.left = data[Sroom][0] + "px";
-    h3.style.top = data[Sroom][1] + "px";
+    h3.style.width = ( data[Sroom]["pos"][2] - data[Sroom]["pos"][0] ) + "px";
+    h3.style.height = ( data[Sroom]["pos"][3] - data[Sroom]["pos"][1] ) + "px";
+    h3.style.left = data[Sroom]["pos"][0] + "px";
+    h3.style.top = data[Sroom]["pos"][1] + "px";
     h3.style.visibility = "visible";
     h3.classList.add("show");
     h3.style.zIndex = 1;
