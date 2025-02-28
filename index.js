@@ -230,13 +230,15 @@ function search_route(Snum, Gnum) {
                             Gx[i] = Gx0;
                             Gy[i] = Gy0;
                             fl = i;
+                            if (i == 1)
+                                floor1 = 1;
                             if (i == Sf){
                                 continue;
                             }
                             else{
                                 Sx[i] = 330;
                                 Gx[i] = 330;
-                                Gy[i] = 220;
+                                Sy[i] = 220;
                                 Gy[i] = 220;
                                 
                             }
@@ -591,19 +593,15 @@ function search_route(Snum, Gnum) {
                         }
                         //校長室側から移動するとき
                         else if(Sy0 == 256){
-                            if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
-                                if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
-                                    stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
-                                }
-                                else{
-                                    stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,701);
-                                }
+                            if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
                             }
-                            else {
-                                stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,341);
+                            else{
+                                stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,701);
                             }
                         }
                     }
+                    map.contentWindow.clearhighlight();
                     map.contentWindow.download(Sx,Sy,Gx,Gy,Sf,Gf,floor1);
                     map.contentWindow.Sroom = Snum;
                     map.contentWindow.showupS(Snum);

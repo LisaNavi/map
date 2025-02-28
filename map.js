@@ -53,6 +53,14 @@ function showup(rn)
     h1.style.zIndex = 1;
 }
 
+//ハイライト削除
+function clearhighlight(){
+    h3.classList.remove("show");
+    h3.style.visibility = "hidden";
+    h4.classList.remove("show");
+    h4.style.visibility = "hidden";
+}
+
 // Change floor
 function flchange(num)
 {
@@ -330,9 +338,9 @@ function draw(Sx, Sy, Gx, Gy){
         //校長室側へ移動するとき
         else if(Gy == 256){
             if(Math.abs(366 - Sx) + 572 + Math.abs(Gx - 938) < Math.abs(1182 - Sx) + Math.abs(1182 - Gx)){
-                line(Sx,Sy,336,Sy);
-                line(336,Sy,336,181);
-                line(336,181,938,181);
+                line(Sx,Sy,366,Sy);
+                line(366,Sy,366,181);
+                line(366,181,938,181);
                 line(938,181,938,Gy);
                 line(938,Gy,Gx,Gy);
             }
@@ -373,9 +381,15 @@ function draw(Sx, Sy, Gx, Gy){
     }
     //校長室側から移動するとき
     else if(Sy == 256){
-        line(Sx,Sy,1182,Sy);
-        line(1182,Sy,1182,Gy);
-        line(1182,Gy,Gx,Gy);
+        if(Sy == Gy){
+            line(Sx,Sy,Sx,Gy);
+            line(Sx,Gy,Gx,Gy);
+        }
+        else{
+            line(Sx,Sy,1182,Sy);
+            line(1182,Sy,1182,Gy);
+            line(1182,Gy,Gx,Gy);
+        }
     }
     //その他
     else {
