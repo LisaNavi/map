@@ -128,12 +128,10 @@
     <div id="route-panel">
       <table id="route-chart" style="padding: 1rem;">
       <a>経路検索</a>
-        <input id="input-start" type="number" min="100" max="431" placeholder="現在地の教室番号" style="text-align: center; margin-right: 7rem; margin-top: 0.5rem;"></input>
-        <input id="input-goal" type="number" min="100" max="431" placeholder="目的地の教室番号" style="text-align: center; margin-left: 7rem; margin-top: -1.28rem; margin-bottom: 0.5rem;"></input>
-        <a href="javascript:search_route(document.getElementById('input-start').value,document.getElementById('input-goal').value),close_route(document.getElementById('route-panel').value)" class="btn_05" style="margin-bottom: -8.6rem; margin-left: 7rem;">🔍</a>
-        <a href="javascript:search_route(document.getElementById('input-start').value,document.getElementById('input-goal').value)" id="info-btn" class="btn_05">Info</a>
-        <br>
-        <a href="javascript:close_route(document.getElementById('route-panel').value)" class="btn_05" style="margin-top: -2rem; margin-bottom: -1rem; margin-right: 7rem;">閉じる</a>
+        <input id="input-start" type="number" min="100" max="431" placeholder="現在地の教室番号" style="text-align: center; margin-right: 128px; margin-top: 16px"></input>
+        <input id="input-goal" type="number" min="100" max="431" placeholder="目的地の教室番号" style="text-align: center; margin-left: 128px; margin-top: -21px;"></input>
+        <a href="javascript:search_route(document.getElementById('input-start').value,document.getElementById('input-goal').value),close_route(document.getElementById('route-panel').value)" class="btn_05" style="margin-bottom: -80px; margin-left: 100px;">検索</a>
+        <a href="javascript:close_route(document.getElementById('route-panel').value)" class="btn_05" style="margin-top: 46px; margin-right: 100px; margin-bottom: 2px;">閉じる</a>
       </table>
     </div>
 
