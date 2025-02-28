@@ -8,6 +8,7 @@ data={
       1548,
       170
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/101.png"
   },
@@ -18,6 +19,7 @@ data={
       1546,
       276
     ],
+    "floor":[0],
     "info": "ジャズバンド部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/102.png"
   },
@@ -28,6 +30,7 @@ data={
       1454,
       171
     ],
+    "floor":[0],
     "info": "視聴覚室です。\n学年全体で集まるときに使います。また、LBT部、演劇部が活動しています。\n軽音楽部LBT部がライブを行っていることもあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/103.png"
   },
@@ -38,6 +41,7 @@ data={
       1073,
       171
     ],
+    "floor":[0],
     "info": "保健室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/104.png"
   },
@@ -48,6 +52,7 @@ data={
       977,
       153
     ],
+    "floor":[0],
     "info": "カウンセリングルームです。\n",
     "img": "https://lisanavi.github.io/map/floorpic/105.png"
   },
@@ -58,6 +63,7 @@ data={
       930,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/106.png"
   },
@@ -68,6 +74,7 @@ data={
       877,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/107.png"
   },
@@ -78,6 +85,7 @@ data={
       809,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/108.png"
   },
@@ -88,6 +96,7 @@ data={
       736,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/109.png"
   },
@@ -98,6 +107,7 @@ data={
       690,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/110.png"
   },
@@ -108,6 +118,7 @@ data={
       596,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/111.png"
   },
@@ -118,6 +129,7 @@ data={
       547,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/112.png"
   },
@@ -128,6 +140,7 @@ data={
       450,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/113.png"
   },
@@ -138,6 +151,7 @@ data={
       403,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/114.png"
   },
@@ -148,6 +162,7 @@ data={
       306,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/115.png"
   },
@@ -158,6 +173,7 @@ data={
       259,
       171
     ],
+    "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/116.png"
   },
@@ -168,6 +184,7 @@ data={
       354,
       443
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/117.png"
   },
@@ -178,6 +195,7 @@ data={
       477,
       452
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/118.png"
   },
@@ -188,6 +206,7 @@ data={
       546,
       276
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/119.png"
   },
@@ -198,6 +217,7 @@ data={
       594,
       254
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/120.png"
   },
@@ -208,6 +228,7 @@ data={
       690,
       277
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/121.png"
   },
@@ -218,6 +239,7 @@ data={
       930,
       277
     ],
+    "floor":[0],
     "info": "会議室です。\n様々な会議で使用します。\n",
     "img": "https://lisanavi.github.io/map/floorpic/122.png"
   },
@@ -228,6 +250,7 @@ data={
       1013,
       247
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/123.png"
   },
@@ -238,6 +261,7 @@ data={
       1073,
       247
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/124.png"
   },
@@ -248,6 +272,7 @@ data={
       994,
       323
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/125.png"
   },
@@ -258,6 +283,7 @@ data={
       1046,
       333
     ],
+    "floor":[0],
     "info": "校長室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/126.png"
   },
@@ -268,6 +294,7 @@ data={
       1150,
       343
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/127.png"
   },
@@ -278,6 +305,7 @@ data={
       1063,
       647
     ],
+    "floor":[0],
     "info": "食堂です。\n営業時間は9:00 ~ 17:00です。\n昼食の他にもお菓子や飲み物、軽食などを買うことができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/128.png"
   },
@@ -288,6 +316,7 @@ data={
       823,
       646
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/129.png"
   },
@@ -298,6 +327,7 @@ data={
       689,
       648
     ],
+    "floor":[0],
     "info": "1階の薬品室になります。\n様々な微生物や食品を扱うバイオ系の授業を支える重要な薬品室です。\n微生物を増やし、観察するための培地をはじめ、基礎実験の薬品等も置いてあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/130.png"
   },
@@ -308,6 +338,7 @@ data={
       641,
       648
     ],
+    "floor":[0],
     "info": "バイオサイエンスC、応用微生物学習室の授業で使用します。\n微生物の働きを利用した発酵の授業や、イカの解剖を軸にした解剖学の基礎などを学びます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/131.png"
   },
@@ -318,6 +349,7 @@ data={
       544,
       647
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/132.png"
   },
@@ -328,6 +360,7 @@ data={
       497,
       649
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/133.png"
   },
@@ -338,6 +371,7 @@ data={
       450,
       649
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/134.png"
   },
@@ -348,6 +382,7 @@ data={
       257,
       648
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/135.png"
   },
@@ -358,6 +393,7 @@ data={
       208,
       648
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/136.png"
   },
@@ -368,6 +404,7 @@ data={
       208,
       648
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/137.png"
   },
@@ -378,6 +415,7 @@ data={
       258,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/138.png"
   },
@@ -388,6 +426,7 @@ data={
       258,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/139.png"
   },
@@ -398,6 +437,7 @@ data={
       305,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/140.png"
   },
@@ -408,6 +448,7 @@ data={
       448,
       754
     ],
+    "floor":[0],
     "info": "化学工学部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/141.png"
   },
@@ -418,6 +459,7 @@ data={
       545,
       754
     ],
+    "floor":[0],
     "info": "バイオテクノロジー入門の授業で使用します。\nヨーグルトを用いた乳酸菌の培養や、納豆づくり、落下細菌を培養し空気中の菌の分析をおこないます。\nバイオ関係に興味がある生徒の初めの1歩となります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/142.png"
   },
@@ -428,6 +470,7 @@ data={
       593,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/143.png"
   },
@@ -438,6 +481,7 @@ data={
       689,
       756
     ],
+    "floor":[0],
     "info": "雑菌などが混入することを防ぐ「クリーンベンチ」という機会が設置されている通称''無菌室''です。\nバイオ入門やバイオサイエンスの授業などで使用します。\n培地などの分注や菌の培養など活用方法は多岐に渡ります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/144.png"
   },
@@ -448,6 +492,7 @@ data={
       849,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/145.png"
   },
@@ -458,6 +503,7 @@ data={
       871,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
@@ -468,6 +514,7 @@ data={
       895,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/147.png"
   },
@@ -478,6 +525,7 @@ data={
       918,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/148.png"
   },
@@ -488,6 +536,7 @@ data={
       989,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/149.png"
   },
@@ -498,6 +547,7 @@ data={
       1012,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/150.png"
   },
@@ -508,6 +558,7 @@ data={
       1036,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/151.png"
   },
@@ -518,6 +569,7 @@ data={
       1063,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/152.png"
   },
@@ -528,6 +580,7 @@ data={
       1144,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/153.png"
   },
@@ -600,6 +653,7 @@ data={
       1218,
       270
     ],
+    "floor":[1],
     "info": "3年次1組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/201.png"
   },
@@ -610,6 +664,7 @@ data={
       1219,
       347
     ],
+    "floor":[1],
     "info": "3年次2組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/202.png"
   },
@@ -620,6 +675,7 @@ data={
       1219,
       421
     ],
+    "floor":[1],
     "info": "3年次3組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/203.png"
   },
@@ -630,6 +686,7 @@ data={
       1218,
       498
     ],
+    "floor":[1],
     "info": "3年次4組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/204.png"
   },
@@ -640,6 +697,7 @@ data={
       1218,
       572
     ],
+    "floor":[1],
     "info": "3年次5組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/205.png"
   },
@@ -650,6 +708,7 @@ data={
       1219,
       649
     ],
+    "floor":[1],
     "info": "3年次6組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/206.png"
   },
@@ -660,6 +719,7 @@ data={
       1119,
       342
     ],
+    "floor":[1],
     "info": "3年次7組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/107.png"
   },
@@ -670,6 +730,7 @@ data={
       1121,
       565
     ],
+    "floor":[1],
     "info": "3年次8組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/108.png"
   },
@@ -680,6 +741,7 @@ data={
       1549,
       277
     ],
+    "floor":[1],
     "info": "図書室です。\n全日制の営業時間は9:00 ~ 17:00までです。\n本の貸し出しなどが行えます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/209.png"
   },
@@ -690,6 +752,7 @@ data={
       1261,
       145
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/210.png"
   },
@@ -700,6 +763,7 @@ data={
       1073,
       172
     ],
+    "floor":[1],
     "info": "東棟1階職員室です。\n3年次の担任、副担任の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/211.png"
   },
@@ -710,6 +774,7 @@ data={
       977,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/212.png"
   },
@@ -720,6 +785,7 @@ data={
       930,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/213.png"
   },
@@ -730,6 +796,7 @@ data={
       783,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/214.png"
   },
@@ -740,6 +807,7 @@ data={
       688,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/215.png"
   },
@@ -750,6 +818,7 @@ data={
       642,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/216.png"
   },
@@ -760,6 +829,7 @@ data={
       546,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/217.png"
   },
@@ -770,6 +840,7 @@ data={
       451,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/218.png"
   },
@@ -780,6 +851,7 @@ data={
       308,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/219.png"
   },
@@ -790,6 +862,7 @@ data={
       261,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/220.png"
   },
@@ -800,6 +873,7 @@ data={
       261,
       277
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/221.png"
   },
@@ -810,6 +884,7 @@ data={
       596,
       277
     ],
+    "floor":[1],
     "info": "アルゴリズム基礎や総合産業実習の情報系などで使用します。\nプログラムを考える上で基礎となるアルゴリズムについて学ぶことが出来ます。\nまた、簡単にC言語についても学ぶことができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/222.png"
   },
@@ -820,6 +895,7 @@ data={
       643,
       277
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/223.png"
   },
@@ -830,6 +906,7 @@ data={
       690,
       278
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/224.png"
   },
@@ -840,6 +917,7 @@ data={
       1025,
       277
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/225.png"
   },
@@ -850,6 +928,7 @@ data={
       800,
       647
     ],
+    "floor":[1],
     "info": "生徒用の女子更衣室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/226.png"
   },
@@ -860,6 +939,7 @@ data={
       689,
       649
     ],
+    "floor":[1],
     "info": "1年生の共通教科でも総合産業実習(環境バイオ系)で使用します。\n視覚と嗅覚の関係性や旨味が人間に与える影響、大気圧や電気料金についての身近な実習についても学ぶことが出来ます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/227.png"
   },
@@ -870,6 +950,7 @@ data={
       593,
       649
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/228.png"
   },
@@ -880,6 +961,7 @@ data={
       545,
       649
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/229.png"
   },
@@ -890,6 +972,7 @@ data={
       257,
       649
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/230.png"
   },
@@ -900,6 +983,7 @@ data={
       209,
       649
     ],
+    "floor":[1],
     "info": "環境一般実習室や、ウェザーワークショップの授業で使用します。\nミニ地球づくりをはじめ、酸性雨発生実験などを通して地球の成り立ちと今後の変貌を考える授業をおこないます。\nまた、天気図や気象予報の勉強を実習を通して楽しく学ベます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/231.png"
   },
@@ -910,6 +994,7 @@ data={
       209,
       755
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/232.png"
   },
@@ -920,6 +1005,7 @@ data={
       305,
       755
     ],
+    "floor":[1],
     "info": "リサイクル工学実習室やエネルギーサイエンスの授業で使用します。\n古紙や廃油、ガラスのリサイクル法を学ぶことや、電気エネルギーや火力エネルギー、化学エネルギーを、実習を通して学ぶことが出来ます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/233.png"
   },
@@ -930,6 +1016,7 @@ data={
       497,
       755
     ],
+    "floor":[1],
     "info": "西棟2階職員室です。\n職員室の前には落とし物が保管されています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/234.png"
   },
@@ -940,6 +1027,7 @@ data={
       593,
       756
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/235.png"
   },
@@ -950,6 +1038,7 @@ data={
       593,
       756
     ],
+    "floor":[1],
     "info": "白衣を借りられる部屋です。\n1～3年生の実習で環境バイオ系を履修してくれた生徒は白衣を部屋から借りることが出来ます。\n白衣に関しては半年間貸し代を行いますので返却していただくことが必要です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/236.png"
   },
@@ -960,6 +1049,7 @@ data={
       689,
       755
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/237.png"
   },
@@ -970,6 +1060,7 @@ data={
       737,
       736
     ],
+    "floor":[1],
     "info": "全日制の生徒会室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/238.png"
   },
@@ -980,6 +1071,7 @@ data={
       800,
       755
     ],
+    "floor":[1],
     "info": "生徒用の男子更衣室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/239.png"
   },
@@ -1060,6 +1152,7 @@ data={
       1220,
       270
     ],
+    "floor":[2],
     "info": "2年次1組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/301.png"
   },
@@ -1070,6 +1163,7 @@ data={
       1218,
       347
     ],
+    "floor":[2],
     "info": "2年次2組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/302.png"
   },
@@ -1080,6 +1174,7 @@ data={
       1218,
       421
     ],
+    "floor":[2],
     "info": "2年次3組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/303.png"
   },
@@ -1090,6 +1185,7 @@ data={
       1218,
       497
     ],
+    "floor":[2],
     "info": "2年次4組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/304.png"
   },
@@ -1100,6 +1196,7 @@ data={
       1218,
       571
     ],
+    "floor":[2],
     "info": "2年次5組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/305.png"
   },
@@ -1110,6 +1207,7 @@ data={
       1218,
       649
     ],
+    "floor":[2],
     "info": "2年次6組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/306.png"
   },
@@ -1120,6 +1218,7 @@ data={
       1119,
       344
     ],
+    "floor":[2],
     "info": "2年次7組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/307.png"
   },
@@ -1130,6 +1229,7 @@ data={
       1119,
       565
     ],
+    "floor":[2],
     "info": "2年次8組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/308.png"
   },
@@ -1140,6 +1240,7 @@ data={
       1507,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/309.png"
   },
@@ -1150,6 +1251,7 @@ data={
       1454,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/310.png"
   },
@@ -1160,6 +1262,7 @@ data={
       1345,
       172
     ],
+    "floor":[2],
     "info": "情報Ⅰの授業で使用します。\n座学やパソコンを使ってExcelの実習などをすることができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/311.png"
   },
@@ -1170,6 +1273,7 @@ data={
       1073,
       172
     ],
+    "floor":[2],
     "info": "東棟3階職員室です。\n2年次の担任、副担任の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/312.png"
   },
@@ -1180,6 +1284,7 @@ data={
       977,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/313.png"
   },
@@ -1190,6 +1295,7 @@ data={
       904,
       172
     ],
+    "floor":[2],
     "info": "進路指導室1です。\n一部の先生がいます。\n",
     "img": "制作中\n"
   },
@@ -1200,6 +1306,7 @@ data={
       734,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/315.png"
   },
@@ -1210,6 +1317,7 @@ data={
       691,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/316.png"
   },
@@ -1220,6 +1328,7 @@ data={
       548,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/317.png"
   },
@@ -1230,6 +1339,7 @@ data={
       494,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/318.png"
   },
@@ -1240,6 +1350,7 @@ data={
       260,
       278
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/319.png"
   },
@@ -1250,6 +1361,7 @@ data={
       546,
       277
     ],
+    "floor":[2],
     "info": "定時制が使用している部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/320.png"
   },
@@ -1260,6 +1372,7 @@ data={
       596,
       277
     ],
+    "floor":[2],
     "info": "物置きです。\n",
     "img": "https://lisanavi.github.io/map/floorpic/321.png"
   },
@@ -1270,6 +1383,7 @@ data={
       690,
       277
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/322.png"
   },
@@ -1280,6 +1394,7 @@ data={
       786,
       254
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/323.png"
   },
@@ -1290,6 +1405,7 @@ data={
       836,
       254
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/324.png"
   },
@@ -1300,6 +1416,7 @@ data={
       880,
       648
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/325.png"
   },
@@ -1310,6 +1427,7 @@ data={
       833,
       649
     ],
+    "floor":[2],
     "info": "公共やツーリズム等の授業で使用します。\n生徒が主体となった活動が多く活気に溢れた授業が行われています。\nまた、漫画研究部の活動場所としても利用されることがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/326.png"
   },
@@ -1320,6 +1438,7 @@ data={
       690,
       649
     ],
+    "floor":[2],
     "info": "物理の基礎的な学習を行うことが出来る。\n力の実習でも使われる。/n",
     "img": "https://lisanavi.github.io/map/floorpic/327.png"
   },
@@ -1330,6 +1449,7 @@ data={
       593,
       649
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/328.png"
   },
@@ -1340,6 +1460,7 @@ data={
       545,
       649
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/329.png"
   },
@@ -1350,6 +1471,7 @@ data={
       256,
       649
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/330.png"
   },
@@ -1360,6 +1482,7 @@ data={
       209,
       734
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/331.png"
   },
@@ -1370,6 +1493,7 @@ data={
       305,
       755
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/332.png"
   },
@@ -1380,6 +1504,7 @@ data={
       593,
       755
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/333.png"
   },
@@ -1390,6 +1515,7 @@ data={
       689,
       755
     ],
+    "floor":[2],
     "info": "化学の基礎的な学習を行うことが出来る。滴定等の実験が可能。\n",
     "img": "https://lisanavi.github.io/map/floorpic/334.png"
   },
@@ -1400,6 +1526,7 @@ data={
       736,
       735
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/335.png"
   },
@@ -1410,6 +1537,7 @@ data={
       822,
       755
     ],
+    "floor":[2],
     "info": "生物の基礎的な学習を行うことが出来る。\n顕微鏡や、解剖で使われます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/336.png"
   },
@@ -1420,6 +1548,7 @@ data={
       870,
       732
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/337.png"
   },
@@ -1430,6 +1559,7 @@ data={
       1014,
       755
     ],
+    "floor":[2],
     "info": "美術の授業で使用します。また、美術部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/338.png"
   },
@@ -1440,6 +1570,7 @@ data={
       1059,
       753
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/339.png"
   },
@@ -1450,6 +1581,7 @@ data={
       1230,
       137
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/380.png"
   },
@@ -1460,6 +1592,7 @@ data={
       712,
       230
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/381.png"
   },
@@ -1470,6 +1603,7 @@ data={
       351,
       170
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/382.png"
   },
@@ -1480,6 +1614,7 @@ data={
       1169,
       751
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/383.png"
   },
@@ -1490,6 +1625,7 @@ data={
       734,
       645
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/384.png"
   },
@@ -1500,6 +1636,7 @@ data={
       351,
       708
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/385.png"
   },
@@ -1510,6 +1647,7 @@ data={
       1218,
       270
     ],
+    "floor":[3],
     "info": "1年次1組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/401.png"
   },
@@ -1520,6 +1658,7 @@ data={
       1218,
       345
     ],
+    "floor":[3],
     "info": "1年次2組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/402.png"
   },
@@ -1530,6 +1669,7 @@ data={
       1218,
       421
     ],
+    "floor":[3],
     "info": "1年次3組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/403.png"
   },
@@ -1540,6 +1680,7 @@ data={
       1218,
       498
     ],
+    "floor":[3],
     "info": "1年次4組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/404.png"
   },
@@ -1550,6 +1691,7 @@ data={
       1218,
       574
     ],
+    "floor":[3],
     "info": "1年次5組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/405.png"
   },
@@ -1560,6 +1702,7 @@ data={
       1218,
       647
     ],
+    "floor":[3],
     "info": "1年次6組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/406.png"
   },
@@ -1570,6 +1713,7 @@ data={
       1121,
       345
     ],
+    "floor":[3],
     "info": "1年次7組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/407.png"
   },
@@ -1580,6 +1724,7 @@ data={
       1121,
       564
     ],
+    "floor":[3],
     "info": "1年次8組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/408.png"
   },
@@ -1590,6 +1735,7 @@ data={
       1093,
       176
     ],
+    "floor":[3],
     "info": "東棟4階職員室です。\n1年次の担任、副担任の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/409.png"
   },
@@ -1600,6 +1746,7 @@ data={
       978,
       173
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/410.png"
   },
@@ -1610,6 +1757,7 @@ data={
       881,
       173
     ],
+    "floor":[3],
     "info": "情報Ⅱの授業や課題研究情報系などで使用します。\n",
     "img": "https://lisanavi.github.io/map/floorpic/411.png"
   },
@@ -1620,6 +1768,7 @@ data={
       771,
       173
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/412.png"
   },
@@ -1630,6 +1779,7 @@ data={
       650,
       173
     ],
+    "floor":[3],
     "info": "プログラミング技術やソフトウェア技術などの授業や課題研究で使用します。\nまた、エレクトロニクス部、ロボメック研究部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/413.png"
   },
@@ -1640,6 +1790,7 @@ data={
       539,
       173
     ],
+    "floor":[3],
     "info": "夜間中学の職員室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/414.png"
   },
@@ -1650,6 +1801,7 @@ data={
       307,
       173
     ],
+    "floor":[3],
     "info": "夜間中学の使用する部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/415.png"
   },
@@ -1660,6 +1812,7 @@ data={
       307,
       130
     ],
+    "floor":[3],
     "info": "夜間中学の使用する部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/416.png"
   },
@@ -1670,6 +1823,7 @@ data={
       258,
       129
     ],
+    "floor":[3],
     "info": "音が響かない特殊な部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/417.png"
   },
@@ -1680,6 +1834,7 @@ data={
       497,
       277
     ],
+    "floor":[3],
     "info": "夜間中学の使用する部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/418.png"
   },
@@ -1690,6 +1845,7 @@ data={
       545,
       277
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/419.png"
   },
@@ -1700,6 +1856,7 @@ data={
       594,
       277
     ],
+    "floor":[3],
     "info": "https://lisanavi.github.io/map/floorpic/420.png"
   },
   "421": {
@@ -1709,6 +1866,7 @@ data={
       688,
       277
     ],
+    "floor":[3],
     "info": "アコースティックギター部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/421.png"
   },
@@ -1719,6 +1877,7 @@ data={
       834,
       277
     ],
+    "floor":[3],
     "info": "https://lisanavi.github.io/map/floorpic/422.png"
   },
   "423": {
@@ -1728,6 +1887,7 @@ data={
       881,
       277
     ],
+    "floor":[3],
     "info": "https://lisanavi.github.io/map/floorpic/423.png"
   },
   "424": {
@@ -1737,6 +1897,7 @@ data={
       832,
       646
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/424.png"
   },
@@ -1747,6 +1908,7 @@ data={
       688,
       647
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/425.png"
   },
@@ -1757,6 +1919,7 @@ data={
       636,
       650
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/426.png"
   },
@@ -1767,6 +1930,7 @@ data={
       687,
       756
     ],
+    "floor":[3],
     "info": "調理実習で使用する他、文化祭の調理団体が使用することもあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/427.png"
   },
@@ -1777,6 +1941,7 @@ data={
       736,
       732
     ],
+    "floor":[3],
     "info": "家庭科の先生がいます。",
     "img": "https://lisanavi.github.io/map/floorpic/428.png"
   },
@@ -1787,6 +1952,7 @@ data={
       821,
       755
     ],
+    "floor":[3],
     "info": "被服室です。\n家庭基礎の授業で使用します。裁縫などができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/429.png"
   },
@@ -1797,6 +1963,7 @@ data={
       1015,
       755
     ],
+    "floor":[3],
     "info": "音楽の授業で使用します。また、軽音楽部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/430.png"
   },
@@ -1807,6 +1974,7 @@ data={
       1064,
       755
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/431.png"
   },
@@ -1817,6 +1985,7 @@ data={
       1230,
       137
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/480.png"
   },
@@ -1867,6 +2036,7 @@ data={
       1548,
       170
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/101.png"
   },
@@ -1877,6 +2047,7 @@ data={
       1546,
       276
     ],
+    "floor":[0],
     "info": "ジャズバンド部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/102.png"
   },
@@ -1887,6 +2058,7 @@ data={
       1454,
       171
     ],
+    "floor":[0],
     "info": "視聴覚室です。\n学年全体で集まるときに使います。また、LBT部、演劇部が活動しています。\n軽音楽部LBT部がライブを行っていることもあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/103.png"
   },
@@ -1897,6 +2069,7 @@ data={
       1073,
       171
     ],
+    "floor":[0],
     "info": "保健室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/104.png"
   },
@@ -1907,6 +2080,7 @@ data={
       977,
       153
     ],
+    "floor":[0],
     "info": "カウンセリングルームです。\n",
     "img": "https://lisanavi.github.io/map/floorpic/105.png"
   },
@@ -1917,6 +2091,7 @@ data={
       930,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/106.png"
   },
@@ -1927,6 +2102,7 @@ data={
       809,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/108.png"
   },
@@ -1937,6 +2113,7 @@ data={
       736,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/109.png"
   },
@@ -1947,6 +2124,7 @@ data={
       690,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/110.png"
   },
@@ -1957,6 +2135,7 @@ data={
       596,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/111.png"
   },
@@ -1967,6 +2146,7 @@ data={
       596,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/111.png"
   },
@@ -1977,6 +2157,7 @@ data={
       547,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/112.png"
   },
@@ -1987,6 +2168,7 @@ data={
       547,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/112.png"
   },
@@ -1997,6 +2179,7 @@ data={
       450,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/113.png"
   },
@@ -2007,6 +2190,7 @@ data={
       450,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/113.png"
   },
@@ -2017,6 +2201,7 @@ data={
       257,
       648
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/135.png"
   },
@@ -2027,6 +2212,7 @@ data={
       306,
       171
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/115.png"
   },
@@ -2037,6 +2223,7 @@ data={
       259,
       171
     ],
+    "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/116.png"
   },
@@ -2047,6 +2234,7 @@ data={
       259,
       171
     ],
+    "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/116.png"
   },
@@ -2057,6 +2245,7 @@ data={
       259,
       171
     ],
+    "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/116.png"
   },
@@ -2067,6 +2256,7 @@ data={
       354,
       443
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/117.png"
   },
@@ -2077,6 +2267,7 @@ data={
       354,
       443
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/117.png"
   },
@@ -2087,6 +2278,7 @@ data={
       477,
       452
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/118.png"
   },
@@ -2097,6 +2289,7 @@ data={
       546,
       276
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/119.png"
   },
@@ -2107,6 +2300,7 @@ data={
       594,
       254
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/120.png"
   },
@@ -2117,6 +2311,7 @@ data={
       690,
       277
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/121.png"
   },
@@ -2127,6 +2322,7 @@ data={
       690,
       277
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/122.png"
   },
@@ -2137,6 +2333,7 @@ data={
       690,
       277
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/123.png"
   },
@@ -2147,6 +2344,7 @@ data={
       930,
       277
     ],
+    "floor":[0],
     "info": "会議室です。\n様々な会議で使用します。\n",
     "img": "https://lisanavi.github.io/map/floorpic/122.png"
   },
@@ -2157,6 +2355,7 @@ data={
       1013,
       247
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/123.png"
   },
@@ -2167,6 +2366,7 @@ data={
       1073,
       247
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/124.png"
   },
@@ -2177,6 +2377,7 @@ data={
       994,
       323
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/125.png"
   },
@@ -2187,6 +2388,7 @@ data={
       1046,
       333
     ],
+    "floor":[0],
     "info": "校長室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/126.png"
   },
@@ -2197,6 +2399,7 @@ data={
       1150,
       343
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/127.png"
   },
@@ -2207,6 +2410,7 @@ data={
       1063,
       647
     ],
+    "floor":[0],
     "info": "食堂です。\n営業時間は9:00 ~ 17:00です。\n昼食の他にもお菓子や飲み物、軽食などを買うことができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/128.png"
   },
@@ -2217,6 +2421,7 @@ data={
       823,
       646
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/129.png"
   },
@@ -2227,6 +2432,7 @@ data={
       257,
       649
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/230.png"
   },
@@ -2237,6 +2443,7 @@ data={
       641,
       648
     ],
+    "floor":[0],
     "info": "バイオサイエンスC、応用微生物学習室の授業で使用します。\n微生物の働きを利用した発酵の授業や、イカの解剖を軸にした解剖学の基礎などを学びます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/131.png"
   },
@@ -2247,6 +2454,7 @@ data={
       544,
       647
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/132.png"
   },
@@ -2257,6 +2465,7 @@ data={
       544,
       647
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/132.png"
   },
@@ -2267,6 +2476,7 @@ data={
       497,
       649
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/133.png"
   },
@@ -2277,6 +2487,7 @@ data={
       450,
       649
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/134.png"
   },
@@ -2287,6 +2498,7 @@ data={
       208,
       648
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/136.png"
   },
@@ -2297,6 +2509,7 @@ data={
       208,
       648
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/137.png"
   },
@@ -2307,6 +2520,7 @@ data={
       258,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/138.png"
   },
@@ -2317,6 +2531,7 @@ data={
       258,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/139.png"
   },
@@ -2327,6 +2542,7 @@ data={
       305,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/140.png"
   },
@@ -2337,6 +2553,7 @@ data={
       593,
       756
     ],
+    "floor":[0],
     "info": "白衣を借りられる部屋です。\n1～3年生の実習で環境バイオ系を履修してくれた生徒は白衣を部屋から借りることが出来ます。\n白衣に関しては半年間貸し代を行いますので返却していただくことが必要です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/236.png"
   },
@@ -2347,6 +2564,7 @@ data={
       545,
       754
     ],
+    "floor":[0],
     "info": "バイオテクノロジー入門の授業で使用します。\nヨーグルトを用いた乳酸菌の培養や、納豆づくり、落下細菌を培養し空気中の菌の分析をおこないます。\nバイオ関係に興味がある生徒の初めの1歩となります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/142.png"
   },
@@ -2357,6 +2575,7 @@ data={
       545,
       754
     ],
+    "floor":[0],
     "info": "バイオテクノロジー入門の授業で使用します。\nヨーグルトを用いた乳酸菌の培養や、納豆づくり、落下細菌を培養し空気中の菌の分析をおこないます。\nバイオ関係に興味がある生徒の初めの1歩となります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/142.png"
   },
@@ -2367,6 +2586,7 @@ data={
       593,
       755
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/143.png"
   },
@@ -2377,6 +2597,7 @@ data={
       689,
       756
     ],
+    "floor":[0],
     "info": "雑菌などが混入することを防ぐ「クリーンベンチ」という機会が設置されている通称''無菌室''\nバイオ入門やバイオサイエンスの授業などで使用します。\n培地などの分注や菌の培養など活用方法は多岐に渡ります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/144.png"
   },
@@ -2387,6 +2608,7 @@ data={
       849,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/145.png"
   },
@@ -2397,6 +2619,7 @@ data={
       871,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
@@ -2407,6 +2630,7 @@ data={
       895,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
@@ -2417,6 +2641,7 @@ data={
       918,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
@@ -2427,6 +2652,7 @@ data={
       989,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
@@ -2437,6 +2663,7 @@ data={
       1012,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
@@ -2447,6 +2674,7 @@ data={
       1036,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
@@ -2457,6 +2685,7 @@ data={
       1063,
       734
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/152.png"
   },
@@ -2467,6 +2696,7 @@ data={
       1144,
       733
     ],
+    "floor":[0],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/153.png"
   },
@@ -2477,6 +2707,7 @@ data={
       1218,
       270
     ],
+    "floor":[1],
     "info": "3年次1組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/201.png"
   },
@@ -2487,6 +2718,7 @@ data={
       1219,
       347
     ],
+    "floor":[1],
     "info": "3年次2組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/201.png"
   },
@@ -2497,6 +2729,7 @@ data={
       1219,
       421
     ],
+    "floor":[1],
     "info": "3年次3組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/201.png"
   },
@@ -2507,6 +2740,7 @@ data={
       1218,
       498
     ],
+    "floor":[1],
     "info": "3年次4組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/201.png"
   },
@@ -2517,6 +2751,7 @@ data={
       1218,
       572
     ],
+    "floor":[1],
     "info": "3年次5組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/201.png"
   },
@@ -2527,6 +2762,7 @@ data={
       1219,
       649
     ],
+    "floor":[1],
     "info": "3年次6組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/201.png"
   },
@@ -2537,6 +2773,7 @@ data={
       1119,
       342
     ],
+    "floor":[1],
     "info": "3年次7組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/207.png"
   },
@@ -2547,6 +2784,7 @@ data={
       1121,
       565
     ],
+    "floor":[1],
     "info": "3年次8組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/207.png"
   },
@@ -2557,6 +2795,7 @@ data={
       1549,
       277
     ],
+    "floor":[1],
     "info": "図書室です。\n全日制の営業時間は9:00 ~ 17:00までです。\n本の貸し出しなどが行えます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/209.png"
   },
@@ -2567,6 +2806,7 @@ data={
       1261,
       145
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/210.png"
   },
@@ -2577,6 +2817,7 @@ data={
       1073,
       172
     ],
+    "floor":[1],
     "info": "東棟1階職員室です。\n3年次の担任、副担任の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/211.png"
   },
@@ -2587,6 +2828,7 @@ data={
       977,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/212.png"
   },
@@ -2597,6 +2839,7 @@ data={
       930,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/213.png"
   },
@@ -2607,6 +2850,7 @@ data={
       783,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/214.png"
   },
@@ -2617,6 +2861,7 @@ data={
       688,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/215.png"
   },
@@ -2627,6 +2872,7 @@ data={
       642,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/216.png"
   },
@@ -2637,6 +2883,7 @@ data={
       546,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/217.png"
   },
@@ -2647,6 +2894,7 @@ data={
       451,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/218.png"
   },
@@ -2657,6 +2905,7 @@ data={
       308,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/219.png"
   },
@@ -2667,6 +2916,7 @@ data={
       261,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/220.png"
   },
@@ -2677,6 +2927,7 @@ data={
       261,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/220.png"
   },
@@ -2687,6 +2938,7 @@ data={
       261,
       172
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/220.png"
   },
@@ -2697,6 +2949,7 @@ data={
       261,
       277
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/221.png"
   },
@@ -2707,6 +2960,7 @@ data={
       596,
       277
     ],
+    "floor":[1],
     "info": "アルゴリズム基礎や総合産業実習の情報系などで使用します。\nプログラムを考える上で基礎となるアルゴリズムについて学ぶことが出来ます。\nまた、簡単にC言語についても学ぶことができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/222.png"
   },
@@ -2717,6 +2971,7 @@ data={
       596,
       277
     ],
+    "floor":[1],
     "info": "アルゴリズム基礎や総合産業実習の情報系などで使用します。\nプログラムを考える上で基礎となるアルゴリズムについて学ぶことが出来ます。\nまた、簡単にC言語についても学ぶことができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/222.png"
   },
@@ -2727,6 +2982,7 @@ data={
       643,
       277
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/223.png"
   },
@@ -2737,6 +2993,7 @@ data={
       690,
       278
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/224.png"
   },
@@ -2747,6 +3004,7 @@ data={
       1025,
       277
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/225.png"
   },
@@ -2757,6 +3015,7 @@ data={
       800,
       647
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/226.png"
   },
@@ -2767,6 +3026,7 @@ data={
       689,
       649
     ],
+    "floor":[1],
     "info": "1年生の共通教科でも総合産業実習(環境バイオ系)で使用します。\n視覚と嗅覚の関係性や旨味が人間に与える影響、大気圧や電気料金についての身近な実習についても学ぶことが出来ます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/227.png"
   },
@@ -2777,6 +3037,7 @@ data={
       593,
       649
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/228.png"
   },
@@ -2787,6 +3048,7 @@ data={
       545,
       649
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/229.png"
   },
@@ -2797,6 +3059,7 @@ data={
       209,
       649
     ],
+    "floor":[1],
     "info": "環境一般実習室や、ウェザーワークショップの授業で使用します。\nミニ地球づくりをはじめ、酸性雨発生実験などを通して地球の成り立ちと今後の変貌を考える授業をおこないます。\nまた、天気図や気象予報の勉強を実習を通して楽しく学ベます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/231.png"
   },
@@ -2807,6 +3070,7 @@ data={
       209,
       649
     ],
+    "floor":[1],
     "info": "環境一般実習室や、ウェザーワークショップの授業で使用します。\nミニ地球づくりをはじめ、酸性雨発生実験などを通して地球の成り立ちと今後の変貌を考える授業をおこないます。\nまた、天気図や気象予報の勉強を実習を通して楽しく学ベます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/231.png"
   },
@@ -2817,6 +3081,7 @@ data={
       209,
       755
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/232.png"
   },
@@ -2827,6 +3092,7 @@ data={
       305,
       755
     ],
+    "floor":[1],
     "info": "リサイクル工学実習室やエネルギーサイエンスの授業で使用します。\n古紙や廃油、ガラスのリサイクル法を学ぶことや、電気エネルギーや火力エネルギー、化学エネルギーを、実習を通して学ぶことが出来ます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/233.png"
   },
@@ -2837,6 +3103,7 @@ data={
       305,
       755
     ],
+    "floor":[1],
     "info": "リサイクル工学実習室やエネルギーサイエンスの授業で使用します。\n古紙や廃油、ガラスのリサイクル法を学ぶことや、電気エネルギーや火力エネルギー、化学エネルギーを、実習を通して学ぶことが出来ます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/233.png"
   },
@@ -2847,6 +3114,7 @@ data={
       497,
       755
     ],
+    "floor":[1],
     "info": "西棟2階職員室です。\n職員室の前には落とし物が保管されています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/234.png"
   },
@@ -2857,6 +3125,7 @@ data={
       593,
       756
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/235.png"
   },
@@ -2867,6 +3136,7 @@ data={
       689,
       755
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/237.png"
   },
@@ -2877,6 +3147,7 @@ data={
       689,
       755
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/237.png"
   },
@@ -2887,6 +3158,7 @@ data={
       737,
       736
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/238.png"
   },
@@ -2897,6 +3169,7 @@ data={
       800,
       755
     ],
+    "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/239.png"
   },
@@ -2907,6 +3180,7 @@ data={
       1220,
       270
     ],
+    "floor":[2],
     "info": "2年次1組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/301.png"
   },
@@ -2917,6 +3191,7 @@ data={
       1218,
       347
     ],
+    "floor":[2],
     "info": "2年次2組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/301.png"
   },
@@ -2927,6 +3202,7 @@ data={
       1218,
       421
     ],
+    "floor":[2],
     "info": "2年次3組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/301.png"
   },
@@ -2937,6 +3213,7 @@ data={
       1218,
       497
     ],
+    "floor":[2],
     "info": "2年次4組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/301.png"
   },
@@ -2947,6 +3224,7 @@ data={
       1218,
       571
     ],
+    "floor":[2],
     "info": "2年次5組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/301.png"
   },
@@ -2957,6 +3235,7 @@ data={
       1218,
       649
     ],
+    "floor":[2],
     "info": "2年次6組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/301.png"
   },
@@ -2967,6 +3246,7 @@ data={
       1119,
       344
     ],
+    "floor":[2],
     "info": "2年次7組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/307.png"
   },
@@ -2977,6 +3257,7 @@ data={
       1119,
       565
     ],
+    "floor":[2],
     "info": "2年次8組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/307.png"
   },
@@ -2987,6 +3268,7 @@ data={
       1507,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/309.png"
   },
@@ -2997,6 +3279,7 @@ data={
       1454,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/310.png"
   },
@@ -3007,6 +3290,7 @@ data={
       1345,
       172
     ],
+    "floor":[2],
     "info": "情報Ⅰの授業で使用します。\n座学やパソコンを使ってExcelの実習などをすることができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/311.png"
   },
@@ -3017,6 +3301,7 @@ data={
       1073,
       172
     ],
+    "floor":[2],
     "info": "東棟3階職員室です。\n2年次の担任、副担任の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/312.png"
   },
@@ -3027,6 +3312,7 @@ data={
       977,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/313.png"
   },
@@ -3037,6 +3323,7 @@ data={
       977,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/313.png"
   },
@@ -3047,6 +3334,7 @@ data={
       904,
       172
     ],
+    "floor":[2],
     "info": "進路指導室1です。\n一部の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/314.png"
   },
@@ -3057,6 +3345,7 @@ data={
       904,
       172
     ],
+    "floor":[2],
     "info": "進路関係の教室です。\n一部の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/314.png"
   },
@@ -3067,6 +3356,7 @@ data={
       904,
       172
     ],
+    "floor":[2],
     "info": "進路指導室2です。\n一部の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/314.png"
   },
@@ -3077,6 +3367,7 @@ data={
       734,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/315.png"
   },
@@ -3087,6 +3378,7 @@ data={
       691,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/316.png"
   },
@@ -3097,6 +3389,7 @@ data={
       548,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/317.png"
   },
@@ -3107,6 +3400,7 @@ data={
       494,
       172
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/318.png"
   },
@@ -3117,6 +3411,7 @@ data={
       260,
       278
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/319.png"
   },
@@ -3127,6 +3422,7 @@ data={
       546,
       277
     ],
+    "floor":[2],
     "info": "定時制が使用している部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/320.png"
   },
@@ -3137,6 +3433,7 @@ data={
       596,
       277
     ],
+    "floor":[2],
     "info": "物置きです。\n",
     "img": "https://lisanavi.github.io/map/floorpic/321.png"
   },
@@ -3147,6 +3444,7 @@ data={
       690,
       277
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/322.png"
   },
@@ -3157,6 +3455,7 @@ data={
       786,
       254
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/323.png"
   },
@@ -3167,6 +3466,7 @@ data={
       836,
       254
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/324.png"
   },
@@ -3177,6 +3477,7 @@ data={
       880,
       648
     ],
+    "floor":[2],
     "info": "社会科の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/325.png"
   },
@@ -3187,6 +3488,7 @@ data={
       833,
       649
     ],
+    "floor":[2],
     "info": "公共やツーリズム等の授業で使用します。\n生徒が主体となった活動が多く活気に溢れた授業が行われています。\nまた、漫画研究部の活動場所としても利用されることがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/326.png"
   },
@@ -3197,6 +3499,7 @@ data={
       690,
       649
     ],
+    "floor":[2],
     "info": "物理の基礎的な学習を行うことが出来ます。\nまた、力の実習でも使われます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/327.png"
   },
@@ -3207,6 +3510,7 @@ data={
       593,
       649
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/328.png"
   },
@@ -3217,6 +3521,7 @@ data={
       545,
       649
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/329.png"
   },
@@ -3227,6 +3532,7 @@ data={
       256,
       649
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/330.png"
   },
@@ -3237,6 +3543,7 @@ data={
       209,
       734
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/331.png"
   },
@@ -3247,6 +3554,7 @@ data={
       305,
       755
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/332.png"
   },
@@ -3257,6 +3565,7 @@ data={
       593,
       755
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/333.png"
   },
@@ -3267,6 +3576,7 @@ data={
       593,
       755
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/333.png"
   },
@@ -3277,6 +3587,7 @@ data={
       689,
       755
     ],
+    "floor":[2],
     "info": "化学の基礎的な学習を行うことが出来る。滴定等の実験が可能。\n",
     "img": "https://lisanavi.github.io/map/floorpic/334.png"
   },
@@ -3287,6 +3598,7 @@ data={
       736,
       735
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/335.png"
   },
@@ -3297,6 +3609,7 @@ data={
       822,
       755
     ],
+    "floor":[2],
     "info": "生物の基礎的な学習を行うことが出来る。\n顕微鏡や、解剖で使われます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/336.png"
   },
@@ -3307,6 +3620,7 @@ data={
       870,
       732
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/337.png"
   },
@@ -3317,6 +3631,7 @@ data={
       1014,
       755
     ],
+    "floor":[2],
     "info": "美術の授業で使用します。また、美術部が活動しています。\n",
     "img": "制作中\n"
   },
@@ -3327,6 +3642,7 @@ data={
       1059,
       753
     ],
+    "floor":[2],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/339.png"
   },
@@ -3337,6 +3653,7 @@ data={
       1218,
       270
     ],
+    "floor":[3],
     "info": "1年次1組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/401.png"
   },
@@ -3347,6 +3664,7 @@ data={
       1218,
       345
     ],
+    "floor":[3],
     "info": "1年次2組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/401.png"
   },
@@ -3357,6 +3675,7 @@ data={
       1218,
       421
     ],
+    "floor":[3],
     "info": "1年次3組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/401.png"
   },
@@ -3367,6 +3686,7 @@ data={
       1218,
       498
     ],
+    "floor":[3],
     "info": "1年次4組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/401.png"
   },
@@ -3377,6 +3697,7 @@ data={
       1218,
       574
     ],
+    "floor":[3],
     "info": "1年次5組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/401.png"
   },
@@ -3387,6 +3708,7 @@ data={
       1218,
       647
     ],
+    "floor":[3],
     "info": "1年次6組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/401.png"
   },
@@ -3397,6 +3719,7 @@ data={
       1121,
       345
     ],
+    "floor":[3],
     "info": "1年次7組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/407.png"
   },
@@ -3407,6 +3730,7 @@ data={
       1121,
       564
     ],
+    "floor":[3],
     "info": "1年次8組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/407.png"
   },
@@ -3417,6 +3741,7 @@ data={
       1093,
       176
     ],
+    "floor":[3],
     "info": "東棟4階職員室です。\n1年次の担任、副担任の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/409.png"
   },
@@ -3427,6 +3752,7 @@ data={
       978,
       173
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/410.png"
   },
@@ -3437,6 +3763,7 @@ data={
       881,
       173
     ],
+    "floor":[3],
     "info": "情報Ⅱの授業や課題研究情報系などで使用します。\n",
     "img": "https://lisanavi.github.io/map/floorpic/411.png"
   },
@@ -3447,6 +3774,7 @@ data={
       771,
       173
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/412.png"
   },
@@ -3457,6 +3785,7 @@ data={
       650,
       173
     ],
+    "floor":[3],
     "info": "プログラミング技術やソフトウェア技術などの授業や課題研究で使用します。\nまた、エレクトロニクス部、ロボメック研究部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/413.png"
   },
@@ -3467,6 +3796,7 @@ data={
       539,
       173
     ],
+    "floor":[3],
     "info": "夜間中学の職員室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/414.png"
   },
@@ -3477,6 +3807,7 @@ data={
       307,
       173
     ],
+    "floor":[3],
     "info": "夜間中学の使用する部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/415.png"
   },
@@ -3487,6 +3818,7 @@ data={
       307,
       130
     ],
+    "floor":[3],
     "info": "夜間中学の使用する部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/416.png"
   },
@@ -3497,6 +3829,7 @@ data={
       258,
       129
     ],
+    "floor":[3],
     "info": "音が響かない特殊な部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/417.png"
   },
@@ -3507,6 +3840,7 @@ data={
       497,
       277
     ],
+    "floor":[3],
     "info": "夜間中学の使用する部屋です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/418.png"
   },
@@ -3517,6 +3851,7 @@ data={
       545,
       277
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/419.png"
   },
@@ -3527,6 +3862,7 @@ data={
       594,
       277
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/420.png"
   },
@@ -3537,6 +3873,7 @@ data={
       688,
       277
     ],
+    "floor":[3],
     "info": "アコースティックギター部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/421.png"
   },
@@ -3547,6 +3884,7 @@ data={
       834,
       277
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/422.png"
   },
@@ -3557,6 +3895,7 @@ data={
       881,
       277
     ],
+    "floor":[3],
     "info": "静かな環境で自習ができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/423.png"
   },
@@ -3567,6 +3906,7 @@ data={
       832,
       646
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/424.png"
   },
@@ -3577,6 +3917,7 @@ data={
       688,
       647
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/425.png"
   },
@@ -3587,6 +3928,7 @@ data={
       636,
       650
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/426.png"
   },
@@ -3597,6 +3939,7 @@ data={
       687,
       756
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/427.png"
   },
@@ -3607,6 +3950,7 @@ data={
       736,
       732
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/428.png"
   },
@@ -3617,6 +3961,7 @@ data={
       821,
       755
     ],
+    "floor":[3],
     "info": "被服室です。\n家庭基礎の授業で使用します。裁縫などができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/429.png"
   },
@@ -3627,6 +3972,7 @@ data={
       1015,
       755
     ],
+    "floor":[3],
     "info": "音楽の授業で使用します。また、軽音楽部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/430.png"
   },
@@ -3637,6 +3983,7 @@ data={
       1064,
       755
     ],
+    "floor":[3],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/431.png"
   }

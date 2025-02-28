@@ -38,35 +38,30 @@ function floor(num)
 function search(num){
     if (Number.isInteger(num)){
         alert("部屋番号を入力してください。");
-    }
-    else if (!(num > 100 && num < 1000)) {
-        alert("3桁である必要があります。");
-    }
-    else if (!(num[0] < 5 && num[0] > 0))
-    {
-        alert(num[0] + "階は存在しません。");
-    }
-    else {
+    } else {
         if (typeof data[num] == "undefined"){
             alert("指定された部屋番号は登録されていません。");
         }
         else {
-            map.contentWindow.room = num;
-            floornum = num[0] - 1;
-            map.contentWindow.flchange(num-1);
-            map.contentWindow.showup(num);
-            dis_number.textContent = num[0] + "F";
-            dis_number.style.background=colors[num[0] - 1];
-            if (data[num]["info"] != undefined)
-                document.getElementById("info").style.visibility = "hidden";
-            if (data[num]["info"] != undefined)
+            if (data[num]["info"] != undefined){
+                document.getElementById("info").style.visibility = "hidden";}
+            if (data[num]["info"] != undefined){
                 document.getElementById("info-btn").style.visibility = "visible"
-            else
-                document.getElementById("info-btn").style.visibility = "none";
+                document.getElementById("info-btn").style.visibility = "none";}
+
+            map.contentWindow.room = num;
+            floors = data[num]["floor"];
+            
+            map.contentWindow.showup(num);
+        
+            dis_number.textContent = (floors[0]+1) + "F";
+            dis_number.style.background=colors[data[num]["floor"]];
+           
         }
         
     }
 }
+
 
 function info(num) {
     var info_pane = document.getElementById("information");

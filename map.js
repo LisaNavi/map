@@ -40,7 +40,8 @@ h4.onanimationend = function () {
 function showup(rn)
 {
     room = rn;
-    img.src = pictures[room[0] - 1]
+    a=data[room]["floor"];
+    img.src = pictures[a];
 
     // lefttop y - rightbottom y = height
     
