@@ -44,11 +44,12 @@ function search(num){
         }
         else {
             if (data[num]["info"] != undefined){
-                document.getElementById("info").style.visibility = "hidden";}
+                document.getElementById("info").style.visibility = "hidden";
+            }
             if (data[num]["info"] != undefined){
                 document.getElementById("info-btn").style.visibility = "visible"
-                document.getElementById("info-btn").style.visibility = "none";}
-
+                document.getElementById("info-btn").style.visibility = "none";
+            }
             map.contentWindow.room = num;
             floors = data[num]["floor"];
             
@@ -161,13 +162,6 @@ function search_route(Snum, Gnum) {
     if (Number.isInteger(Snum)){
         alert("部屋番号を入力してください。");
     }
-    else if (!(Snum > 100 && Snum < 1000)) {
-        alert("3桁である必要があります。");
-    }
-    else if (!(Snum[0] < 5 && Snum[0] > 0))
-    {
-        alert(Snum[0] + "階は存在しません。");
-    }
     else {
         if (typeof data[Snum] == "undefined"){
             alert("指定された部屋番号は登録されていません。");
@@ -175,13 +169,6 @@ function search_route(Snum, Gnum) {
         else {
             if (Number.isInteger(Gnum)){
                 alert("部屋番号を入力してください。");
-            }
-            else if (!(Gnum > 100 && Gnum < 1000)) {
-                alert("3桁である必要があります。");
-            }
-            else if (!(Gnum[0] < 5 && Gnum[0] > 0))
-            {
-                alert(Gnum[0] + "階は存在しません。");
             }
             else {
                 if (typeof data[Gnum] == "undefined"){
@@ -194,14 +181,8 @@ function search_route(Snum, Gnum) {
                     var Gx0 = path[Gnum][0];
                     var Gy0 = path[Gnum][1];
                     var floor1 = 0;
-                    for (let i = 0; i < 4; i++){
-                        if ((i+1)*100 < Snum && Snum < (i+2)*100){
-                            Sf = i;
-                        }
-                        if ((i+1)*100 < Gnum && Gnum < (i+2)*100){
-                            Gf = i;
-                        }
-                    }
+                    Sf = data[Snum]["floor"];
+                    Gf = data[Gnum]["floor"];
                     var fn = Sf;
                     var work = [];
                     if(Gx0 < Sx0){
@@ -599,12 +580,13 @@ function search_route(Snum, Gnum) {
                     map.contentWindow.clearhighlight();
                     map.contentWindow.download(Sx,Sy,Gx,Gy,Sf,Gf,floor1);
                     map.contentWindow.Sroom = Snum;
-                    map.contentWindow.showupS(Snum);
                     map.contentWindow.Groom = Gnum;
+                    floors = data[Snum]["floor"];
+                    map.contentWindow.showupS(Snum);
                     map.contentWindow.showupG(Gnum);
                     map.contentWindow.flchange(fn);
-                    dis_number.textContent = Snum[0] + "F";
-                    dis_number.style.background=colors[Snum[0] - 1];
+                    dis_number.textContent = (floors[0]+1) + "F";
+                    dis_number.style.background=colors[data[Snum]["floor"]];
                 }
             }
         }

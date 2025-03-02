@@ -189,6 +189,16 @@ div#right-side {
 	border: 2px solid #6699ff;
 }
 
+#input-start{
+	width:75px; height: 2rem;
+	border: 2px solid #6699ff;
+}
+
+#input-goal{
+	width:75px; height: 2rem;
+	border: 2px solid #6699ff;
+}
+
 div#zooms{
 	display: none; /* スマホ専用表示のためデフォルトは非表示 */
 }

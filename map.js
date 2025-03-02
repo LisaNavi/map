@@ -71,7 +71,7 @@ function flchange(num)
     
 
     // ハイライトと同じ階になったら表示
-    if (room != "" && room[0] == floornum+1)
+    if (room != "" && data[room]["floor"] == floornum)
     {
         if (h1.style.visibility == "hidden") {
             // 大きさを計算して座標配置
@@ -112,7 +112,7 @@ function flchange(num)
     }
 
     //経路スタート地点
-    if (Sroom != "" && Sroom[0] == floornum+1){
+    if (Sroom != "" && Sfloor == floornum){
         if (h3.style.visibility == "hidden") {
             // 大きさを計算して座標配置
             h3.style.width = ( data[Sroom]["pos"][2] - data[Sroom]["pos"][0] ) + "px";
@@ -131,7 +131,7 @@ function flchange(num)
         h3.style.visibility = "hidden";
     }
     //経路ゴール地点
-    if (Groom != "" && Groom[0] == floornum+1){
+    if (Groom != "" && Gfloor == floornum){
         if (h4.style.visibility == "hidden") {
             // 大きさを計算して座標配置
             h4.style.width = ( data[Groom]["pos"][2] - data[Groom]["pos"][0] ) + "px";
@@ -181,7 +181,8 @@ function download(S1,S2,G1,G2,S3,G3,fl){
 function showupS(rn)
 {
     Sroom = rn;
-    img.src = pictures[Sroom[0] - 1]
+    Sfloor=data[Sroom]["floor"][0];
+    img.src = pictures[Sfloor];
 
     // lefttop y - rightbottom y = height
     
@@ -197,6 +198,8 @@ function showupS(rn)
 function showupG(rn)
 {
     Groom = rn;
+    Gfloor = data[Groom]["floor"][0];
+    console.log(Gfloor);
 }
 
 function line(Sx,Sy,Gx,Gy){
