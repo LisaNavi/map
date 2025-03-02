@@ -171,7 +171,7 @@ data={
       112,
       87,
       259,
-      171
+      273
     ],
     "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
@@ -2051,7 +2051,29 @@ data={
     "info": "ジャズバンド部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/102.png"
   },
+  "記念": {
+    "pos": [
+      1451,
+      205,
+      1546,
+      276
+    ],
+    "floor":[0],
+    "info": "ジャズバンド部が活動しています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/102.png"
+  },
   "視聴覚室": {
+    "pos": [
+      1230,
+      38,
+      1454,
+      171
+    ],
+    "floor":[0],
+    "info": "視聴覚室です。\n学年全体で集まるときに使います。また、LBT部、演劇部が活動しています。\n軽音楽部LBT部がライブを行っていることもあります。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/103.png"
+  },
+  "視聴覚": {
     "pos": [
       1230,
       38,
@@ -2221,7 +2243,7 @@ data={
       112,
       87,
       259,
-      171
+      273
     ],
     "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
@@ -2232,7 +2254,7 @@ data={
       112,
       87,
       259,
-      171
+      273
     ],
     "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
@@ -2243,7 +2265,7 @@ data={
       112,
       87,
       259,
-      171
+      273
     ],
     "floor":[0],
     "info": "工学系の教室です。\n旋盤やフライス盤といった特別な機械を使い作業ができます。\n",
@@ -2261,6 +2283,17 @@ data={
     "img": "https://lisanavi.github.io/map/floorpic/117.png"
   },
   "CAM実習室": {
+    "pos": [
+      256,
+      252,
+      354,
+      443
+    ],
+    "floor":[0],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/117.png"
+  },
+  "ＣＡＭ実習室": {
     "pos": [
       256,
       252,
@@ -2338,6 +2371,17 @@ data={
     "img": "https://lisanavi.github.io/map/floorpic/123.png"
   },
   "会議室": {
+    "pos": [
+      733,
+      191,
+      930,
+      277
+    ],
+    "floor":[0],
+    "info": "会議室です。\n様々な会議で使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/122.png"
+  },
+  "会議": {
     "pos": [
       733,
       191,
@@ -2612,7 +2656,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/145.png"
   },
-  "文化部室1": {
+  "文化部部室1": {
     "pos": [
       849,
       696,
@@ -2623,7 +2667,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
-  "文化部室2": {
+  "文化部部室2": {
     "pos": [
       866,
       696,
@@ -2634,7 +2678,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
-  "文化部室3": {
+  "文化部部室3": {
     "pos": [
       891,
       696,
@@ -2645,7 +2689,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
-  "文化部室4": {
+  "文化部部室4": {
     "pos": [
       962,
       696,
@@ -2656,7 +2700,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
-  "文化部室5": {
+  "文化部部室5": {
     "pos": [
       984,
       696,
@@ -2667,7 +2711,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/146.png"
   },
-  "文化部室6": {
+  "文化部部室6": {
     "pos": [
       1007,
       696,
@@ -2811,6 +2855,28 @@ data={
     "img": "https://lisanavi.github.io/map/floorpic/210.png"
   },
   "職員室1": {
+    "pos": [
+      973,
+      87,
+      1073,
+      172
+    ],
+    "floor":[1],
+    "info": "東棟1階職員室です。\n3年次の担任、副担任の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/211.png"
+  },
+  "東棟二階職員室": {
+    "pos": [
+      973,
+      87,
+      1073,
+      172
+    ],
+    "floor":[1],
+    "info": "東棟1階職員室です。\n3年次の担任、副担任の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/211.png"
+  },
+  "東棟2階職員室": {
     "pos": [
       973,
       87,
@@ -3008,7 +3074,84 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/225.png"
   },
+  "生徒会室(定時制)": {
+    "pos": [
+      973,
+      190,
+      1025,
+      277
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/225.png"
+  },
+  "更衣室": {
+    "pos": [
+      733,
+      561,
+      800,
+      647
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/226.png"
+  },
+  "生徒更衣室": {
+    "pos": [
+      733,
+      561,
+      800,
+      647
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/226.png"
+  },
+  "更衣室（女)": {
+    "pos": [
+      733,
+      561,
+      800,
+      647
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/226.png"
+  },
+  "更衣室(女)": {
+    "pos": [
+      733,
+      561,
+      800,
+      647
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/226.png"
+  },
   "生徒更衣室（女)": {
+    "pos": [
+      733,
+      561,
+      800,
+      647
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/226.png"
+  },
+  "生徒更衣室(女)": {
+    "pos": [
+      733,
+      561,
+      800,
+      647
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/226.png"
+  },
+  "女子更衣室": {
     "pos": [
       733,
       561,
@@ -3118,6 +3261,39 @@ data={
     "info": "西棟2階職員室です。\n職員室の前には落とし物が保管されています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/234.png"
   },
+  "西棟職員室": {
+    "pos": [
+      398,
+      669,
+      497,
+      755
+    ],
+    "floor":[1],
+    "info": "西棟2階職員室です。\n職員室の前には落とし物が保管されています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/234.png"
+  },
+  "西棟二階職員室": {
+    "pos": [
+      398,
+      669,
+      497,
+      755
+    ],
+    "floor":[1],
+    "info": "西棟2階職員室です。\n職員室の前には落とし物が保管されています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/234.png"
+  },
+  "西棟2階職員室": {
+    "pos": [
+      398,
+      669,
+      497,
+      755
+    ],
+    "floor":[1],
+    "info": "西棟2階職員室です。\n職員室の前には落とし物が保管されています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/234.png"
+  },
   "NMA室": {
     "pos": [
       492,
@@ -3151,6 +3327,17 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/237.png"
   },
+  "生徒会室": {
+    "pos": [
+      685,
+      669,
+      737,
+      736
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/238.png"
+  },
   "生徒会室（全日制）": {
     "pos": [
       685,
@@ -3162,7 +3349,62 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/238.png"
   },
+  "生徒会室(全日制)": {
+    "pos": [
+      685,
+      669,
+      737,
+      736
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/238.png"
+  },
+  "更衣室（男）": {
+    "pos": [
+      733,
+      669,
+      800,
+      755
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/239.png"
+  },
+  "更衣室(男)": {
+    "pos": [
+      733,
+      669,
+      800,
+      755
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/239.png"
+  },
   "生徒更衣室（男）": {
+    "pos": [
+      733,
+      669,
+      800,
+      755
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/239.png"
+  },
+  "生徒更衣室(男)": {
+    "pos": [
+      733,
+      669,
+      800,
+      755
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/239.png"
+  },
+  "男子更衣室": {
     "pos": [
       733,
       669,
@@ -3294,7 +3536,40 @@ data={
     "info": "情報Ⅰの授業で使用します。\n座学やパソコンを使ってExcelの実習などをすることができます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/311.png"
   },
+  "情報基礎コンピューター室": {
+    "pos": [
+      1233,
+      89,
+      1345,
+      172
+    ],
+    "floor":[2],
+    "info": "情報Ⅰの授業で使用します。\n座学やパソコンを使ってExcelの実習などをすることができます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/311.png"
+  },
   "職員室2": {
+    "pos": [
+      974,
+      89,
+      1073,
+      172
+    ],
+    "floor":[2],
+    "info": "東棟3階職員室です。\n2年次の担任、副担任の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/312.png"
+  },
+  "東棟三階職員室": {
+    "pos": [
+      974,
+      89,
+      1073,
+      172
+    ],
+    "floor":[2],
+    "info": "東棟3階職員室です。\n2年次の担任、副担任の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/312.png"
+  },
+  "東棟3階職員室": {
     "pos": [
       974,
       89,
@@ -3327,9 +3602,9 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/313.png"
   },
-  "進路指導室1": {
+  "進路指導室2": {
     "pos": [
-      729,
+      854,
       89,
       904,
       172
@@ -3340,24 +3615,35 @@ data={
   },
   "ガイダンスルーム": {
     "pos": [
-      729,
+      783,
       89,
-      904,
+      854,
       172
     ],
     "floor":[2],
     "info": "進路関係の教室です。\n一部の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/314.png"
   },
-  "進路指導室2": {
+  "進路指導室1": {
     "pos": [
       729,
       89,
-      904,
+      783,
       172
     ],
     "floor":[2],
     "info": "進路指導室2です。\n一部の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/314.png"
+  },
+  "進路指導室": {
+    "pos": [
+      729,
+      89,
+      783,
+      172
+    ],
+    "floor":[2],
+    "info": "進路指導室1です。\n一部の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/314.png"
   },
   "較正室": {
@@ -3393,7 +3679,18 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/317.png"
   },
-  "化学系課題研究室": {
+  "電気関係資料閲覧室": {
+    "pos": [
+      421,
+      105,
+      494,
+      172
+    ],
+    "floor":[2],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/318.png"
+  },
+  "科学系課題研究室": {
     "pos": [
       421,
       105,
@@ -3745,6 +4042,28 @@ data={
     "info": "東棟4階職員室です。\n1年次の担任、副担任の先生がいます。\n",
     "img": "https://lisanavi.github.io/map/floorpic/409.png"
   },
+  "東棟四階職員室": {
+    "pos": [
+      973,
+      87,
+      1093,
+      176
+    ],
+    "floor":[3],
+    "info": "東棟4階職員室です。\n1年次の担任、副担任の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/409.png"
+  },
+  "東棟4階職員室": {
+    "pos": [
+      973,
+      87,
+      1093,
+      176
+    ],
+    "floor":[3],
+    "info": "東棟4階職員室です。\n1年次の担任、副担任の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/409.png"
+  },
   "外国語学習室": {
     "pos": [
       877,
@@ -3866,6 +4185,17 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/420.png"
   },
+  "情報システム工学第一実験室": {
+    "pos": [
+      540,
+      192,
+      594,
+      277
+    ],
+    "floor":[3],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/420.png"
+  },
   "情報システム工学第2実験室": {
     "pos": [
       590,
@@ -3877,7 +4207,29 @@ data={
     "info": "アコースティックギター部が活動しています。\n",
     "img": "https://lisanavi.github.io/map/floorpic/421.png"
   },
+  "情報システム工学第二実験室": {
+    "pos": [
+      590,
+      192,
+      688,
+      277
+    ],
+    "floor":[3],
+    "info": "アコースティックギター部が活動しています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/421.png"
+  },
   "情報システム工学第3実験室": {
+    "pos": [
+      734,
+      192,
+      834,
+      277
+    ],
+    "floor":[3],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/422.png"
+  },
+  "情報システム工学第三実験室": {
     "pos": [
       734,
       192,
