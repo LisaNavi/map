@@ -199,7 +199,6 @@ function showupG(rn)
 {
     Groom = rn;
     Gfloor = data[Groom]["floor"][0];
-    console.log(Gfloor);
 }
 
 function line(Sx,Sy,Gx,Gy){
