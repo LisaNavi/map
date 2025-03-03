@@ -196,7 +196,7 @@ div#right-side {
 
 #input-goal{
 	width:75px; height: 2rem;
-	border: 2px solid #6699ff;
+	border: 2px solid #ff6666;
 }
 
 div#zooms{
@@ -366,7 +366,7 @@ div#info-text{
 
 }
 #info:hover {
-	color: #9f9f9f;
+	color: #fff;
 	background: #9f9f9f;
 }
 
@@ -376,27 +376,6 @@ div#info-text{
 	width: 480px;
 	height: 280px;
 
-}
-
-div#route-panel{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	width: 22rem;
-	height: 10rem;
-	top: 8rem;
-	background: rgb(61, 61, 61, 0.9);
-	color:#fff;
-	position: fixed;
-	visibility: hidden;
-	z-index:100;
-	font-weight: bold;
-	text-align: center;
-	user-select: none;
-	border-radius: 1rem;
-	left: 50%;
-  	transform: translateX(-50%);
 }
 
 
@@ -450,6 +429,64 @@ div#cls-table{
 	border-radius: 1rem;
 	left: 50%;
   	transform: translateX(-50%);
+}
+
+/*経路検索用*/
+div#route-panel{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 22rem;
+	height: 10rem;
+	top: 8rem;
+	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
+	position: fixed;
+	visibility: hidden;
+	z-index:100;
+	font-weight: bold;
+	text-align: center;
+	user-select: none;
+	border-radius: 1rem;
+	left: 50%;
+  	transform: translateX(-50%);
+}
+
+.route-input{
+	text-align: center;
+	width: 50px;
+	border-radius: 10px;
+	margin: 20px;
+}
+
+div.route-tab{
+	float: left;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+}
+
+a.route-btn{
+	display: inline;
+	text-align: center;
+	width: 45px;
+	border-radius: 10px;
+	margin: 10px;
+	vertical-align: middle;
+	text-decoration: none;
+	padding: 0.3rem 0.4rem;
+	font-weight: bold;
+	border: 2px solid #9f9f9f;
+	color: #9f9f9f;
+	user-select: none;
+	transition: 0.3s;
+}
+
+a.route-btn:hover {
+	color: #fff;
+	background: #9f9f9f;
 }
 
 /* 左寄せ専用タグ */

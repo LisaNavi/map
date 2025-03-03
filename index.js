@@ -50,10 +50,12 @@ function search(num){
                 document.getElementById("info-btn").style.visibility = "visible"
                 document.getElementById("info-btn").style.visibility = "none";
             }
+            map.contentWindow.clearhighlight();
             map.contentWindow.room = num;
             floors = data[num]["floor"];
             
             map.contentWindow.showup(num);
+            map.contentWindow.flchange(floors);
         
             dis_number.textContent = (floors[0]+1) + "F";
             dis_number.style.background=colors[data[num]["floor"]];
@@ -690,6 +692,17 @@ function stairs3(x1,y1,x2,y2,Sf,Gf,stairs){
     }
 }
 
+//ルート削除
+function de_route(){
+    for (let i = 0; i < 4; i++){
+        Sx[i] = 330;
+        Gx[i] = 330;
+        Sy[i] = 220;
+        Gy[i] = 220;
+    }
+    map.contentWindow.clearhighlight();
+    map.contentWindow.delate_route(Sx,Sy,Gx,Gy);
+}
 
 // CSV関係
 let csvformat = [["講時/曜日","月","火","水","木","金"],

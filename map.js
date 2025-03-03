@@ -40,8 +40,8 @@ h4.onanimationend = function () {
 function showup(rn)
 {
     room = rn;
-    a=data[room]["floor"];
-    img.src = pictures[a];
+    afloor=data[room]["floor"][0];
+    img.src = pictures[afloor];
 
     // lefttop y - rightbottom y = height
     
@@ -71,14 +71,10 @@ function flchange(num)
     
 
     // ハイライトと同じ階になったら表示
-    if (room != "" && data[room]["floor"] == floornum)
+    if (room != "" && afloor == floornum)
     {
         if (h1.style.visibility == "hidden") {
             // 大きさを計算して座標配置
-            h1.style.width = ( data[room]["pos"][2] - data[room]["pos"][0] ) + "px";
-            h1.style.height = ( data[room]["pos"][3] - data[room]["pos"][1] ) + "px";
-            h1.style.left = data[room]["pos"][0] + "px";
-            h1.style.top = data[room]["pos"][1] + "px";
             h1.style.visibility = "visible";
             h1.classList.add("show");
             h1.style.zIndex = 1;
@@ -115,10 +111,6 @@ function flchange(num)
     if (Sroom != "" && Sfloor == floornum){
         if (h3.style.visibility == "hidden") {
             // 大きさを計算して座標配置
-            h3.style.width = ( data[Sroom]["pos"][2] - data[Sroom]["pos"][0] ) + "px";
-            h3.style.height = ( data[Sroom]["pos"][3] - data[Sroom]["pos"][1] ) + "px";
-            h3.style.left = data[Sroom]["pos"][0] + "px";
-            h3.style.top = data[Sroom]["pos"][1] + "px";
             h3.style.visibility = "visible";
             h3.classList.add("show");
             h3.style.zIndex = 1;
@@ -134,10 +126,6 @@ function flchange(num)
     if (Groom != "" && Gfloor == floornum){
         if (h4.style.visibility == "hidden") {
             // 大きさを計算して座標配置
-            h4.style.width = ( data[Groom]["pos"][2] - data[Groom]["pos"][0] ) + "px";
-            h4.style.height = ( data[Groom]["pos"][3] - data[Groom]["pos"][1] ) + "px";
-            h4.style.left = data[Groom]["pos"][0] + "px";
-            h4.style.top = data[Groom]["pos"][1] + "px";
             h4.style.visibility = "visible";
             h4.classList.add("show");
             h4.style.zIndex = 1;
@@ -199,6 +187,36 @@ function showupG(rn)
 {
     Groom = rn;
     Gfloor = data[Groom]["floor"][0];
+
+    // lefttop y - rightbottom y = height
+
+    h4.style.width = ( data[Groom]["pos"][2] - data[Groom]["pos"][0] ) + "px";
+    h4.style.height = ( data[Groom]["pos"][3] - data[Groom]["pos"][1] ) + "px";
+    h4.style.left = data[Groom]["pos"][0] + "px";
+    h4.style.top = data[Groom]["pos"][1] + "px";
+}
+
+function delate_route(S1,S2,G1,G2){
+    Sx = S1;
+    Sy = S2;
+    Gx = G1;
+    Gy = G2;
+    flchange(floornum);
+    // lefttop y - rightbottom y = height 
+    h3.style.width = "0px";
+    h3.style.height = "0px";
+    h3.style.left = "0px";
+    h3.style.top = "0px";
+    h3.style.visibility = "visible";
+    h3.classList.add("show");
+    h3.style.zIndex = 1;
+    h4.style.width = "0px";
+    h4.style.height = "0px";
+    h4.style.left = "0px";
+    h4.style.top = "0px";
+    h4.style.visibility = "visible";
+    h4.classList.add("show");
+    h4.style.zIndex = 1;
 }
 
 function line(Sx,Sy,Gx,Gy){
