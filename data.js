@@ -9,8 +9,9 @@ data={
       170
     ],
     "floor":[0],
-    "info": "制作中\n",
-    "img": "https://lisanavi.github.io/map/floorpic/101.png"
+    "info": "制作1中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/101.png",
+    "name":"101教室　多目的室"
   },
   "102": {
     "pos": [
@@ -21,7 +22,8 @@ data={
     ],
     "floor":[0],
     "info": "ジャズバンド部が活動しています。\n",
-    "img": "https://lisanavi.github.io/map/floorpic/102.png"
+    "img": "https://lisanavi.github.io/map/floorpic/102.png",
+    "name":"102教室 記念室"
   },
   "103": {
     "pos": [
