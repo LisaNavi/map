@@ -2592,16 +2592,60 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/140.png"
   },
-  "機器分析実習室": {
+  "機器分析実習室1": {
     "pos": [
-      492,
-      669,
-      593,
-      756
+      397,
+      668,
+      448,
+      754
     ],
     "floor":[0],
-    "info": "白衣を借りられる部屋です。\n1～3年生の実習で環境バイオ系を履修してくれた生徒は白衣を部屋から借りることが出来ます。\n白衣に関しては半年間貸し代を行いますので返却していただくことが必要です。\n",
-    "img": "https://lisanavi.github.io/map/floorpic/236.png"
+    "info": "化学工学部が活動しています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/141.png"
+  },
+  "化学工学部部室": {
+    "pos": [
+      397,
+      668,
+      448,
+      754
+    ],
+    "floor":[0],
+    "info": "化学工学部が活動しています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/141.png"
+  },
+  "化工部部室": {
+    "pos": [
+      397,
+      668,
+      448,
+      754
+    ],
+    "floor":[0],
+    "info": "化学工学部が活動しています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/141.png"
+  },
+  "化学工学部": {
+    "pos": [
+      397,
+      668,
+      448,
+      754
+    ],
+    "floor":[0],
+    "info": "化学工学部が活動しています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/141.png"
+  },
+  "化工部": {
+    "pos": [
+      397,
+      668,
+      448,
+      754
+    ],
+    "floor":[0],
+    "info": "化学工学部が活動しています。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/141.png"
   },
   "分析化学準備室": {
     "pos": [
@@ -3306,6 +3350,28 @@ data={
     "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/235.png"
+  },
+  "機器分析実習室": {
+    "pos": [
+      492,
+      669,
+      593,
+      756
+    ],
+    "floor":[0],
+    "info": "白衣を借りられる部屋です。\n1～3年生の実習で環境バイオ系を履修してくれた生徒は白衣を部屋から借りることが出来ます。\n白衣に関しては半年間貸し代を行いますので返却していただくことが必要です。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/236.png"
+  },
+  "機器分析実習室2": {
+    "pos": [
+      492,
+      669,
+      593,
+      756
+    ],
+    "floor":[0],
+    "info": "白衣を借りられる部屋です。\n1～3年生の実習で環境バイオ系を履修してくれた生徒は白衣を部屋から借りることが出来ます。\n白衣に関しては半年間貸し代を行いますので返却していただくことが必要です。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/236.png"
   },
   "環境工学実習室": {
     "pos": [

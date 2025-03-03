@@ -370,39 +370,39 @@ function search_route(Snum, Gnum) {
                                     }
                                 }
                                 else if(1182 < Gx0){
-                                    if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
-                                        if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                    if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) + 803 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430){
+                                        if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                             stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
-                                            if (Sf == 0 || Gf == 0){
+                                            if (Gf == 0){
                                                 floor1 = 1;
                                             }
                                         }
                                         else{
                                             stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,711);
-                                            if (Sf == 0 || Gf == 0){
+                                            if (Gf == 0){
                                                 floor1 = 1;
                                             }
                                         }
                                     }
                                     else {
                                         stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,328);
-                                        if (Sf == 0 || Gf == 0){
+                                        if (Gf == 0){
                                             floor1 = 1;
                                         }
                                     }
                                 }
                                 else{
                                     if(Math.abs(1182 - Sx0) + 477 + Math.abs(1182 -Gx0) < Math.abs(Sx0 - 366) + 477 + Math.abs(Gx0 - 366)){
-                                        if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
-                                            if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                        if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) + 803 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430){
+                                            if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
-                                                if (Sf == 0 || Gf == 0){
+                                                if (Sf == 0 && Gf == 0){
                                                     floor1 = 1;
                                                 }
                                             }
                                             else{
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,711);
-                                                if (Sf == 0 || Gf == 0){
+                                                if (Sf == 0 && Gf == 0){
                                                     floor1 = 1;
                                                 }
                                             }
@@ -415,8 +415,8 @@ function search_route(Snum, Gnum) {
                                         }
                                     }
                                     else{
-                                        if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
-                                            if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                        if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) + 38 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 345){
+                                            if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 345 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131) + 765){
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
                                                 if (Gf == 0){
                                                     floor1 = 1;
