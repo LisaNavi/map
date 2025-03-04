@@ -245,30 +245,30 @@ function search_route(Snum, Gnum) {
                                 }
                                 else{
                                     if(Math.abs(1182 - Sx0) + 477 + Math.abs(1182 -Gx0) < Math.abs(Sx0 - 366) + 477 + Math.abs(Gx0 - 366)){
-                                        if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
-                                            if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                        if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) +803 >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 430){
+                                            if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) +430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
-                                                if (Sf == 0 || Gf == 0){
+                                                if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                     floor1 = 1;
                                                 }
                                             }
                                             else{
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,701);
-                                                if (Sf == 0 || Gf == 0){
+                                                if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                     floor1 = 1;
                                                 }
                                             }
                                         }
                                         else{
                                             stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,341);
-                                            if (Sf == 0 || Gf == 0){
+                                            if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                 floor1 = 1;
                                             }
                                         }
                                     }
                                     else{
-                                        if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
-                                            if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                        if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) +38 >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 345){
+                                            if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 345 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131) + 765){
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
                                                 if (Gf == 0){
                                                     floor1 = 1;
@@ -296,8 +296,8 @@ function search_route(Snum, Gnum) {
                             }
                             //一般教室へ移動するとき
                             else if(Gx0 == 1131){
-                                if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
-                                    if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) + 803 >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 430){
+                                    if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                         stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
                                     }
                                     else{
@@ -310,8 +310,8 @@ function search_route(Snum, Gnum) {
                             }
                             //事務室へ移動するとき
                             else if(Gy0 == 300){
-                                if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
-                                    if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) + 803 >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 430){
+                                    if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                         stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
                                     }
                                     else{
@@ -325,8 +325,8 @@ function search_route(Snum, Gnum) {
                             //校長室側へ移動するとき
                             else if(Gy0 == 256){
                                 if(Math.abs(938 - Sx) < Math.abs(1182 - Sx)){
-                                    if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
-                                        if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                    if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) + 803 >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 430){
+                                        if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                             stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
                                         }
                                         else{
@@ -396,20 +396,26 @@ function search_route(Snum, Gnum) {
                                         if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) + 803 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430){
                                             if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
-                                                if (Sf == 0 && Gf == 0){
+                                                if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                     floor1 = 1;
                                                 }
                                             }
                                             else{
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,711);
-                                                if (Sf == 0 && Gf == 0){
+                                                if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                     floor1 = 1;
                                                 }
                                             }
                                         }
-                                        else {
+                                        else if(Gf != 3){
                                             stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,328);
-                                            if (Sf == 0 || Gf == 0){
+                                            if (Sx < Gx &&(Sf == 0 || Gf == 0)){
+                                                floor1 = 1;
+                                            }
+                                        }
+                                        else {
+                                            stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,711);
+                                            if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                 floor1 = 1;
                                             }
                                         }
@@ -418,20 +424,26 @@ function search_route(Snum, Gnum) {
                                         if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) + 38 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 345){
                                             if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 345 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131) + 765){
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
-                                                if (Gf == 0){
+                                                if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                     floor1 = 1;
                                                 }
                                             }
                                             else{
                                                 stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,711);
-                                                if (Gf == 0){
+                                                if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                     floor1 = 1;
                                                 }
                                             }
                                         }
-                                        else {
+                                        else if(Gf != 3){
                                             stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,328);
-                                            if (Gf == 0){
+                                            if (Sx < Gx &&(Sf == 0 || Gf == 0)){
+                                                floor1 = 1;
+                                            }
+                                        }
+                                        else {
+                                            stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,711);
+                                            if (Sx < Gx &&(Sf == 0 || Gf == 0)){
                                                 floor1 = 1;
                                             }
                                         }
@@ -444,8 +456,8 @@ function search_route(Snum, Gnum) {
                             }
                             //一般教室へ移動するとき
                             else if(Gx0 == 1131){
-                                if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
-                                    if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) +803 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430){
+                                    if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                         stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
                                     }
                                     else{
@@ -458,8 +470,8 @@ function search_route(Snum, Gnum) {
                             }
                             //事務室へ移動するとき
                             else if(Gy0 == 300){
-                                if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
-                                    if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) + 803 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430){
+                                    if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 430 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                         stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
                                     }
                                     else{
@@ -473,8 +485,8 @@ function search_route(Snum, Gnum) {
                             //校長室側へ移動するとき
                             else if(Gy0 == 256){
                                 if(Math.abs(366 - Sx0) + 572 + Math.abs(Gx0 - 938) < Math.abs(1182 - Sx0) + Math.abs(1182 - Gx0)){
-                                    if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
-                                        if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
+                                    if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) + 38 >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 345){
+                                        if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) + 345 >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131) + 765){
                                             stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
                                         }
                                         else{
@@ -572,10 +584,10 @@ function search_route(Snum, Gnum) {
                         //校長室側から移動するとき
                         else if(Sy0 == 256){
                             if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
-                                stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
+                                stairs3(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
                             }
                             else{
-                                stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,701);
+                                stairs3(Sx0,Sy0,Gx0,Gy0,Sf,Gf,701);
                             }
                         }
                     }
@@ -681,6 +693,46 @@ function stairs3(x1,y1,x2,y2,Sf,Gf,stairs){
                 }
                 else {
                     Gx[j] = stairs;
+                }
+            }
+            Sx[i] = x1;
+            Sy[i] = y1;
+        }
+        else {
+            Sx[i] = stairs;
+        }
+    }
+}
+//階段例外処理3
+function stairs(x1,y1,x2,y2,Sf,Gf,stairs){
+    for (let i = 0; i < 4; i++){
+        if (Sf != i){
+            if(Math.abs(y2 - 181) + 75 <= Math.abs(y2 - 658) + 402){
+                Sy[i] = 181;
+            }
+            else {
+                Sy[i] = 658;
+            }
+        }
+        else {
+            Sy[i] = y1;
+        }
+    }    
+    for (let i = 0; i < 4; i++){
+        if (Sf == i){
+            for (let j = 0; j < 4; j++){
+                if (Gf == j){
+                    Gx[j] = x2;
+                    Gy[j] = y2;
+                }
+                else {
+                    Gx[j] = stairs;
+                    if(Math.abs(y2 - 181) + 75 <= Math.abs(y2 - 658) + 402){
+                        Gy[j] = 181;
+                    }
+                    else {
+                        Gy[j] = 658;
+                    }
                 }
             }
             Sx[i] = x1;
