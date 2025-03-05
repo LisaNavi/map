@@ -722,19 +722,8 @@ function stairs3(x1,y1,x2,y2,Sf,Gf,stairs){
 }
 //階段例外処理3
 function stairs4(x1,y1,x2,y2,Sf,Gf,stairs){
-    for (let i = 0; i < 4; i++){
-        if (Sf != i){
-            if(Math.abs(y2 - 181) + 75 <= Math.abs(y2 - 658) + 402){
-                Sy[i] = 181;
-            }
-            else {
-                Sy[i] = 658;
-            }
-        }
-        else {
-            Sy[i] = y1;
-        }
-    }    
+    console.log(Math.abs(y1 - 181) + Math.abs(y2 - 181));
+    console.log(Math.abs(y1 - 658) + Math.abs(y2 - 658) -8);
     for (let i = 0; i < 4; i++){
         if (Sf == i){
             for (let j = 0; j < 4; j++){
@@ -744,7 +733,7 @@ function stairs4(x1,y1,x2,y2,Sf,Gf,stairs){
                 }
                 else {
                     Gx[j] = stairs;
-                    if(Math.abs(y1 - 181) + Math.abs(y2 - 181) < Math.abs(y1 - 658) + Math.abs(y2 - 658)){
+                    if(Math.abs(y1 - 181) + Math.abs(y2 - 181) < Math.abs(y1 - 658) + Math.abs(y2 - 658) -8){
                         Gy[j] = 181;
                     }
                     else {
@@ -757,7 +746,7 @@ function stairs4(x1,y1,x2,y2,Sf,Gf,stairs){
         }
         else {
             Sx[i] = stairs;
-            if(Math.abs(y1 - 181) + Math.abs(y2 - 181) < Math.abs(y1 - 658) + Math.abs(y2 - 658)){
+            if(Math.abs(y1 - 181) + Math.abs(y2 - 181) < Math.abs(y1 - 658) + Math.abs(y2 - 658) -8){
                 Sy[i] = 181;
             }
             else {
