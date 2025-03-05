@@ -671,40 +671,8 @@ function stairs2(x1,y1,x2,y2,Sf,Gf,stairs){
         }
     }
 }
-//階段例外用2
+//階段例外処理2
 function stairs3(x1,y1,x2,y2,Sf,Gf,stairs){
-    for (let i = 0; i < 4; i++){
-        if (Gf == Sf){
-            Gy[i] = y1;
-        }
-        else{
-            Gy[i] = y2;
-        }
-    }
-    for (let i = 0; i < 4; i++){
-        Sy[i] = y2;
-    }    
-    for (let i = 0; i < 4; i++){
-        if (Sf == i){
-            for (let j = 0; j < 4; j++){
-                if (Gf == j){
-                    Gx[j] = x2;
-                    Gy[j] = y2;
-                }
-                else {
-                    Gx[j] = stairs;
-                }
-            }
-            Sx[i] = x1;
-            Sy[i] = y1;
-        }
-        else {
-            Sx[i] = stairs;
-        }
-    }
-}
-//階段例外処理3
-function stairs(x1,y1,x2,y2,Sf,Gf,stairs){
     for (let i = 0; i < 4; i++){
         if (Sf != i){
             if(Math.abs(y2 - 181) + 75 <= Math.abs(y2 - 658) + 402){
@@ -733,6 +701,44 @@ function stairs(x1,y1,x2,y2,Sf,Gf,stairs){
                     else {
                         Gy[j] = 658;
                     }
+                }
+            }
+            Sx[i] = x1;
+            Sy[i] = y1;
+        }
+        else {
+            Sx[i] = stairs;
+            if(Math.abs(y2 - 181) + 75 <= Math.abs(y2 - 658) + 402){
+                Sy[i] = 181;
+            }
+            else {
+                Sy[i] = 658;
+            }
+        }
+    }
+}
+//階段例外用(謎)
+function stairs4(x1,y1,x2,y2,Sf,Gf,stairs){
+    for (let i = 0; i < 4; i++){
+        if (Gf == Sf){
+            Gy[i] = y1;
+        }
+        else{
+            Gy[i] = y2;
+        }
+    }
+    for (let i = 0; i < 4; i++){
+        Sy[i] = y2;
+    }    
+    for (let i = 0; i < 4; i++){
+        if (Sf == i){
+            for (let j = 0; j < 4; j++){
+                if (Gf == j){
+                    Gx[j] = x2;
+                    Gy[j] = y2;
+                }
+                else {
+                    Gx[j] = stairs;
                 }
             }
             Sx[i] = x1;
