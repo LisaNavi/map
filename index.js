@@ -544,7 +544,10 @@ function search_route(Snum, Gnum) {
                         }
                         //一般教室から移動するとき
                         else if(Sx0 == 1131){
-                            if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
+                            if(Gx0 == 1131){
+                                stairs4(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1191);
+                            }
+                            else if(Math.abs(Sx0 - 341) + Math.abs(Gx0 - 341) >= Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701)){
                                 if(Math.abs(Sx0 - 701) + Math.abs(Gx0 - 701) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                     if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
                                         if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
@@ -717,8 +720,54 @@ function stairs3(x1,y1,x2,y2,Sf,Gf,stairs){
         }
     }
 }
-//階段例外用(謎)
+//階段例外処理3
 function stairs4(x1,y1,x2,y2,Sf,Gf,stairs){
+    for (let i = 0; i < 4; i++){
+        if (Sf != i){
+            if(Math.abs(y2 - 181) + 75 <= Math.abs(y2 - 658) + 402){
+                Sy[i] = 181;
+            }
+            else {
+                Sy[i] = 658;
+            }
+        }
+        else {
+            Sy[i] = y1;
+        }
+    }    
+    for (let i = 0; i < 4; i++){
+        if (Sf == i){
+            for (let j = 0; j < 4; j++){
+                if (Gf == j){
+                    Gx[j] = x2;
+                    Gy[j] = y2;
+                }
+                else {
+                    Gx[j] = stairs;
+                    if(Math.abs(y1 - 181) + Math.abs(y2 - 181) < Math.abs(y1 - 658) + Math.abs(y2 - 658)){
+                        Gy[j] = 181;
+                    }
+                    else {
+                        Gy[j] = 658;
+                    }
+                }
+            }
+            Sx[i] = x1;
+            Sy[i] = y1;
+        }
+        else {
+            Sx[i] = stairs;
+            if(Math.abs(y1 - 181) + Math.abs(y2 - 181) < Math.abs(y1 - 658) + Math.abs(y2 - 658)){
+                Sy[i] = 181;
+            }
+            else {
+                Sy[i] = 658;
+            }
+        }
+    }
+}
+//階段例外用(謎)
+function stairs5(x1,y1,x2,y2,Sf,Gf,stairs){
     for (let i = 0; i < 4; i++){
         if (Gf == Sf){
             Gy[i] = y1;
