@@ -757,7 +757,7 @@ function search_route(Snum, Gnum) {
                     map.contentWindow.download(Sx,Sy,Gx,Gy,Sf,Gf,floor1);
                     map.contentWindow.Sroom = Snum;
                     map.contentWindow.Groom = Gnum;
-                    floors = data[Snum]["floor"][0];
+                    floors = data[Snum]["floor"];
                     map.contentWindow.showupS(Snum);
                     map.contentWindow.showupG(Gnum);
                     map.contentWindow.download1(Mx,My,Vx,Vy,Mf,Vf);
@@ -766,7 +766,7 @@ function search_route(Snum, Gnum) {
                     map.contentWindow.showupM(Mnum);
                     map.contentWindow.flchange(fn);
                     dis_number.textContent = (floors[0]+1) + "F";
-                    dis_number.style.background=colors[data[Snum]["floor"][0]];
+                    dis_number.style.background=colors[data[Snum]["floor"]];
                 }
             }
         }
