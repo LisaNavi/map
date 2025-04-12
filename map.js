@@ -8,6 +8,8 @@ let dayroom = "";
 let floornum = 1;
 let Sroom = "";
 let Groom = "";
+let Mroom = "";
+let Vroom = "";
 let Sf = "";
 let Gf = "";
 let container = document.getElementById("container");
@@ -21,6 +23,10 @@ let Sx = [];
 let Sy = [];
 let Gx = [];
 let Gy = [];
+let Mx = [];
+let My = [];
+let Vx = [];
+let Vy = [];
 let floor1 = "";
 
 h1.onanimationend = function () {
@@ -67,7 +73,9 @@ function flchange(num)
 {
     floornum = num;
     img.src=pictures[floornum];
+    fig.clearRect(0,0,1651,1350);
     draw(Sx[floornum],Sy[floornum],Gx[floornum],Gy[floornum]);
+    draw(Mx[floornum],My[floornum],Vx[floornum],Vy[floornum]);
     
 
     // ハイライトと同じ階になったら表示
@@ -157,6 +165,7 @@ function clschange(num)
 
 //経路検索
 function download(S1,S2,G1,G2,S3,G3,fl){
+    fig.clearRect(0,0,1651,1350);
     Sx = S1;
     Sy = S2;
     Gx = G1;
@@ -196,6 +205,44 @@ function showupG(rn)
     h4.style.top = data[Groom]["pos"][1] + "px";
 }
 
+function download1(S1,S2,G1,G2,S3,G3){
+    Mx = S1;
+    My = S2;
+    Vx = G1;
+    Vy = G2;
+    Mf = S3;
+    Vf = G3;
+}
+
+function showupM(rn){
+    if(Sroom == 167 || Sroom == 267){
+        Sroom = rn;
+        Sfloor=data[Sroom]["floor"][0];
+        img.src = pictures[Sfloor];
+
+        // lefttop y - rightbottom y = height
+        
+        h3.style.width = ( data[Sroom]["pos"][2] - data[Sroom]["pos"][0] ) + "px";
+        h3.style.height = ( data[Sroom]["pos"][3] - data[Sroom]["pos"][1] ) + "px";
+        h3.style.left = data[Sroom]["pos"][0] + "px";
+        h3.style.top = data[Sroom]["pos"][1] + "px";
+        h3.style.visibility = "visible";
+        h3.classList.add("show");
+        h3.style.zIndex = 1;
+    }
+    else if(Groom == 167 || Groom == 267){
+        Groom = rn;
+        Gfloor = data[Groom]["floor"][0];
+
+        // lefttop y - rightbottom y = height
+    
+        h4.style.width = ( data[Groom]["pos"][2] - data[Groom]["pos"][0] ) + "px";
+        h4.style.height = ( data[Groom]["pos"][3] - data[Groom]["pos"][1] ) + "px";
+        h4.style.left = data[Groom]["pos"][0] + "px";
+        h4.style.top = data[Groom]["pos"][1] + "px";
+    }
+}
+
 function delate_route(S1,S2,G1,G2){
     Sx = S1;
     Sy = S2;
@@ -233,7 +280,6 @@ function line(Sx,Sy,Gx,Gy){
 }
 
 function draw(Sx, Sy, Gx, Gy){
-    fig.clearRect(0,0,1651,1350);
     var work;
     if(Gx < Sx){
         work = Gx;
@@ -411,6 +457,15 @@ function draw(Sx, Sy, Gx, Gy){
             line(1182,Sy,1182,Gy);
             line(1182,Gy,Gx,Gy);
         }
+    }
+    //体育館1Fへ移動するとき
+    else if(Sx == 290){
+        line(Gx,Gy,Gx,1006);
+        line(Gx,1006,Sx,1006);
+        line(Sx,1006,Sx,Sy);
+    }
+    else if(Sy > 700){
+        line(Gx,Gy,Sx,Sy);
     }
     //その他
     else {

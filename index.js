@@ -13,6 +13,10 @@ var Sx = [];
 var Sy = [];
 var Gx = [];
 var Gy = [];
+var Mx = [];
+var My = [];
+var Vx = [];
+var Vy = [];
 
 // クッキーから読み込み
 let userdata = {};
@@ -183,10 +187,92 @@ function search_route(Snum, Gnum) {
                     var Gx0 = path[Gnum][0];
                     var Gy0 = path[Gnum][1];
                     var floor1 = 0;
-                    Sf = data[Snum]["floor"];
-                    Gf = data[Gnum]["floor"];
-                    var fn = Sf;
-                    var work = [];
+                    var Sf = data[Snum]["floor"][0];
+                    var Gf = data[Gnum]["floor"][0];
+                    var Mx0 = 0;
+                    var My0 = 0;
+                    var Vx0 = 0;
+                    var Vy0 = 0;
+                    var Mf = 0;
+                    var Vf = 0;
+                    var Mnum = 0;
+                    var Vnum = 0;
+                    for(i = 0; i < 4; i++){
+                        Mx[i] = 0;
+                        My[i] = 0;
+                        Vx[i] = 0;
+                        Vy[i] = 0;
+                    }
+                    Mf = 0;
+                    Vf = 0;
+                    Mnum = 0;
+                    Vnum = 0;
+                    if(Sy0 > 700 && Gy0 < 700){
+                        Mnum = Snum;
+                        Mx0 = Sx0;
+                        My0 = Sy0;
+                        Mf = Sf;
+                        if(Gf >= 1){
+                            Vnum = 267;
+                            Snum = 267;
+                        }
+                        else{
+                            Vnum = 167;
+                            Snum = 167;
+                        }
+                        Vx0 = path[Vnum][0];
+                        Vy0 = path[Vnum][1];
+                        Sx0 = Vx0;
+                        Sy0 = Vy0;
+                        Sf = data[Snum]["floor"][0];
+                        Vf = Sf;
+                    }
+                    else if(Sy0 < 700 && Gy0 > 700){
+                        Mnum = Gnum;
+                        Mx0 = Gx0;
+                        My0 = Gy0;
+                        Mf = Gf;
+                        if(Sf >= 1){
+                            Vnum = 267;
+                            Gnum = 267;
+                        }
+                        else{
+                            Vnum = 167;
+                            Gnum = 167;
+                        }
+                        Vx0 = path[Vnum][0];
+                        Vy0 = path[Vnum][1];
+                        Gx0 = Vx0;
+                        Gy0 = Vy0;
+                        Gf = data[Gnum]["floor"][0];
+                        Vf = Gf;
+                    }
+                    else if(Sy0 > 700 && Gy0 > 700){
+                        Mnum = Snum;
+                        Vnum = Gnum;
+                        Mx0 = Sx0;
+                        My0 = Sy0;
+                        Mf = Sf;
+                        Vx0 = Gx0;
+                        Vy0 = Gy0;
+                        Sx0 = Vx0;
+                        Vf = Gf;
+                        if(Mx0 > Vx0){
+                            work = Vx0;
+                            Vx0 = Mx0;
+                            Mx0 = work;
+    
+                            work = Vy0;
+                            Vy0 = My0;
+                            My0 = work;
+    
+                            work = Vf;
+                            Vf = Mf;
+                            Mf = work;
+                        }
+                    }
+                    fn = Sf;
+                    work = [];
                     if(Gx0 < Sx0){
                         work = Gx0;
                         Gx0 = Sx0;
@@ -208,8 +294,9 @@ function search_route(Snum, Gnum) {
                             Gx[i] = Gx0;
                             Gy[i] = Gy0;
                             fl = i;
-                            if (i == 1)
+                            if(Sf == 0){
                                 floor1 = 1;
+                            }
                             if (i == Sf){
                                 continue;
                             }
@@ -345,12 +432,14 @@ function search_route(Snum, Gnum) {
                         //西棟から移動するとき
                         else if(Sy0 == 658){
                             if(Gy0 == Sy0){
+                                console.log("test");
                                 if(Math.abs(Sx0 - 328) + Math.abs(Gx0 - 328) >= Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711)){
                                     if(Math.abs(Sx0 - 711) + Math.abs(Gx0 - 711) >= Math.abs(Sx0 - 1131) + Math.abs(Gx0 - 1131)){
                                         stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,1179);
                                     }
                                     else{
                                         stairs(Sx0,Sy0,Gx0,Gy0,Sf,Gf,711);
+                                        console.log("test");
                                     }
                                 }
                                 else if(Gf != 3){
@@ -594,16 +683,90 @@ function search_route(Snum, Gnum) {
                             }
                         }
                     }
+                    //体育館へ移動
+                    if(My0 > 700){
+                        //同じ階同士のとき
+                        if(Mf == Vf){
+                            for (let i = 0; i < 4; i++) {
+                                Mx[i] = Mx0;
+                                My[i] = My0;
+                                Vx[i] = Vx0;
+                                Vy[i] = Vy0;
+                                if (i == Mf){
+                                    continue;
+                                }
+                                else{
+                                    Mx[i] = 330;
+                                    Vx[i] = 330;
+                                    My[i] = 220;
+                                    Vy[i] = 220;
+                                }
+                            }
+                        }
+                        //体育館同士異なる階で移動するとき
+                        else if(My0 > 700 && Vy0 >700){
+                            for (let i = 2; i < 4; i++){
+                                Mx[i] = 330;
+                                Vx[i] = 330;
+                                My[i] = 220;
+                                Vy[i] = 220;
+                            }
+                            Mx[0] = Mx0;
+                            Mx[1] = 375;
+                            Vx[0] = 375;
+                            Vx[1] = Vx0;
+                            My[0] = My0;
+                            My[1] = 840;
+                            Vy[0] = 950;
+                            Vy[1] = Vy0;
+                        }
+                        //異なる階同士のとき
+                        else{
+                            for (let i = 2; i < 4; i++){
+                                Mx[i] = 330;
+                                Vx[i] = 330;
+                                My[i] = 220;
+                                Vy[i] = 220;
+                            }
+                            if(Mf == Vf){
+                            }
+                            else if(Mf == 0 && Vf == 1){
+                                Mx[0] = Mx0;
+                                Mx[1] = 375;
+                                Vx[0] = 375;
+                                Vx[1] = Vx0;
+                                My[0] = My0;
+                                My[1] = 840;
+                                Vy[0] = 950;
+                                Vy[1] = Vy0;
+                            }
+                            else if(Mf == 1 && Vf == 0){
+                                Mx[0] = 375;
+                                Mx[1] = Mx0;
+                                Vx[0] = Vx0;
+                                Vx[1] = 375;
+                                My[0] = 950;
+                                My[1] = My0;
+                                Vy[0] = Vy0;
+                                Vy[1] = 840;
+                            }
+                        }
+
+                    }
                     map.contentWindow.clearhighlight();
                     map.contentWindow.download(Sx,Sy,Gx,Gy,Sf,Gf,floor1);
                     map.contentWindow.Sroom = Snum;
                     map.contentWindow.Groom = Gnum;
-                    floors = data[Snum]["floor"];
+                    floors = data[Snum]["floor"][0];
                     map.contentWindow.showupS(Snum);
                     map.contentWindow.showupG(Gnum);
+                    map.contentWindow.download1(Mx,My,Vx,Vy,Mf,Vf);
+                    map.contentWindow.Mroom = Mnum;
+                    map.contentWindow.Vroom = Vnum;
+                    map.contentWindow.showupM(Mnum);
                     map.contentWindow.flchange(fn);
                     dis_number.textContent = (floors[0]+1) + "F";
-                    dis_number.style.background=colors[data[Snum]["floor"]];
+                    dis_number.style.background=colors[data[Snum]["floor"][0]];
                 }
             }
         }

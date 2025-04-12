@@ -586,6 +586,17 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/153.png"
   },
+  "167": {
+    "pos": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "floor":[0],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/167.png"
+  },
   "180": {
     "pos": [
       1150,
@@ -1076,6 +1087,17 @@ data={
     "floor":[1],
     "info": "生徒用の男子更衣室です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/239.png"
+  },
+  "267": {
+    "pos": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "floor":[1],
+    "info": "制作中\n",
+    "img": "https://lisanavi.github.io/map/floorpic/167.png"
   },
   "280": {
     "pos": [
