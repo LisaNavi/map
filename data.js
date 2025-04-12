@@ -2790,6 +2790,83 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/153.png"
   },
+  "卓球室・武道場": {
+    "pos": [
+      113,
+      870,
+      277,
+      1029
+    ],
+    "floor":[0],
+    "info": "武道場と卓球室です。\n卓球やフィットネスなどの体育の授業で使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/budou.png"
+  },
+  "武道場": {
+    "pos": [
+      113,
+      870,
+      277,
+      1029
+    ],
+    "floor":[0],
+    "info": "武道場と卓球室です。\n卓球やフィットネスなどの体育の授業で使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/budou.png"
+  },
+  "卓球室": {
+    "pos": [
+      113,
+      870,
+      277,
+      1029
+    ],
+    "floor":[0],
+    "info": "武道場と卓球室です。\n卓球やフィットネスなどの体育の授業で使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/budou.png"
+  },
+  "トレーニングルーム": {
+    "pos": [
+      279,
+      870,
+      340,
+      948
+    ],
+    "floor":[0],
+    "info": "トレーニング用の器具があります。\nフィットネスの授業などで使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/training.png"
+  },
+  "体育室": {
+    "pos": [
+      113,
+      1031,
+      277,
+      1242
+    ],
+    "floor":[0],
+    "info": "体育館の大部分を占める体育室です。\n様々な体育の授業で使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/pe.png"
+  },
+  "体育館": {
+    "pos": [
+      113,
+      1031,
+      277,
+      1242
+    ],
+    "floor":[0],
+    "info": "体育館の大部分を占める体育室です。\n様々な体育の授業で使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/pe.png"
+  },
+  "体育準備室": {
+    "pos": [
+      303,
+      1064,
+      359,
+      1126
+    ],
+    "floor":[0],
+    "info": "体育科の教師がよくいる場所です。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/pe_pre.png"
+  },
   "一般学習室1": {
     "pos": [
       1141,
@@ -3108,6 +3185,40 @@ data={
     "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/224.png"
+  },
+  "鵜の森亭": {
+    "pos": [
+      880,
+      193,
+      975,
+      275
+    ],
+    "floor":[1],
+    "info": "鵜の森亭と言われるラウンジです。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/unomori.png"
+  },
+  "鵜野森亭": {
+    "pos": [
+      880,
+      193,
+      975,
+      275
+    ],
+    "floor":[1],
+    "info": "鵜の森亭と言われるラウンジです。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/unomori.png"
+  },
+  
+  "ラウンジ": {
+    "pos": [
+      880,
+      193,
+      975,
+      275
+    ],
+    "floor":[1],
+    "info": "鵜の森亭と言われるラウンジです。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/unomori.png"
   },
   "生徒会室（定時制)": {
     "pos": [
@@ -3482,6 +3593,83 @@ data={
     "floor":[1],
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/239.png"
+  },
+  "ロッカー": {
+    "pos": [
+      800,
+      671,
+      1061,
+      753
+    ],
+    "floor":[1],
+    "info": "ロッカースペースです。\n全日制の全ての生徒のロッカーがあります。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/locker.png"
+  },
+  "ロッカー（全日制）": {
+    "pos": [
+      800,
+      671,
+      1061,
+      753
+    ],
+    "floor":[1],
+    "info": "ロッカースペースです。\n全日制の全ての生徒のロッカーがあります。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/locker.png"
+  },
+  "ロッカー(全日制)": {
+    "pos": [
+      800,
+      671,
+      1061,
+      753
+    ],
+    "floor":[1],
+    "info": "ロッカースペースです。\n全日制の全ての生徒のロッカーがあります。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/locker.png"
+  },
+  "ロッカースペース": {
+    "pos": [
+      800,
+      671,
+      1061,
+      753
+    ],
+    "floor":[1],
+    "info": "ロッカースペースです。\n全日制の全ての生徒のロッカーがあります。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/locker.png"
+  },
+  "ロッカースペース（全日制）": {
+    "pos": [
+      800,
+      671,
+      1061,
+      753
+    ],
+    "floor":[1],
+    "info": "ロッカースペースです。\n全日制の全ての生徒のロッカーがあります。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/locker.png"
+  },
+  "ロッカースペース(全日制)": {
+    "pos": [
+      800,
+      671,
+      1061,
+      753
+    ],
+    "floor":[1],
+    "info": "ロッカースペースです。\n全日制の全ての生徒のロッカーがあります。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/locker.png"
+  },
+  "運動部部室": {
+    "pos": [
+      281,
+      834,
+      351,
+      1256
+    ],
+    "floor":[1],
+    "info": "運動部の部室です。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/undoubu.png"
   },
   "一般学習室7": {
     "pos": [
