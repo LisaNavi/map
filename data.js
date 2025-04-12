@@ -2812,7 +2812,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/153.png"
   },
-  "卓球室・武道場": {
+  "卓球場・武道場": {
     "pos": [
       113,
       870,
@@ -2834,7 +2834,7 @@ data={
     "info": "武道場と卓球室です。\n卓球やフィットネスなどの体育の授業で使用します。\n",
     "img": "https://lisanavi.github.io/map/floorpic/budou.png"
   },
-  "卓球室": {
+  "卓球場": {
     "pos": [
       113,
       870,
