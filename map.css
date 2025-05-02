@@ -123,3 +123,9 @@ img#image{
     height: auto;
     vertical-align: bottom;
   }
+  
+  #container {
+    transform-origin: center center;
+    transition: transform 0.05s linear; /* スムーズな変化用（任意） */
+    touch-action: none; /* ブラウザのズーム操作を無効化 */
+  }

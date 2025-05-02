@@ -503,7 +503,7 @@ function getImages(){
     }
 }
 
-//ピンチ機能
+// ピンチ機能
 const touchContainer = document.getElementById('display');
 const image = document.getElementById('container');
 let touchScale = 1;
@@ -511,28 +511,41 @@ let initialDistance = 0;
 let initialScale = 1;
 
 touchContainer.addEventListener('touchstart', function (event) {
-    if (event.touches.length === 2) {
-      initialDistance = getDistance(event.touches[0], event.touches[1]);
-      initialScale = touchScale;
-      event.preventDefault();
-    }
-  });
-
-  touchContainer.addEventListener('touchmove', function (event) {
-    if (event.touches.length === 2) {
-      const distance = getDistance(event.touches[0], event.touches[1]);
-      const scaleChange = distance / initialDistance;
-
-      touchScale = initialScale * scaleChange;
-      image.style.scale = touchScale;
-
-      event.preventDefault();
-    }
-  });
-
-  function getDistance(touch1, touch2) {
-    const x = touch1.pageX - touch2.pageX;
-    const y = touch1.pageY - touch2.pageY;
-
-    return Math.sqrt(x * x + y * y);
+  if (event.touches.length === 2) {
+    initialDistance = getDistance(event.touches[0], event.touches[1]);
+    initialScale = touchScale;
+    event.preventDefault();
   }
+});
+
+touchContainer.addEventListener('touchmove', function (event) {
+  if (event.touches.length === 2) {
+    const distance = getDistance(event.touches[0], event.touches[1]);
+    const scaleChange = distance / initialDistance;
+
+    touchScale = initialScale * scaleChange;
+
+    // ピンチの中心点（2本の指の中点）を取得
+    const centerX = (event.touches[0].pageX + event.touches[1].pageX) / 2;
+    const centerY = (event.touches[0].pageY + event.touches[1].pageY) / 2;
+
+    // 画像内でのピンチ中心の相対位置
+    const rect = image.getBoundingClientRect();
+    const offsetX = centerX - rect.left;
+    const offsetY = centerY - rect.top;
+
+    // transform-origin を更新して中心を指定
+    image.style.transformOrigin = `${offsetX}px ${offsetY}px`;
+
+    // transformでスケールを適用（style.scaleではなく）
+    image.style.transform = `scale(${touchScale})`;
+
+    event.preventDefault();
+  }
+});
+
+function getDistance(touch1, touch2) {
+  const x = touch1.pageX - touch2.pageX;
+  const y = touch1.pageY - touch2.pageY;
+  return Math.sqrt(x * x + y * y);
+}
