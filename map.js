@@ -503,49 +503,59 @@ function getImages(){
     }
 }
 
-// ピンチ機能
-const touchContainer = document.getElementById('display');
-const image = document.getElementById('container');
-let touchScale = 1;
-let initialDistance = 0;
-let initialScale = 1;
+//ピンチ機能
+const touchcontainer = document.getElementById('container');
 
-touchContainer.addEventListener('touchstart', function (event) {
-  if (event.touches.length === 2) {
-    initialDistance = getDistance(event.touches[0], event.touches[1]);
-    initialScale = touchScale;
-    event.preventDefault();
-  }
-});
+let scale = 1;
+let origin = { x: 0, y: 0 };
+let lastTouchDist = null;
+let lastCenter = null;
 
-touchContainer.addEventListener('touchmove', function (event) {
-  if (event.touches.length === 2) {
-    const distance = getDistance(event.touches[0], event.touches[1]);
-    const scaleChange = distance / initialDistance;
-
-    touchScale = initialScale * scaleChange;
-
-    // ピンチの中心点（2本の指の中点）を取得
-    const centerX = (event.touches[0].pageX + event.touches[1].pageX) / 2;
-    const centerY = (event.touches[0].pageY + event.touches[1].pageY) / 2;
-
-    // 画像内でのピンチ中心の相対位置
-    const rect = image.getBoundingClientRect();
-    const offsetX = centerX - rect.left;
-    const offsetY = centerY - rect.top;
-
-    // transform-origin を更新して中心を指定
-    image.style.transformOrigin = `${offsetX}px ${offsetY}px`;
-
-    // transformでスケールを適用（style.scaleではなく）
-    image.style.transform = `scale(${touchScale})`;
-
-    event.preventDefault();
-  }
-});
-
-function getDistance(touch1, touch2) {
-  const x = touch1.pageX - touch2.pageX;
-  const y = touch1.pageY - touch2.pageY;
-  return Math.sqrt(x * x + y * y);
+function getTouchCenter(touches) {
+  const x = (touches[0].clientX + touches[1].clientX) / 2;
+  const y = (touches[0].clientY + touches[1].clientY) / 2;
+  return { x, y };
 }
+
+function getTouchDistance(touches) {
+  const dx = touches[0].clientX - touches[1].clientX;
+  const dy = touches[0].clientY - touches[1].clientY;
+  return Math.sqrt(dx * dx + dy * dy);
+}
+
+function updateTransform() {
+  const translateX = origin.x;
+  const translateY = origin.y;
+  container.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+}
+
+document.getElementById('display').addEventListener('touchstart', (e) => {
+  if (e.touches.length === 2) {
+    lastTouchDist = getTouchDistance(e.touches);
+    lastCenter = getTouchCenter(e.touches);
+  }
+}, { passive: false });
+
+document.getElementById('display').addEventListener('touchmove', (e) => {
+  if (e.touches.length === 2) {
+    e.preventDefault(); // 標準のズーム無効化
+    const newDist = getTouchDistance(e.touches);
+    const newCenter = getTouchCenter(e.touches);
+
+    const scaleChange = newDist / lastTouchDist;
+    const newScale = scale * scaleChange;
+
+    // 原点位置の調整
+    const dx = newCenter.x - origin.x;
+    const dy = newCenter.y - origin.y;
+
+    origin.x -= dx * (scaleChange - 1);
+    origin.y -= dy * (scaleChange - 1);
+
+    scale = newScale;
+    lastTouchDist = newDist;
+    lastCenter = newCenter;
+
+    updateTransform();
+  }
+}, { passive: false });

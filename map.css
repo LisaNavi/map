@@ -2,6 +2,22 @@
     margin: 0;
     padding: 0;
 }*/
+
+/**//**/
+#display {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: none;
+  position: relative;
+}
+
+#container {
+  position: absolute;
+  transform-origin: 0 0;
+}
+/**//**/
+
 div#container{
     transform-origin:0 0;
     scale: 1;
@@ -123,9 +139,16 @@ img#image{
     height: auto;
     vertical-align: bottom;
   }
-  
-  #container {
-    transform-origin: center center;
-    transition: transform 0.05s linear; /* スムーズな変化用（任意） */
-    touch-action: none; /* ブラウザのズーム操作を無効化 */
-  }
+
+#display {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: none;
+  position: relative;
+}
+
+#container {
+  position: absolute;
+  transform-origin: 0 0;
+}
