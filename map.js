@@ -504,58 +504,35 @@ function getImages(){
 }
 
 //ピンチ機能
-const touchcontainer = document.getElementById('container');
+const touchContainer = document.getElementById('display');
+const image = document.getElementById('container');
+let touchScale = 1;
+let initialDistance = 0;
+let initialScale = 1;
 
-let scale = 1;
-let origin = { x: 0, y: 0 };
-let lastTouchDist = null;
-let lastCenter = null;
+touchContainer.addEventListener('touchstart', function (event) {
+    if (event.touches.length === 2) {
+      initialDistance = getDistance(event.touches[0], event.touches[1]);
+      initialScale = touchScale;
+      event.preventDefault();
+    }
+  });
 
-function getTouchCenter(touches) {
-  const x = (touches[0].clientX + touches[1].clientX) / 2;
-  const y = (touches[0].clientY + touches[1].clientY) / 2;
-  return { x, y };
-}
+  touchContainer.addEventListener('touchmove', function (event) {
+    if (event.touches.length === 2) {
+      const distance = getDistance(event.touches[0], event.touches[1]);
+      const scaleChange = distance / initialDistance;
 
-function getTouchDistance(touches) {
-  const dx = touches[0].clientX - touches[1].clientX;
-  const dy = touches[0].clientY - touches[1].clientY;
-  return Math.sqrt(dx * dx + dy * dy);
-}
+      touchScale = initialScale * scaleChange;
+      image.style.scale = touchScale;
 
-function updateTransform() {
-  const translateX = origin.x;
-  const translateY = origin.y;
-  container.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-}
+      event.preventDefault();
+    }
+  });
 
-document.getElementById('display').addEventListener('touchstart', (e) => {
-  if (e.touches.length === 2) {
-    lastTouchDist = getTouchDistance(e.touches);
-    lastCenter = getTouchCenter(e.touches);
+  function getDistance(touch1, touch2) {
+    const x = touch1.pageX - touch2.pageX;
+    const y = touch1.pageY - touch2.pageY;
+
+    return Math.sqrt(x * x + y * y);
   }
-}, { passive: false });
-
-document.getElementById('display').addEventListener('touchmove', (e) => {
-  if (e.touches.length === 2) {
-    e.preventDefault(); // 標準のズーム無効化
-    const newDist = getTouchDistance(e.touches);
-    const newCenter = getTouchCenter(e.touches);
-
-    const scaleChange = newDist / lastTouchDist;
-    const newScale = scale * scaleChange;
-
-    // 原点位置の調整
-    const dx = newCenter.x - origin.x;
-    const dy = newCenter.y - origin.y;
-
-    origin.x -= dx * (scaleChange - 1);
-    origin.y -= dy * (scaleChange - 1);
-
-    scale = newScale;
-    lastTouchDist = newDist;
-    lastCenter = newCenter;
-
-    updateTransform();
-  }
-}, { passive: false });
