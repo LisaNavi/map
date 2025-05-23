@@ -504,6 +504,7 @@ function getImages(){
 }
 
 //ピンチ機能
+/*
 const touchContainer = document.getElementById('display');
 const image = document.getElementById('container');
 let touchScale = 1;
@@ -536,3 +537,59 @@ touchContainer.addEventListener('touchstart', function (event) {
 
     return Math.sqrt(x * x + y * y);
   }
+*/
+const touchcontainer = document.getElementById('container');
+
+let scale = 1;
+let origin = { x: 0, y: 0 };
+let lastTouchDist = null;
+let lastCenter = null;
+
+function getTouchCenter(touches) {
+  const x = (touches[0].clientX + touches[1].clientX) / 2;
+  const y = (touches[0].clientY + touches[1].clientY) / 2;
+  return { x, y };
+}
+
+function getTouchDistance(touches) {
+  const dx = touches[0].clientX - touches[1].clientX;
+  const dy = touches[0].clientY - touches[1].clientY;
+  return Math.sqrt(dx * dx + dy * dy);
+}
+
+function updateTransform() {
+  const translateX = origin.x;
+  const translateY = origin.y;
+  container.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+}
+
+document.getElementById('display').addEventListener('touchstart', (e) => {
+  if (e.touches.length === 2) {
+    lastTouchDist = getTouchDistance(e.touches);
+    lastCenter = getTouchCenter(e.touches);
+  }
+}, { passive: false });
+
+document.getElementById('display').addEventListener('touchmove', (e) => {
+  if (e.touches.length === 2) {
+    e.preventDefault(); // 標準のズーム無効化
+    const newDist = getTouchDistance(e.touches);
+    const newCenter = getTouchCenter(e.touches);
+
+    const scaleChange = newDist / lastTouchDist;
+    const newScale = scale * scaleChange;
+
+    // 原点位置の調整
+    const dx = newCenter.x - origin.x;
+    const dy = newCenter.y - origin.y;
+
+    origin.x -= dx * (scaleChange - 1);
+    origin.y -= dy * (scaleChange - 1);
+
+    scale = newScale;
+    lastTouchDist = newDist;
+    lastCenter = newCenter;
+
+    updateTransform();
+  }
+}, { passive: false });
