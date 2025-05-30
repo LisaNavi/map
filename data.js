@@ -3120,7 +3120,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/219.png"
   },
-  "高圧実習室": {
+  "空き教室": {
     "pos": [
       160,
       87,
@@ -3131,7 +3131,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/220.png"
   },
-  "受電設備実習室": {
+  "空き教室": {
     "pos": [
       160,
       87,
@@ -3142,7 +3142,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/220.png"
   },
-  "模擬送電設備実習室": {
+  "空き教室": {
     "pos": [
       160,
       87,
@@ -3781,7 +3781,7 @@ data={
     "info": "2年次8組のホームルーム教室です。\nその他の授業でも使用することがあります。\n",
     "img": "https://lisanavi.github.io/map/floorpic/307.png"
   },
-  "国際交流室": {
+  "リベラルアーツ分野課題研究室": {
     "pos": [
       1450,
       89,
@@ -3957,7 +3957,7 @@ data={
     "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/317.png"
   },
-  "電気関係資料閲覧室": {
+  "科学系課題研究室": {
     "pos": [
       421,
       105,
