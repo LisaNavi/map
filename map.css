@@ -3,6 +3,7 @@
     padding: 0;
 }*/
 
+/*
 div#container{
     transform-origin:0 0;
     scale: 1;
@@ -10,6 +11,7 @@ div#container{
     width: 1651px; height:1350px;
     left: 0px; top:0px;
 }
+*/
 #highlight{
     width: 80px;
     height: 80px;
@@ -128,12 +130,11 @@ img#image{
 #display {
   width: 100vw;
   height: 100vh;
-  overflow: auto;
-  touch-action: auto;
+  overflow: hidden;
+  touch-action: none;
   position: relative;
 }
 
 #container {
-  position: absolute;
   transform-origin: 0 0;
 }

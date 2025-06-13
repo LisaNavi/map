@@ -476,17 +476,11 @@ function draw(Sx, Sy, Gx, Gy){
 
 
 function zoomin() {
-    if (zoomlevel < 2) {
-        zoomlevel += 0.05;
-        container.style.scale = zoomlevel;
-    }
+  setScale(scale + 0.05, display.clientWidth / 2, display.clientHeight / 2);
 }
 
 function zoomout() {
-    if (zoomlevel > 0.5) {
-        zoomlevel -= 0.05;
-        container.style.scale = zoomlevel;
-    }
+  setScale(scale - 0.05, display.clientWidth / 2, display.clientHeight / 2);
 }
 
 window.onload = function(){
@@ -504,50 +498,62 @@ function getImages(){
 }
 
 //ピンチ機能
-/*
-const touchContainer = document.getElementById('display');
-const image = document.getElementById('container');
-let touchScale = 1;
-let initialDistance = 0;
-let initialScale = 1;
+const display = document.getElementById('display');
 
-touchContainer.addEventListener('touchstart', function (event) {
-    if (event.touches.length === 2) {
-      initialDistance = getDistance(event.touches[0], event.touches[1]);
-      initialScale = touchScale;
-      event.preventDefault();
-    }
-  });
-
-  touchContainer.addEventListener('touchmove', function (event) {
-    if (event.touches.length === 2) {
-      const distance = getDistance(event.touches[0], event.touches[1]);
-      const scaleChange = distance / initialDistance;
-
-      touchScale = initialScale * scaleChange;
-      image.style.scale = touchScale;
-
-      event.preventDefault();
-    }
-  });
-
-  function getDistance(touch1, touch2) {
-    const x = touch1.pageX - touch2.pageX;
-    const y = touch1.pageY - touch2.pageY;
-
-    return Math.sqrt(x * x + y * y);
-  }
-*/
-const touchcontainer = document.getElementById('container');
-
+// ズームパラメータを一元管理
 let scale = 1;
+const minScale = 0.95;
+const maxScale = 3.5;
 let origin = { x: 0, y: 0 };
 let lastTouchDist = null;
 let lastCenter = null;
 
+// ボタン用ズーム関数も統一
+function setScale(newScale, centerX, centerY) {
+  // centerX, centerY はオプション
+  const clampedScale = Math.max(minScale, Math.min(newScale, maxScale));
+
+  if (centerX !== undefined && centerY !== undefined) {
+    const dx = centerX - origin.x;
+    const dy = centerY - origin.y;
+    origin.x -= dx * (clampedScale / scale - 1);
+    origin.y -= dy * (clampedScale / scale - 1);
+  }
+
+  scale = clampedScale;
+  updateTransform();
+}
+
+function zoomin() {
+  setScale(scale + 0.05, display.clientWidth/2, display.clientHeight/2);
+}
+
+function zoomout() {
+  setScale(scale - 0.05, display.clientWidth/2, display.clientHeight/2);
+}
+
+function updateTransform() {
+  const containerWidth = 1651 * scale;
+  const containerHeight = 1350 * scale;
+
+  const displayWidth = display.clientWidth;
+  const displayHeight = display.clientHeight;
+
+  const minX = Math.min(0, displayWidth - containerWidth);
+  const minY = Math.min(0, displayHeight - containerHeight);
+  const maxX = 0;
+  const maxY = 0;
+
+  origin.x = Math.min(maxX, Math.max(minX, origin.x));
+  origin.y = Math.min(maxY, Math.max(minY, origin.y));
+
+  container.style.transform = `translate(${origin.x}px, ${origin.y}px) scale(${scale})`;
+}
+
 function getTouchCenter(touches) {
-  const x = (touches[0].clientX + touches[1].clientX) / 2;
-  const y = (touches[0].clientY + touches[1].clientY) / 2;
+  const rect = display.getBoundingClientRect();
+  const x = (touches[0].clientX + touches[1].clientX) / 2 - rect.left + display.scrollLeft;
+  const y = (touches[0].clientY + touches[1].clientY) / 2 - rect.top + display.scrollTop;
   return { x, y };
 }
 
@@ -557,39 +563,85 @@ function getTouchDistance(touches) {
   return Math.sqrt(dx * dx + dy * dy);
 }
 
-function updateTransform() {
-  const translateX = origin.x;
-  const translateY = origin.y;
-  container.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-}
-
-document.getElementById('display').addEventListener('touchstart', (e) => {
+display.addEventListener('touchstart', (e) => {
   if (e.touches.length === 2) {
+    e.preventDefault();
     lastTouchDist = getTouchDistance(e.touches);
     lastCenter = getTouchCenter(e.touches);
+    isDragging = false; // 2本指ならパンは無効
+  } else if (e.touches.length === 1) {
+    isDragging = true;
+    lastDragPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
   }
 }, { passive: false });
 
-document.getElementById('display').addEventListener('touchmove', (e) => {
+display.addEventListener('touchmove', (e) => {
   if (e.touches.length === 2) {
-    e.preventDefault(); // 標準のズーム無効化
+    e.preventDefault();
     const newDist = getTouchDistance(e.touches);
     const newCenter = getTouchCenter(e.touches);
 
     const scaleChange = newDist / lastTouchDist;
-    const newScale = scale * scaleChange;
+    setScale(scale * scaleChange, newCenter.x, newCenter.y);
 
-    // 原点位置の調整
-    const dx = newCenter.x - origin.x;
-    const dy = newCenter.y - origin.y;
-
-    origin.x -= dx * (scaleChange - 1);
-    origin.y -= dy * (scaleChange - 1);
-
-    scale = newScale;
     lastTouchDist = newDist;
     lastCenter = newCenter;
+  }
+}, { passive: false });
 
+display.addEventListener('touchend', (e) => {
+  if (e.touches.length < 2) {
+    lastTouchDist = null;
+    lastCenter = null;
+  }
+});
+
+// --- パン（ドラッグ）用変数 ---
+let isDragging = false;
+let lastDragPos = { x: 0, y: 0 };
+
+// --- マウス対応パン ---
+display.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  lastDragPos = { x: e.clientX, y: e.clientY };
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (isDragging) {
+    const dx = e.clientX - lastDragPos.x;
+    const dy = e.clientY - lastDragPos.y;
+    origin.x += dx;
+    origin.y += dy;
+    lastDragPos = { x: e.clientX, y: e.clientY };
+    updateTransform();
+  }
+});
+
+window.addEventListener('mouseup', () => {
+  isDragging = false;
+});
+
+// --- タッチ対応パン ---
+display.addEventListener('touchstart', (e) => {
+  if (e.touches.length === 1) {
+    isDragging = true;
+    lastDragPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }
+}, { passive: false });
+
+display.addEventListener('touchmove', (e) => {
+  if (e.touches.length === 1 && isDragging) {
+    const dx = e.touches[0].clientX - lastDragPos.x;
+    const dy = e.touches[0].clientY - lastDragPos.y;
+    origin.x += dx;
+    origin.y += dy;
+    lastDragPos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
     updateTransform();
   }
 }, { passive: false });
+
+display.addEventListener('touchend', (e) => {
+  if (e.touches.length === 0) {
+    isDragging = false;
+  }
+});
