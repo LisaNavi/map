@@ -60,7 +60,27 @@ img#image{
     -moz-user-select:none;
     user-select:none;
 }
+img#image2{
+    position:absolute;
+    left: 0%; top: 0%;
+    width: 1651px; height: 1350px;
+    z-index: 0;
 
+    /*保存の禁止*/
+    pointer-events: none;
+    /* SPの長押し禁止 */
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-touch-callout:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+#canvas{
+    position:absolute;
+    left: 0%; top: 0%;
+    width: 1651px; height: 1350px;
+    z-index: 1;
+}
 .show{
     animation: fadein 300ms ease-out 0s 1 normal forwards;
 }

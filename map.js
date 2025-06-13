@@ -1,8 +1,11 @@
-let pictures = new Array("https://lisanavi.github.io/map/img/1F.png","https://lisanavi.github.io/map/img/2F.png","https://lisanavi.github.io/map/img/3F.png","https://lisanavi.github.io/map/img/4F.png");
+let pictures = new Array("https://lisanavi.github.io/map/img/1F_ex1-over.png","https://lisanavi.github.io/map/img/2F_ex1-over.png","https://lisanavi.github.io/map/img/3F_ex1-over.png","https://lisanavi.github.io/map/img/4F_ex1-over.png");
+let pictures2 = new Array("https://lisanavi.github.io/map/img/1F_ex1-under.png","https://lisanavi.github.io/map/img/2F_ex1-under.png","https://lisanavi.github.io/map/img/3F_ex1-under.png","https://lisanavi.github.io/map/img/4F_ex1-under.png");
 let img_height = 1350;
 let img_width = 1651;
 let zoomlevel = 1;
 let img = document.getElementById("image");
+let img2 = document.getElementById("image2");
+let body = document.getElementById("body");
 let room = "";
 let dayroom = "";
 let floornum = 1;
@@ -48,6 +51,7 @@ function showup(rn)
     room = rn;
     afloor=data[room]["floor"][0];
     img.src = pictures[afloor];
+    img2.src=pictures2[afloor];
 
     // lefttop y - rightbottom y = height
     
@@ -73,11 +77,27 @@ function flchange(num)
 {
     floornum = num;
     img.src=pictures[floornum];
+    img2.src=pictures2[floornum];
+
+        if(floornum==0){
+body.style.backgroundColor='rgb(255,244,227)';
+
+    }else if(floornum==1){
+body.style.backgroundColor='rgb(227,247,255)';
+
+    }else if(floornum==2){
+body.style.backgroundColor='rgb(237,255,227)';
+
+    }else if(floornum==3){
+        body.style.backgroundColor='rgb(255,234,227)';
+    }
+
+
     fig.clearRect(0,0,1651,1350);
     draw(Sx[floornum],Sy[floornum],Gx[floornum],Gy[floornum]);
     draw(Mx[floornum],My[floornum],Vx[floornum],Vy[floornum]);
-    
 
+    
     // ハイライトと同じ階になったら表示
     if (room != "" && afloor == floornum)
     {

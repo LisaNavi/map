@@ -9,6 +9,8 @@ let notify_text = document.getElementById("notify-text");
 let route_panel = document.getElementById('route-panel')
 let inputS = document.getElementById("input-start");
 let inputG = document.getElementById("input-goal");
+
+
 var Sx = [];
 var Sy = [];
 var Gx = [];
@@ -37,6 +39,7 @@ function floor(num)
     dis_number.textContent = (floornum+1) + "F";
     dis_number.style.background=colors[floornum];
     map.contentWindow.flchange(floornum);
+
 }
 
 function search(num){
