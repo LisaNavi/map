@@ -4,6 +4,7 @@ let img_height = 1350;
 let img_width = 1651;
 let zoomlevel = 1;
 let img = document.getElementById("image");
+let img2=document.getElementById("image2");
 let room = "";
 let dayroom = "";
 let floornum = 1;
