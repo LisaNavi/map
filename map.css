@@ -82,6 +82,7 @@ img#image2{
     left: 0%; top: 0%;
     width: 1651px; height: 1350px;
     z-index: 1;
+    cursor: grab;
 }
 
 .show{
@@ -90,9 +91,11 @@ img#image2{
 @keyframes fadein{
     0%{
         opacity: 0;
+        scale: 5;
     }
     100%{
         opacity: 1;
+        scale: 1;
     }
 }
 
