@@ -397,15 +397,18 @@ div#tutorial{
 	z-index:11;
 	font-weight: bold;
 	text-align: center;
+}
 	 /*使い方ボタン？アイコン型*/
-	#help-btn {
+	#help-btn{
+	 position: absolute;
 	 width: 1.2rem;
 	 height:1.2rem;
+	 top:17px;
 	 min-width: 0;
-	 margin-left:0.7rem;
-	 background: #fff;
-	 border:2px solid#6699ff;
-	 color: #6699ff;
+	 margin-left:-0.4rem;
+	 background: #4fdcff;
+	 border:2px solid#4fdcff;
+	 color: #ffffff;
 	 border-radius:50%;
 	 font-size:1.1rem;
 	 font-weight: bold;
@@ -427,13 +430,13 @@ div#tutorial{
 	 text-align:center;
 	 line-height:1/2rem;
 	}
-	#help-btn:hover{
+	#help-btn-right-bottom:hover{
 	 background: #6699ff;
-	 color: #6699ff;
+	 color: #ffffff;
 	}
 
 	
-}
+
 
 img#cls_tutorial{
 	height: 75vh;
