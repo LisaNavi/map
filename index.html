@@ -19,10 +19,13 @@
   <body style="overflow-y: hidden;">
     <link rel="stylesheet" type="text/css" href="index.css" />
     <div class="title">
-      <div style="padding: 10px 10px; width: 200px; text-align: left;">LiSA Navi</div>
+      <div style="padding: 10px 10px; width: 200px; text-align: left;">LiSA Navi
+        <button id="help-btn" onclick="cls_tutorialopen()" title="使い方">?</button> 
+      </div>
       <div id="floorid">1F</div>
       <button style="font-weight: bold; font-size: 2rem;" onclick="Menu_Toggle()">≡</button>
     </div>
+
     <div id="menu">
       <div style="height: 1rem;"></div>
       <h1 style="margin-top: -8px; margin-bottom: -8px">Menu</h1>
@@ -110,7 +113,7 @@
 
       <br>
 
-      <a href="javascript:cls_tutorialopen()" class="btn_05" style="margin-bottom: 0.5rem; margin-top: -0.6rem;">使い方</a>
+      
 
 
       <a href="javascript:cls_open()" class="btn_05" style="margin-bottom: 0.5rem;">時間割</a>

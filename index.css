@@ -397,13 +397,48 @@ div#tutorial{
 	z-index:11;
 	font-weight: bold;
 	text-align: center;
+	 /*使い方ボタン？アイコン型*/
+	#help-btn {
+	 width: 1.2rem;
+	 height:1.2rem;
+	 min-width: 0;
+	 margin-left:0.7rem;
+	 background: #fff;
+	 border:2px solid#6699ff;
+	 color: #6699ff;
+	 border-radius:50%;
+	 font-size:1.1rem;
+	 font-weight: bold;
+	 display:flex;
+	 align-items: center;
+	 justify-content: center;
+	 cursor: pointer;
+	 box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+	 transition: background 0.2s, color 0.2s;
+	 position: relative;
+	 padding: 0;
+	}
+	#help-btn::before{
+	 content:"？";
+	 font-size: 0.8rem;
+	 font-weight:bold;
+	 display:block;
+	 width:100%;
+	 text-align:center;
+	 line-height:1/2rem;
+	}
+	#help-btn:hover{
+	 background: #6699ff;
+	 color: #6699ff;
+	}
+
 	
 }
 
 img#cls_tutorial{
 	height: 75vh;
 	object-fit: contain;
-	color:#fff;
+	color:#6699ff;
 }
 
 .cls-buttons {
