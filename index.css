@@ -669,7 +669,7 @@ button:active {
 	justify-content: center;
 	flex-flow: row nowrap;
 	align-items: center;
-	width: 20rem;
+	width: 15rem;
 	height: 58px;
 	top:4rem;
 	background: rgb(61, 61, 61, 0.9);
@@ -686,7 +686,7 @@ button:active {
 }
 
 #input{
-	width:500px; height: 2rem;
+	width:300px; height: 2rem;
 	border: 2px solid #6699ff;
 	margin-left: -20px;
 	z-index: 1;
