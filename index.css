@@ -172,21 +172,96 @@ div#left-side {
 }
 
 div#right-side {
-	height:auto;
-	padding: 5px 5px 5px 5px;
-	background: rgba(0, 0, 0, 0.75);
-	position:fixed;
-	bottom: 1rem; right:1rem;
 	display: flex;
-	flex-flow: column;
-	justify-content: right;
-	z-index:5;
-	border-radius: 0.5rem;
+	justify-content: center;
+	flex-flow: row nowrap;
+	align-items: center;
+	width: 22rem;
+	height: 58px;
+	top:4rem;
+	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
+	position: fixed;
+	visibility: visible;
+	z-index:1;
+	font-weight: bold;
+	text-align: center;
+	user-select: none;
+	border-radius: 1rem;
+	left: 50%;
+  	transform: translateX(-50%);
+}
+
+#back-btn{
+	content: "👈";
+	 position: absolute;
+	 width: 60px;
+	 height: 40px;
+	 top: 0px;
+	 right: 45px;
+	 min-width: 0;
+	 margin-left:-0.4rem;
+	 border:2px solid#ffffff;
+	 border-radius:50%;
+	 font-size:1.1rem;
+	 font-weight: bold;
+	 display:flex;
+	 align-items: center;
+	 justify-content: center;
+	 cursor: pointer;
+	 box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+	 transition: background 0.2s, color 0.2s;
+	 position: relative;
+	 padding: 0;
+	
+
+	}
+	#back-btn::before{
+	 content:"👈";
+	 font-size: 1.0rem;
+	 font-weight:bold;
+	 display:block;
+	 width:100%;
+	 text-align:center;
+	 line-height:1/2rem;
+	}
+
+#serchbtn{
+	 animation: test-animation 1s 2s 1 forwards;
+}
+
+@keyframes nobiru{
+100%{
+	width:500px;
+}
+
+}
+
+div#right{
+	display: flex;
+	justify-content: center;
+	flex-flow: row nowrap;
+	align-items: center;
+	width: 30rem;
+	height: 58px;
+	top:4rem;
+	background: rgb(61, 61, 61, 0.9);
+	color:#fff;
+	position: fixed;
+	visibility: hidden;
+	z-index:1;
+	font-weight: bold;
+	text-align: center;
+	user-select: none;
+	border-radius: 1rem;
+	left: 50%;
+  	transform: translateX(-50%);
 }
 
 #input{
-	width:75px; height: 2rem;
+	width:500px; height: 2rem;
 	border: 2px solid #6699ff;
+	margin-left: 20px;
 	z-index: 1;
 }
 

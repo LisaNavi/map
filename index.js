@@ -9,6 +9,9 @@ let notify_text = document.getElementById("notify-text");
 let route_panel = document.getElementById('route-panel')
 let inputS = document.getElementById("input-start");
 let inputG = document.getElementById("input-goal");
+let right_side = document.getElementById("right-side");
+let right = document.getElementById("right");
+
 var Sx = [];
 var Sy = [];
 var Gx = [];
@@ -45,13 +48,11 @@ function search(num){
     } else {
         if (typeof data[num] == "undefined"){
             alert("指定された部屋番号は登録されていません。");
+            document.getElementById("info-btn").style.visibility = "hidden";
         }
         else {
             if (data[num]["info"] != undefined){
-                document.getElementById("info").style.visibility = "hidden";
-            }
-            if (data[num]["info"] != undefined){
-                document.getElementById("info-btn").style.visibility = "visible"
+                document.getElementById("info-btn").style.visibility = "visible";
                 document.getElementById("info-btn").style.visibility = "none";
             }
             map.contentWindow.clearhighlight();
@@ -85,7 +86,33 @@ function info(num) {
     }
 }
 
+function aaa(){
 
+right_side.style.visibility="hidden";
+right.style.visibility="visible";
+
+inputbox.animate(
+  // 変化させるスタイル
+	[
+		{ width: '0px' },
+		{ width: '500px' }
+	],
+  // プロパティ
+	{
+		duration: 1000,
+		
+		direction: 'alternate'
+	}
+);
+
+}
+
+function back(){
+right_side.style.visibility="visible";
+right.style.visibility="hidden";
+document.getElementById("info-btn").style.visibility = "hidden";
+
+}
 
 function inf(){
 
