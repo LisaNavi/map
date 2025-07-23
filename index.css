@@ -385,19 +385,32 @@ div#info-text{
 div#tutorial{ 
     display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	width: 100vw;
 	height: 100vh;
 	top: 0%; left: 0%;
 	background: rgb(61, 61, 61, 0.9);
 	color:#fff;
-	position: fixed;
+	position: absolute;
 	visibility: hidden;
 	z-index:11;
 	font-weight: bold;
 	text-align: center;
 }
+#tutorial > .cls-buttons {
+	position: absolute;
+	top:3rem;
+	left: 0.5rem;
+	z-index:12;
+}
+img#cls_tutorial{
+	height: 75vh;
+	object-fit: contain;
+	color:#6699ff;
+	margin: auto;
+}
+
 	 /*使い方ボタン？アイコン型*/
 	#help-btn{
 	 position: absolute;
