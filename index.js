@@ -164,10 +164,12 @@ function cls_close() {
     }
     Cookies.set("data",JSON.stringify(userdata), {expires: 180});
     schedulebox.style.visibility = "hidden";
+      right_side.style.visibility="visible";
 }
 
 function cls_open() {
     schedulebox.style.visibility = "visible";
+    right_side.style.visibility="hidden";
 }
 
 function info_close() {
@@ -183,6 +185,8 @@ function TimelineChange() {
         notify_text.textContent = "次の授業教室は " + userdata["schedule"][classday + "-" + classtime] + " です";
         Notify_Toggle(true);
         dis_number.style.background=colors[floornum];
+        right_side.style.top='6rem';
+         right.style.top='6rem';
     }
     
 }
@@ -221,12 +225,14 @@ function tutorial_back(){
 function open_route(){
     var route_pane = document.getElementById("route-panel");
     route_pane.style.visibility = "visible";
+    right_side.style.visibility="hidden";
     
 }
 
 function close_route(){
     var close_pane = document.getElementById("route-panel");
     close_pane.style.visibility = "hidden";
+    right_side.style.visibility="visible"
 }
 
 
