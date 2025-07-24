@@ -136,13 +136,24 @@
 </div>
 
 
-    <div id="tutorial">
-      <img src="img/Lisanavi_tutorial_2.png"  id="cls_tutorial">
-      <div class="cls-buttons">
-        <br>
-          <button type="button" onclick="javascript:cls_tutorialclose()" style="padding: 10 20 10 20">閉じる</button>
+     <div id="tutorial">
+     <div class="cls-buttons">
+       <button type="button" onclick="cls_tutorialclose()">閉じる</button>
+       <button type="button" onclick="tutorial_back()" id="back-btn-tutorial" style="margin-left: 10px; display:none;">戻る</button>
       </div>
-    </div> 
+
+      <div id="category-list" class="tutorial-center">
+      <button class="category-btn" onclick="showTutorialImage('tutorial.png')">LiSA Navi とは</button>
+        <button class="category-btn" onclick="showTutorialImage('tutorial.png')">LiSA Naviの主な機能</button>
+       <button class="category-btn" onclick="showTutorialImage('img3.png')">教室検索について</button>
+       <button class="category-btn" onclick="showTutorialImage('img4.png')">経路案内について</button>
+        <button class="category-btn" onclick="showTutorialImage('img5.png')">時間割機能について</button>
+        <button class="category-btn" onclick="showTutorialImage('img6.png')">カテゴリー6</button>
+      </div>
+
+        <img id="cls_tutorial" src="" style="display:none;" />
+     </div>
+
     
    <div id="information">
       <div id="info-text">

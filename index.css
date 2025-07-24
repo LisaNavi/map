@@ -475,7 +475,7 @@ div#tutorial{
 }
 #tutorial > .cls-buttons {
 	position: absolute;
-	top:3rem;
+	top:5rem;
 	left: 0.5rem;
 	z-index:12;
 }
@@ -535,6 +535,31 @@ img#cls_tutorial{
 .cls-buttons {
 	align-self: center;
 }
+.tutorial-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 6rem;
+}
+
+.category-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #6699ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.category-btn:hover {
+  background-color: #4f7edc;
+}
+
 
 /*週程表*/
 div#cls-table{

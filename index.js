@@ -177,6 +177,26 @@ function cls_tutorialclose() {
     tutorial.style.visibility = "hidden";
 }
 
+function cls_tutorialopen(){
+  tutorial.style.visibility = "visible";
+  document.getElementById("category-list").style.display = "flex";
+  document.getElementById("cls_tutorial").style.display = "none";
+  document.getElementById("back-btn-tutorial").style.display = "none";
+}
+
+function showTutorialImage(imgPath){
+  document.getElementById("cls_tutorial").src = "img/" + imgPath;
+  document.getElementById("cls_tutorial").style.display = "block";
+  document.getElementById("category-list").style.display = "none";
+  document.getElementById("back-btn-tutorial").style.display = "inline-block";
+}
+
+function tutorial_back(){
+  document.getElementById("cls_tutorial").style.display = "none";
+  document.getElementById("category-list").style.display = "flex";
+  document.getElementById("back-btn-tutorial").style.display = "none";
+}
+
 
 //経路検索
 function open_route(){
