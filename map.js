@@ -1,5 +1,5 @@
-let pictures = new Array("https://lisanavi.github.io/map/img/1F_ex1-over.png","https://lisanavi.github.io/map/img/2F_ex1-over.png","https://lisanavi.github.io/map/img/3F_ex1-over.png","https://lisanavi.github.io/map/img/4F_ex1-over.png");
-let pictures2 = new Array("https://lisanavi.github.io/map/img/1F_ex1-under.png","https://lisanavi.github.io/map/img/2F_ex1-under.png","https://lisanavi.github.io/map/img/3F_ex1-under.png","https://lisanavi.github.io/map/img/4F_ex1-under.png");
+let pictures = new Array("https://lisanavi.github.io/map/img/1F_ex2-over.png","https://lisanavi.github.io/map/img/2F_ex2-over.png","https://lisanavi.github.io/map/img/3F_ex2-over.png","https://lisanavi.github.io/map/img/4F_ex2-over.png");
+let pictures2 = new Array("https://lisanavi.github.io/map/img/1F_ex2-under.png","https://lisanavi.github.io/map/img/2F_ex2-under.png","https://lisanavi.github.io/map/img/3F_ex2-under.png","https://lisanavi.github.io/map/img/4F_ex2-under.png");
 let img_height = 1350;
 let img_width = 1651;
 let zoomlevel = 1;
