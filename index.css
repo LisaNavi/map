@@ -669,7 +669,7 @@ button:active {
 	justify-content: center;
 	flex-flow: row nowrap;
 	align-items: center;
-	width: 15rem;
+	width: 20rem;
 	height: 58px;
 	top:4rem;
 	background: rgb(61, 61, 61, 0.9);
@@ -681,7 +681,7 @@ button:active {
 	text-align: center;
 	user-select: none;
 	border-radius: 1rem;
-	left: 50%;
+	left: 57%;
   	transform: translateX(-50%);
 }
 

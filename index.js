@@ -91,6 +91,24 @@ function aaa(){
 right_side.style.visibility="hidden";
 right.style.visibility="visible";
 
+if (window.matchMedia('(max-width: 480px)').matches) {
+    // 〇〇px以下の処理
+    inputbox.animate(
+  // 変化させるスタイル
+	[
+		{ width: '0px' },
+		{ width: '300px' }
+	],
+  // プロパティ
+	{
+		duration: 1000,
+		
+		direction: 'alternate'
+	}
+);
+} else if (window.matchMedia('(min-width:480px)').matches) {
+    // 〇〇px 以上の処理
+
 inputbox.animate(
   // 変化させるスタイル
 	[
@@ -104,6 +122,7 @@ inputbox.animate(
 		direction: 'alternate'
 	}
 );
+}
 
 }
 
