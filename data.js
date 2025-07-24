@@ -2901,6 +2901,17 @@ data={
     "info": "体育科の教師がよくいる場所です。\n",
     "img": "https://lisanavi.github.io/map/floorpic/pe_pre.png"
   },
+  "ステージ": {
+    "pos": [
+      136,
+      1242,
+      253,
+      1291
+    ],
+    "floor":[0],
+    "info": "体育館のステージです。集会などで使用します。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/stage.png"
+  },
   "一般学習室1": {
     "pos": [
       1141,
@@ -3926,6 +3937,17 @@ data={
     "img": "https://lisanavi.github.io/map/floorpic/314.png"
   },
   "進路指導室": {
+    "pos": [
+      729,
+      89,
+      783,
+      172
+    ],
+    "floor":[2],
+    "info": "進路指導室1です。\n一部の先生がいます。\n",
+    "img": "https://lisanavi.github.io/map/floorpic/314.png"
+  },
+  "進路室": {
     "pos": [
       729,
       89,
