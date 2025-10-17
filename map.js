@@ -518,8 +518,22 @@ const display = document.getElementById('display');
 
 // ズームパラメータを一元管理
 let scale = 1;
-const minScale = 0.95;
-const maxScale = 3.5;
+let minScale, maxScale;
+
+if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+  // iOS
+  minScale = 0.5;
+  maxScale = 3.0;
+} else if (/Android/i.test(navigator.userAgent)) {
+  // Android
+  minScale = 0.5;
+  maxScale = 3.0;
+} else {
+  // PC
+  minScale = 0.95;
+  maxScale = 4.0;
+}
+
 let origin = { x: 0, y: 0 };
 let lastTouchDist = null;
 let lastCenter = null;
@@ -611,6 +625,21 @@ display.addEventListener('touchend', (e) => {
     lastCenter = null;
   }
 });
+
+display.addEventListener("wheel", (e) => {
+  e.preventDefault();
+
+  // ホイールの回転量で倍率を決定（上に回すと拡大、下で縮小）
+  const zoomIntensity = 0.1; // 感度
+  const scaleChange = e.deltaY < 0 ? 1 + zoomIntensity : 1 - zoomIntensity;
+
+  // ホイール位置を基準にズームする
+  const rect = display.getBoundingClientRect();
+  const centerX = e.clientX - rect.left + display.scrollLeft;
+  const centerY = e.clientY - rect.top + display.scrollTop;
+
+  setScale(scale * scaleChange, centerX, centerY);
+}, { passive: false });
 
 // --- パン（ドラッグ）用変数 ---
 let isDragging = false;
