@@ -335,6 +335,11 @@ div#right{
 	border: 2px solid #6699ff;
 }
 
+#input-waypoint{
+	width:75px; height: 2rem;
+	border: 2px solid #4f4f4f;
+}
+
 #input-goal{
 	width:75px; height: 2rem;
 	border: 2px solid #ff6666;

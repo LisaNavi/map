@@ -41,7 +41,7 @@ div#container{
 #waypoint-highlight {
   width: 80px;
   height: 80px;
-  background: rgb(110, 110, 110);
+  background: rgb(178, 178, 178);
   position: absolute;
   left: 0px; top: 0px;
   visibility: hidden;
