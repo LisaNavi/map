@@ -9,6 +9,7 @@ let room = "";
 let dayroom = "";
 let floornum = 0;
 let Sroom = "";
+let Wroom = "";
 let Groom = "";
 let Mroom = "";
 let Vroom = "";
@@ -19,6 +20,7 @@ let h1 = document.getElementById("highlight");
 let h2 = document.getElementById("cls-highlight");
 let h3 = document.getElementById("start-highlight");
 let h4 = document.getElementById("goal-highlight");
+let h5 = document.getElementById("waypoint-highlight"); //経由地です
 var canvas = document.getElementById('canvas');
 var fig = canvas.getContext("2d");
 let Sx = [];
@@ -30,6 +32,9 @@ let My = [];
 let Vx = [];
 let Vy = [];
 let floor1 = "";
+
+let routes = [];          // 各ルートは {Sx:[], Sy:[], Gx:[], Gy:[], Sf:..., Gf:..., floor1:...}
+let appendMode = false;   // true のとき download() は既存ルートを消さず追加する
 
 h1.onanimationend = function () {
     h1.classList.remove("show");
@@ -43,14 +48,15 @@ h3.onanimationend = function () {
 h4.onanimationend = function () {
     h4.classList.remove("show");
 }
+h5.onanimationend = function () {
+    h5.classList.remove("show");
+}
 
 // Search room by input roomnumber
 function showup(rn)
 {
     room = rn;
     afloor=data[room]["floor"][0];
-    img.src = pictures[afloor];
-    img2.src=pictures2[afloor];
 
     // lefttop y - rightbottom y = height
     
@@ -69,17 +75,53 @@ function clearhighlight(){
     h3.style.visibility = "hidden";
     h4.classList.remove("show");
     h4.style.visibility = "hidden";
+    h5.classList.remove("show"); //h5は経由地ですよ～
+    h5.style.visibility = "hidden";
 }
 
 // Change floor
 function flchange(num)
 {
     floornum = num;
-    img.src=pictures[floornum];
-       img2.src=pictures2[floornum];
-    fig.clearRect(0,0,1651,1350);
-    draw(Sx[floornum],Sy[floornum],Gx[floornum],Gy[floornum]);
-    draw(Mx[floornum],My[floornum],Vx[floornum],Vy[floornum]);
+    img.src = pictures[floornum];
+    img2.src = pictures2[floornum];
+    fig.clearRect(0, 0, 1651, 1350);
+
+// 通常ルート
+for (const r of routes) {
+    if (
+        r &&
+        r.Sx &&
+        r.Sx[floornum] !== undefined &&
+        r.Gx &&
+        r.Gx[floornum] !== undefined
+    ) {
+        draw(
+            r.Sx[floornum],
+            r.Sy[floornum],
+            r.Gx[floornum],
+            r.Gy[floornum],
+            r.color
+        );
+    }
+}
+
+// 体育館ルート（従来方式を維持）
+if (typeof Mx !== "undefined" &&
+    Mx[floornum] !== undefined &&
+    My[floornum] !== undefined &&
+    Vx[floornum] !== undefined &&
+    Vy[floornum] !== undefined
+) {
+    draw(
+        Mx[floornum],
+        My[floornum],
+        Vx[floornum],
+        Vy[floornum],
+        "red"
+    );
+}
+
 
         if(floornum==0){
 body.style.backgroundColor='rgb(255,244,227)';
@@ -146,6 +188,23 @@ body.style.backgroundColor='rgb(237,255,227)';
         h3.classList.remove("show");
         h3.style.visibility = "hidden";
     }
+
+    //経路経由地地点
+    if (Wroom != "" && Wfloor == floornum){
+        if (h5.style.visibility == "hidden") {
+            // 大きさを計算して座標配置
+            h5.style.visibility = "visible";
+            h5.classList.add("show");
+            h5.style.zIndex = 1;
+        }
+    }
+    // 別の階になったら非表示
+    else
+    {
+        h5.classList.remove("show");
+        h5.style.visibility = "hidden";
+    }
+
     //経路ゴール地点
     if (Groom != "" && Gfloor == floornum){
         if (h4.style.visibility == "hidden") {
@@ -180,6 +239,7 @@ function clschange(num)
 }
 
 //経路検索
+/*
 function download(S1,S2,G1,G2,S3,G3,fl){
     fig.clearRect(0,0,1651,1350);
     Sx = S1;
@@ -190,12 +250,58 @@ function download(S1,S2,G1,G2,S3,G3,fl){
     Gf = G3;
     floor1 = fl;
 }
+*/
+function download(S1, S2, G1, G2, S3, G3, fl) {
+
+    const useVia = window.useVia === true;
+    const append = window.appendMode === true;
+
+    let color;
+
+    if (!useVia) {
+        color = "red";
+    } else if (!append) {
+        color = "blue";
+    } else {
+        color = "red";
+    }
+
+    const route = {
+        Sx: Array.isArray(S1) ? S1.slice() : S1,
+        Sy: Array.isArray(S2) ? S2.slice() : S2,
+        Gx: Array.isArray(G1) ? G1.slice() : G1,
+        Gy: Array.isArray(G2) ? G2.slice() : G2,
+        Sf: S3,
+        Gf: G3,
+        floor1: fl,
+        color: color
+    };
+
+    // 互換用：既存 draw() が参照するグローバル変数を更新
+    Sx = route.Sx;
+    Sy = route.Sy;
+    Gx = route.Gx;
+    Gy = route.Gy;
+    Sf = route.Sf;
+    Gf = route.Gf;
+    floor1 = route.floor1;
+
+    // ルート登録
+    if (!append) {
+        routes = [route];
+        fig.clearRect(0, 0, img_width, img_height);
+    } else {
+        routes.push(route);
+    }
+
+    flchange(floornum);
+}
 
 function showupS(rn)
 {
     Sroom = rn;
     Sfloor=data[Sroom]["floor"][0];
-    img.src = pictures[Sfloor];
+    /*img.src = pictures[Sfloor];*/
 
     // lefttop y - rightbottom y = height
     
@@ -203,10 +309,29 @@ function showupS(rn)
     h3.style.height = ( data[Sroom]["pos"][3] - data[Sroom]["pos"][1] ) + "px";
     h3.style.left = data[Sroom]["pos"][0] + "px";
     h3.style.top = data[Sroom]["pos"][1] + "px";
-    h3.style.visibility = "visible";
+    h3.style.visibility = "hidden";
+    /*
     h3.classList.add("show");
     h3.style.zIndex = 1;
+    */
 }
+
+function showupW(rn)
+{
+    Wroom = rn;
+    Wfloor = data[Wroom]["floor"][0];
+
+    h5.style.width  = ( data[Wroom]["pos"][2] - data[Wroom]["pos"][0] ) + "px";
+    h5.style.height = ( data[Wroom]["pos"][3] - data[Wroom]["pos"][1] ) + "px";
+    h5.style.left   = data[Wroom]["pos"][0] + "px";
+    h5.style.top    = data[Wroom]["pos"][1] + "px";
+    h5.style.visibility = "hidden";
+    /*
+    h5.classList.add("show");
+    h5.style.zIndex = 1;
+    */
+}
+
 
 function showupG(rn)
 {
@@ -219,6 +344,11 @@ function showupG(rn)
     h4.style.height = ( data[Groom]["pos"][3] - data[Groom]["pos"][1] ) + "px";
     h4.style.left = data[Groom]["pos"][0] + "px";
     h4.style.top = data[Groom]["pos"][1] + "px";
+    h4.style.visibility = "hidden";
+    /*
+    h4.classList.add("show");
+    h4.style.zIndex = 1;
+    */
 }
 
 function download1(S1,S2,G1,G2,S3,G3){
@@ -280,22 +410,51 @@ function delate_route(S1,S2,G1,G2){
     h4.style.visibility = "visible";
     h4.classList.add("show");
     h4.style.zIndex = 1;
+    h5.style.width = "0px";
+    h5.style.height = "0px";
+    h5.style.left = "0px";
+    h5.style.top = "0px";
+    h5.style.visibility = "visible";
+    h5.classList.add("show");
+    h5.style.zIndex = 1;
 }
 
-function line(Sx,Sy,Gx,Gy){
+function clear_all_routes(){
+    routes = [];
+    Sx = []; Sy = []; Gx = []; Gy = [];
+    fig.clearRect(0,0,img_width,img_height);
+    // ハイライト類を消す
+    h3.style.width = "0px"; h3.style.height = "0px"; h3.style.left = "0px"; h3.style.top = "0px";
+    h3.style.visibility = "hidden"; h3.classList.remove("show");
+    h4.style.width = "0px"; h4.style.height = "0px"; h4.style.left = "0px"; h4.style.top = "0px";
+    h4.style.visibility = "hidden"; h4.classList.remove("show");
+    h5.style.width = "0px"; h5.style.height = "0px"; h5.style.left = "0px"; h5.style.top = "0px";
+    h5.style.visibility = "hidden"; h5.classList.remove("show");
+    flchange(floornum);
+}
+
+function line(Sx,Sy,Gx,Gy, color) {
+    // color が未指定なら赤をデフォルト
+    const routeColor = color || "blue";
+
+    // 同じ点の場合は少しずらす（既存の挙動）
     if (Sx == Gx && Sy == Gy){
         Sx = Sx - 5;
         Gx = Gx + 5;
     }
+
     fig.beginPath();
     fig.lineWidth = 8;
-    fig.strokeStyle = "red";
+    fig.strokeStyle = routeColor;
     fig.moveTo(Sx,Sy);
     fig.lineTo(Gx,Gy);
     fig.stroke();
 }
 
-function draw(Sx, Sy, Gx, Gy){
+function draw(Sx, Sy, Gx, Gy, color){
+    // color が未指定なら赤をデフォルト
+    const routeColor = color || "blue";
+
     var work;
     if(Gx < Sx){
         work = Gx;
@@ -306,190 +465,221 @@ function draw(Sx, Sy, Gx, Gy){
         Gy = Sy;
         Sy = work;
     }
+
     //東棟から移動するとき
     if(Sy == 181){
         if(Gy == Sy){
-            line(Sx,Sy,Gx,Gy);
+            line(Sx,Sy,Gx,Gy, routeColor);
         }
         else if(Gy == 658){
             if(Sx < 366 && (Sf != 3 && Gf != 3)){
-                line(Sx,Sy,366,Sy);
-                line(366,Sy,366,Gy);
-                line(Gx,Gy,366,Gy);
+                line(Sx,Sy,366,Sy, routeColor);
+                line(366,Sy,366,Gy, routeColor);
+                line(Gx,Gy,366,Gy, routeColor);
             }
             else{
                 if(Math.abs(1182 - Sx) + 477 + Math.abs(1182 -Gx) > Math.abs(Sx - 366) + 477 + Math.abs(Gx - 366) && (Sf != 3 && Gf != 3)){
-                    line(Sx,Sy,366,Sy);
-                    line(366,Sy,366,Gy);
-                    line(Gx,Gy,366,Gy);
+                    line(Sx,Sy,366,Sy, routeColor);
+                    line(366,Sy,366,Gy, routeColor);
+                    line(Gx,Gy,366,Gy, routeColor);
                 }
                 else if(floor1 == 1){
-                    line(Sx,Sy,1182,Sy);
-                    line(1182,Sy,1182,Gy);
-                    line(Gx,Gy,1182,Gy);
+                    line(Sx,Sy,1182,Sy, routeColor);
+                    line(1182,Sy,1182,Gy, routeColor);
+                    line(Gx,Gy,1182,Gy, routeColor);
                 }
                 else{
-                    line(Sx,Sy,1131,Sy);
-                    line(1131,Sy,1131,Gy);
-                    line(Gx,Gy,1131,Gy);
+                    line(Sx,Sy,1131,Sy, routeColor);
+                    line(1131,Sy,1131,Gy, routeColor);
+                    line(Gx,Gy,1131,Gy, routeColor);
                 }
             }
         }
         //117,118へ移動するとき
         else if(Gx == 366){
-            line(Sx,Sy,Gx,Sy);
-            line(Gx,Sy,Gx,Gy);
+            line(Sx,Sy,Gx,Sy, routeColor);
+            line(Gx,Sy,Gx,Gy, routeColor);
         }
         //一般教室へ移動するとき
         else if(Gx == 1131){
-            line(Sx,Sy,Gx,Sy);
-            line(Gx,Sy,Gx,Gy);
+            line(Sx,Sy,Gx,Sy, routeColor);
+            line(Gx,Sy,Gx,Gy, routeColor);
         }
         //事務室へ移動するとき
         else if(Gy == 300){
-            line(Sx,Sy,1182,Sy);
-            line(Gx,Sy,Gx,Gy);
+            line(Sx,Sy,1182,Sy, routeColor);
+            line(Gx,Sy,Gx,Gy, routeColor);
         }
         //校長室側へ移動するとき
         else if(Gy == 256){
             if(Math.abs(938 - Sx) < Math.abs(1182 - Sx)){
-                line(Sx,Sy,938,Sy);
-                line(938,Sy,938,Gy);
-                line(938,Gy,Gx,Gy);
+                line(Sx,Sy,938,Sy, routeColor);
+                line(938,Sy,938,Gy, routeColor);
+                line(938,Gy,Gx,Gy, routeColor);
             }
             else{
-                line(Sx,Sy,1182,Sy);
-                line(1182,Sy,1182,Gy);
-                line(Gx,Gy,1182,Gy);
+                line(Sx,Sy,1182,Sy, routeColor);
+                line(1182,Sy,1182,Gy, routeColor);
+                line(Gx,Gy,1182,Gy, routeColor);
             }
         }
     }
     //西棟から移動するとき
     else if(Sy == 658){
         if(Gy == Sy){
-            line(Sx,Sy,Gx,Gy);
+            line(Sx,Sy,Gx,Gy, routeColor);
         }
         else if(Gy == 181){
             if(Sx < 366 && (Sf != 3 && Gf != 3)){
-                line(Sx,Sy,366,Sy);
-                line(366,Sy,366,Gy);
-                line(Gx,Gy,366,Gy);
+                line(Sx,Sy,366,Sy, routeColor);
+                line(366,Sy,366,Gy, routeColor);
+                line(Gx,Gy,366,Gy, routeColor);
             }
             else if(1182 < Gx && (floor1 == 1)){
-                line(Sx,Sy,1182,Sy);
-                line(1182,Sy,1182,Gy);
-                line(Gx,Gy,1182,Gy);
+                line(Sx,Sy,1182,Sy, routeColor);
+                line(1182,Sy,1182,Gy, routeColor);
+                line(Gx,Gy,1182,Gy, routeColor);
             }
             else if(1182 < Gx){
-                line(Sx,Sy,1131,Sy);
-                line(1131,Sy,1131,Gy);
-                line(Gx,Gy,1131,Gy);
+                line(Sx,Sy,1131,Sy, routeColor);
+                line(1131,Sy,1131,Gy, routeColor);
+                line(Gx,Gy,1131,Gy, routeColor);
             }
             else{
                 if(Math.abs(1182 - Sx) + 477 + Math.abs(1182 -Gx) > Math.abs(Sx - 366) + 477 + Math.abs(Gx - 366) && (Sf != 3 && Gf != 3)){
-                    line(Sx,Sy,366,Sy);
-                    line(366,Sy,366,Gy);
-                    line(Gx,Gy,366,Gy);
+                    line(Sx,Sy,366,Sy, routeColor);
+                    line(366,Sy,366,Gy, routeColor);
+                    line(Gx,Gy,366,Gy, routeColor);
                 }
                 else if(floor1 == 1){
-                    line(Sx,Sy,1182,Sy);
-                    line(1182,Sy,1182,Gy);
-                    line(Gx,Gy,1182,Gy);
+                    line(Sx,Sy,1182,Sy, routeColor);
+                    line(1182,Sy,1182,Gy, routeColor);
+                    line(Gx,Gy,1182,Gy, routeColor);
                 }
                 else{
-                    line(Sx,Sy,1131,Sy);
-                    line(1131,Sy,1131,Gy);
-                    line(Gx,Gy,1131,Gy);
+                    line(Sx,Sy,1131,Sy, routeColor);
+                    line(1131,Sy,1131,Gy, routeColor);
+                    line(Gx,Gy,1131,Gy, routeColor);
                 }
             }
         }
         //117,118へ移動するとき
         else if(Gx == 366){
-            line(Sx,Sy,Gx,Sy);
-            line(Gx,Sy,Gx,Gy);
+            line(Sx,Sy,Gx,Sy, routeColor);
+            line(Gx,Sy,Gx,Gy, routeColor);
         }
         //一般教室へ移動するとき
         else if(Gx == 1131){
-            line(Sx,Sy,Gx,Sy);
-            line(Gx,Sy,Gx,Gy);
+            line(Sx,Sy,Gx,Sy, routeColor);
+            line(Gx,Sy,Gx,Gy, routeColor);
         }
         //事務室へ移動するとき
         else if(Gy == 300){
-            line(Sx,Sy,1182,Sy);
-            line(Gx,Sy,Gx,Gy);
+            line(Sx,Sy,1182,Sy, routeColor);
+            line(Gx,Sy,Gx,Gy, routeColor);
         }
         //校長室側へ移動するとき
         else if(Gy == 256){
             if(Math.abs(366 - Sx) + 572 + Math.abs(Gx - 938) < Math.abs(1182 - Sx) + Math.abs(1182 - Gx)){
-                line(Sx,Sy,366,Sy);
-                line(366,Sy,366,181);
-                line(366,181,938,181);
-                line(938,181,938,Gy);
-                line(938,Gy,Gx,Gy);
+                line(Sx,Sy,366,Sy, routeColor);
+                line(366,Sy,366,181, routeColor);
+                line(366,181,938,181, routeColor);
+                line(938,181,938,Gy, routeColor);
+                line(938,Gy,Gx,Gy, routeColor);
             }
             else{
-                line(Sx,Sy,1182,Sy);
-                line(1182,Sy,1182,Gy);
-                line(Gx,Gy,1182,Gy);
+                line(Sx,Sy,1182,Sy, routeColor);
+                line(1182,Sy,1182,Gy, routeColor);
+                line(Gx,Gy,1182,Gy, routeColor);
             }
         }
     }
     //117,118から移動するとき
     else if(Sx == 366){
         if(Gy == 300){
-            line(Sx,Sy,Sx,181);
-            line(Sx,181,1182,181);
-            line(1182,181,1182,300);
+            line(Sx,Sy,Sx,181, routeColor);
+            line(Sx,181,1182,181, routeColor);
+            line(1182,181,1182,300, routeColor);
         }
         else if(Gy != 256){
-            line(Sx,Sy,Sx,Gy);
-            line(Sx,Gy,Gx,Gy);
+            line(Sx,Sy,Sx,Gy, routeColor);
+            line(Sx,Gy,Gx,Gy, routeColor);
         }
         else{
-            line(Sx,Sy,Sx,181);
-            line(Sx,181,938,181);
-            line(938,181,938,Gy);
-            line(938,Gy,Gx,Gy);
+            line(Sx,Sy,Sx,181, routeColor);
+            line(Sx,181,938,181, routeColor);
+            line(938,181,938,Gy, routeColor);
+            line(938,Gy,Gx,Gy, routeColor);
         }
     }
     //一般教室から移動するとき
     else if(Sx == 1131){
-        line(Sx,Sy,Sx,Gy);
-        line(Sx,Gy,Gx,Gy);
+        line(Sx,Sy,Sx,Gy, routeColor);
+        line(Sx,Gy,Gx,Gy, routeColor);
     }
     //事務室から移動するとき
     else if(Sy == 300){
-        line(Sx,Sy,Sx,Gy);
-        line(Sx,Gy,Gx,Gy);
+        line(Sx,Sy,Sx,Gy, routeColor);
+        line(Sx,Gy,Gx,Gy, routeColor);
     }
     //校長室側から移動するとき
     else if(Sy == 256){
         if(Sy == Gy){
-            line(Sx,Sy,Sx,Gy);
-            line(Sx,Gy,Gx,Gy);
+            line(Sx,Sy,Sx,Gy, routeColor);
+            line(Sx,Gy,Gx,Gy, routeColor);
         }
         else{
-            line(Sx,Sy,1182,Sy);
-            line(1182,Sy,1182,Gy);
-            line(1182,Gy,Gx,Gy);
+            line(Sx,Sy,1182,Sy, routeColor);
+            line(1182,Sy,1182,Gy, routeColor);
+            line(1182,Gy,Gx,Gy, routeColor);
         }
     }
     //体育館1Fへ移動するとき
     else if(Sx == 290){
-        line(Gx,Gy,Gx,1006);
-        line(Gx,1006,Sx,1006);
-        line(Sx,1006,Sx,Sy);
+        line(Gx,Gy,Gx,1006, routeColor);
+        line(Gx,1006,Sx,1006, routeColor);
+        line(Sx,1006,Sx,Sy, routeColor);
     }
     else if(Sy > 700){
-        line(Gx,Gy,Sx,Sy);
+        line(Gx,Gy,Sx,Sy, routeColor);
     }
     //その他
     else {
-        line(Sx,Sy,Gx,Gy);
+        line(Sx,Sy,Gx,Gy, routeColor);
     }
 }
 
+function ll_routes(){
+    routes = [];
+    Sx = [];
+    Sy = [];
+    Gx = [];
+    Gy = [];
+    // canvas とハイライトをクリアしてフロア再描画
+    fig.clearRect(0,0,1651,1350);
+    h3.style.width = "0px";
+    h3.style.height = "0px";
+    h3.style.left = "0px";
+    h3.style.top = "0px";
+    h3.style.visibility = "hidden";
+    h3.classList.remove("show");
 
+    h4.style.width = "0px";
+    h4.style.height = "0px";
+    h4.style.left = "0px";
+    h4.style.top = "0px";
+    h4.style.visibility = "hidden";
+    h4.classList.remove("show");
+
+    h5.style.width = "0px";
+    h5.style.height = "0px";
+    h5.style.left = "0px";
+    h5.style.top = "0px";
+    h5.style.visibility = "hidden";
+    h5.classList.remove("show");
+
+    flchange(floornum);
+}
 
 function zoomin() {
   setScale(scale + 0.05, display.clientWidth / 2, display.clientHeight / 2);

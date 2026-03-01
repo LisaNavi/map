@@ -126,6 +126,18 @@ inputbox.animate(
 
 }
 
+function togglePanels() {
+  const left  = document.getElementById('left-side');
+  const right = document.getElementById('right-side');
+  const btn   = document.getElementById('toggle-btn');
+
+  const hidden = left.classList.toggle('hidden');
+  right.classList.toggle('hidden');
+
+  btn.querySelector('.label').textContent = hidden ? ' 表示 ' : '非表示';
+  btn.querySelector('.icon').textContent  = hidden ? '▶' : '◀';
+}
+
 function back(){
 right_side.style.visibility="visible";
 right.style.visibility="hidden";
@@ -235,6 +247,82 @@ function close_route(){
     right_side.style.visibility="visible"
 }
 
+// 経由地を使うときのラッパー
+function search_with_waypoint() {
+
+    const s = document.getElementById('input-start').value.trim();
+    const w = document.getElementById('input-waypoint')
+        ? document.getElementById('input-waypoint').value.trim()
+        : "";
+    const g = document.getElementById('input-goal').value.trim();
+
+    if (!s || !g) {
+        alert("現在地と目的地は必須です。");
+        return;
+    }
+
+    const startIsGym = data[s]["pos"][1] > 700;
+    const waypointIsGym = w && data[w]["pos"][1] > 700;
+    const goalIsGym = data[g]["pos"][1] > 700;
+
+    map.contentWindow.useVia = !!w;
+    map.contentWindow.appendMode = false;
+    map.contentWindow.isGymRoute = false;
+
+    /* 経由地なし */
+    if (!w) {
+
+        map.contentWindow.isGymRoute = startIsGym || goalIsGym;
+
+        search_route(s, g);
+    } 
+    /* 経由地あり */
+    else {
+
+        /* --- 前半：Start → Waypoint --- */
+        if (startIsGym) {
+            map.contentWindow.isGymRoute = true;
+            search_route(s, w);
+
+            map.contentWindow.isGymRoute = false;
+            map.contentWindow.appendMode = true;
+            search_route(map.contentWindow.exitRoom, w);
+        } else {
+            search_route(s, w);
+        }
+
+        /* --- 後半：Waypoint → Goal --- */
+        map.contentWindow.appendMode = true;
+        map.contentWindow.isGymRoute = waypointIsGym || goalIsGym;
+        search_route(w, g);
+    }
+
+    /* 表示階は最後に1回だけ */
+    const startFloor = data[s]["floor"][0];
+    map.contentWindow.flchange(startFloor);
+
+    /* 状態リセット */
+    map.contentWindow.appendMode = false;
+    map.contentWindow.useVia = false;
+
+    /* 部屋を確定させる */
+    map.contentWindow.showupS(s);
+
+    if (w) {
+        map.contentWindow.showupW(w);
+    }
+
+    map.contentWindow.showupG(g);
+
+    /* 最後に1回だけ描画更新 */
+    map.contentWindow.flchange(startFloor);
+}
+
+// ルート削除（既存 de_route を次の実装に置換）
+function de_route(){
+    map.contentWindow.clear_all_routes();
+    map.contentWindow.clearhighlight();
+}
 
 function search_route(Snum, Gnum) {
     if (Number.isInteger(Snum)){
@@ -823,22 +911,24 @@ function search_route(Snum, Gnum) {
                                 Vy[1] = 840;
                             }
                         }
-
                     }
                     map.contentWindow.clearhighlight();
                     map.contentWindow.download(Sx,Sy,Gx,Gy,Sf,Gf,floor1);
+                    
                     map.contentWindow.Sroom = Snum;
                     map.contentWindow.Groom = Gnum;
+                    
                     floors = data[Snum]["floor"];
                     map.contentWindow.showupS(Snum);
                     map.contentWindow.showupG(Gnum);
+                    map.contentWindow.showupM(Mnum);
                     map.contentWindow.download1(Mx,My,Vx,Vy,Mf,Vf);
                     map.contentWindow.Mroom = Mnum;
                     map.contentWindow.Vroom = Vnum;
-                    map.contentWindow.showupM(Mnum);
                     map.contentWindow.flchange(fn);
                     dis_number.textContent = (floors[0]+1) + "F";
                     dis_number.style.background=colors[data[Snum]["floor"]];
+                    
                 }
             }
         }
@@ -1024,6 +1114,7 @@ function stairs5(x1,y1,x2,y2,Sf,Gf,stairs){
 }
 
 //ルート削除
+/*
 function de_route(){
     for (let i = 0; i < 4; i++){
         Sx[i] = 330;
@@ -1034,6 +1125,7 @@ function de_route(){
     map.contentWindow.clearhighlight();
     map.contentWindow.delate_route(Sx,Sy,Gx,Gy);
 }
+*/
 
 // CSV関係
 let csvformat = [["講時/曜日","月","火","水","木","金"],
@@ -1238,3 +1330,72 @@ window.addEventListener('DOMContentLoaded', function() {
 
 panel.addEventListener("click", function() {panel.style.visibility = "hidden";});
 
+// Q&Aポップアップを開く
+function openQAPopup() {
+  document.getElementById("qa-popup").style.display = "flex";
+}
+
+function closeQAPopup() {
+  document.getElementById("qa-popup").style.display = "none";
+}
+// 背景クリックで閉じる
+document.addEventListener("click", function(e){
+  const popup = document.getElementById("qa-popup");
+  if (e.target === popup) {
+    closeQAPopup();
+  }
+});
+
+
+// Q&Aアコーディオン設定
+
+
+
+// Q&Aポップアップを開く
+function openQA() {
+    document.getElementById("qa-popup").style.display = "block";
+
+
+
+    if (!document.getElementById("qa-container").dataset.loaded) {
+        fetch("https://lisanavi.github.io/archive/qanda.html")
+            .then(response => response.text())
+            .then(html => {
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, "text/html");
+
+                document.getElementById("qa-container").innerHTML = doc.body.innerHTML;
+                document.getElementById("qa-container").dataset.loaded = "true";
+
+                setupQAAccordion(); // ← これが④
+            })
+            .catch(() => {
+                document.getElementById("qa-container").innerHTML =
+                    "Q&Aの読み込みに失敗しました";
+            });
+    }
+}
+window.addEventListener("DOMContentLoaded", setupQAAccordion);
+function setupQAAccordion() {
+    const questions = document.querySelectorAll(".qa-question");
+
+    questions.forEach(q => {
+        q.addEventListener("click", () => {
+            const answer = q.nextElementSibling;
+
+            document.querySelectorAll(".qa-answer").forEach(a => {
+                if (a !== answer) a.style.display = "none";
+            });
+
+            answer.style.display =
+                answer.style.display === "block" ? "none" : "block";
+        });
+    });
+}
+function openQA() {
+    document.getElementById("qa-popup").style.display = "flex";
+}
+
+function closeQA() {
+    document.getElementById("qa-popup").style.display = "none";
+}

@@ -21,7 +21,7 @@ data={
       170
     ],
     "floor":[0],
-    "info": "制作1中\n",
+    "info": "制作中\n",
     "img": "https://lisanavi.github.io/map/floorpic/101.png",
     "name":"101教室 多目的室"
   },

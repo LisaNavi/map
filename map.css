@@ -38,6 +38,15 @@ div#container{
   visibility: hidden;
   z-index: 1;
 }
+#waypoint-highlight {
+  width: 80px;
+  height: 80px;
+  background: rgb(110, 110, 110);
+  position: absolute;
+  left: 0px; top: 0px;
+  visibility: hidden;
+  z-index: 1;
+}
 #goal-highlight{
   width: 80px;
   height: 80px;

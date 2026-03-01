@@ -17,6 +17,77 @@
 
   
   <body style="overflow-y: hidden;">
+
+<div id="qa-popup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Q&A</h2>
+
+    <div class="qa-item">
+      <div class="qa-question">Q. LiSA NaviとLiSA Archiveとはなんですか？</div>
+      <div class="qa-answer">
+LiSA NaviとLiSA Archiveの機能はそれぞれ以下の通りです。<br><br>
+<b>LiSA Navi</b><br>
+校内の教室や教室の説明、経路、時間割から次の教室の場所を表示することができるサイトです。<br><br>
+<b>LiSA Archive</b><br>
+校内の風景を360°写真で見ることができるサイトです。
+      </div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">Q. LiSA Navi、LiSA Archiveの使い方は？</div>
+      <div class="qa-answer">サイト右側にある「使い方」ボタンから確認できます</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">Q. サイトにバグを発見しました。どうすればいいですか？</div>
+      <div class="qa-answer">メニューにある「フィードバック」からバグの内容を送信してください。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-sikiri">LiSA Naviの使用方法についての質問⇓</div>
+      <div class="qa-answer">はい、ピンチ操作で拡大縮小できます。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-question">Q. 校内マップを見る以外の使い方はあるの？</div>
+      <div class="qa-answer"> あります。<br>
+LiSA Naviではその他にも教室検索、教室情報を見る、ある教室から教室までの経路を検索する、時間割から次の教室を表示する機能などがあります。</div>
+    </div>
+     <div class="qa-item">
+      <div class="qa-question">Q.教室検索の方法は？</div>
+      <div class="qa-answer">画面右下にある「教室検索」の欄に教室番号か教室名を入力してください。
+その後、その下の「🔍」ボタンを押すことでその教室を水色で強調表示します。
+ただし、教室名で検索する場合、完全一致でないと検索できません。</div>
+    </div>
+     <div class="qa-item">
+      <div class="qa-question">Q. 右下の「Info」ボタンは何？</div>
+      <div class="qa-answer">検索した教室の説明を表示するボタンです。 また、その教室の2D写真を表示する機能も現在制作中です。
+</div>
+    </div>
+     <div class="qa-item">
+      <div class="qa-question">Q. 右下の「経路β」ボタンは何？</div>
+      <div class="qa-answer">A. 現在地の教室から目的地の教室までの経路を検索する画面を表示するボタンです。</div>
+    </div>
+     <div class="qa-item">
+      <div class="qa-question">Q. 経路案内の方法は？</div>
+      <div class="qa-answer"> 画面右下にある「経路β」ボタンを押してください。
+その後、左にある青枠の「現在地」に今いる場所の近くの教室番号または教室名、右にある赤枠の「目的地」に行きたい教室の教室番号または教室名を入力してください。
+入力後、下にある「検索」ボタンを押すことで、現在地を青色で、目的地を赤色で表示し、その経路を赤い線で結びます。
+経路を削除したい場合、「経路β」ボタンを押し、左下にある「削除」というボタンを押すことで削除できます。
+また、経路を削除しなくても新たに経路を検索することができます。</div>
+    </div>
+     <div class="qa-item">
+      <div class="qa-question">Q. スマホでも使えますか？</div>
+      <div class="qa-answer">はい、ピンチ操作で拡大縮小できます。</div>
+    </div>
+
+
+    <button onclick="closeQA()">閉じる</button>
+
+  </div>
+</div>
+
+</div>
+
+
     <link rel="stylesheet" type="text/css" href="index.css" />
     <div class="title">
       <div style="padding: 10px 10px; display: flex; align-items: center;">
@@ -53,7 +124,7 @@
               <h4 class="delete-space">サイト説明</h4> <!--これは変更しない-->
               LiSA Navi、LiSArchiveについてのQ&Aです。<br>サイトの事で何かわからないところがあれば見てください。<br> <!--ここにサイトの説明を記入-->
             </div>
-            <button onclick="window.open('https://lisanavi.github.io/archive/qanda.html', '_blank')">開く</button> <!--サイトに飛ぶためのリンクをここに挿入-->
+            <button onclick="openQAPopup()">開く</button> <!--サイトに飛ぶためのリンクをここに挿入-->
           </div>
           <div class="booth-item"> <!--ここでブース一個-->
             <img class="booth-img" src="img/feedback.png">
@@ -94,10 +165,13 @@
 
     <br><br> <!--ここはマップ用の空白-->
     <iframe id="map" src="map.html" width="1000" height="1000" frameborder=0></iframe>
+    
+    <!--拡大縮小は実装できたので非表示
     <div id="zooms">
       <button onclick="map.contentWindow.zoomin()">+</button>
       <button onclick="map.contentWindow.zoomout()">-</button>
     </div>
+    -->
 
     <div id="left-side">
       <a href="javascript:floor(3)" class="btn_04">4F</a>
@@ -110,8 +184,15 @@
       <a href="javascript:open_route('route-panel')" class="btn_05" style="left:-25px; left: 5px;">経路</a>
       <a href="javascript:cls_open()" class="btn_05" style="left:5px;">時間割</a>
     </div>
+    <div id="bottom-right-corner">
+      <button id="toggle-btn" onclick="togglePanels()">
+       <span class="icon">◀</span>
+        <span class="label">非表示</span>
+      </button>
+    </div>
 
-      
+
+
 
     <div id="right">
       <button id="back-btn" onclick="back()" ></button> 
@@ -122,18 +203,19 @@
 
     <div id="route-panel">
       <table id="route-chart" style="padding: 1rem;">
-        <a class="route-tab" style="margin-bottom: 80px;">経路検索</a>
         <div class="route-tab" style="margin-bottom: 30px;">
-          <input id="input-start" min="100" max="431" placeholder="現在地" class="route-input"></input>
-          <input id="input-goal" min="100" max="431" placeholder="目的地" class="route-input"></input>
-        </div>
+         <input id="input-start" min="100" max="431" placeholder="現在地" class="route-input"></input>
+         <input id="input-waypoint" min="100" max="431" placeholder="経由地（任意）" class="route-input"></input>
+         <input id="input-goal" min="100" max="431" placeholder="目的地" class="route-input"></input>
+      </div>
         <div class="route-tab" style="margin-top: 90px;">
           <a href="javascript:de_route(),close_route(document.getElementById('route-panel').value)" class="route-btn">削除</a>
-          <a href="javascript:search_route(document.getElementById('input-start').value,document.getElementById('input-goal').value),close_route(document.getElementById('route-panel').value)" class="route-btn">検索</a>
+          <a href="javascript:search_with_waypoint(),close_route(document.getElementById('route-panel').value)" class="route-btn">検索</a>
           <a href="javascript:close_route(document.getElementById('route-panel').value)" class="route-btn">閉じる</a>          
         </div>
       </table>
 </div>
+
 
 
      <div id="tutorial">

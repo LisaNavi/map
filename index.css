@@ -6,6 +6,42 @@ body,p,ul,td,th{
 	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 }
 
+/* 表示 / 非表示トグルボタン */
+#toggle-btn {
+  width: 6.0rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+
+  border: 2px solid #ffffff;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.8rem;
+
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* hover時 */
+#toggle-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* 矢印アイコン */
+#toggle-btn .icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* テキスト */
+#toggle-btn .label {
+  font-size: 0.85rem;
+}
+
 /* Header (上部) */
 .title{
 	text-align: center;
@@ -159,37 +195,66 @@ div.booth-item > button {
 
 /* UI */
 div#left-side {
-	height: 12rem;
-	background: rgba(0, 0, 0, 0.75);
-	padding: 5 5 5 5;
-	position:fixed;
-	bottom: 1rem; left:1rem;
-	display: flex;
-	flex-flow: column;
-	justify-content: left;
-	z-index:5;
-	border-radius: 0.5rem;
+  height: 12rem;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 5px;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  z-index: 5;
+  border-radius: 0.5rem;
+  transition: transform 0.5s ease, opacity 0.4s ease;
+}
+
+/* 左側パネル非表示時：左へスライドアウト */
+div#left-side.hidden {
+  transform: translateX(-150%);
+  opacity: 0;
 }
 
 div#right-side {
-	display: flex;
-	justify-content: center;
-	flex-flow: row nowrap;
-	align-items: center;
-	width: 17rem;
-	height: 58px;
-	top:4rem;
-	background: rgb(61, 61, 61, 0.9);
-	color:#fff;
-	position: fixed;
-	visibility: visible;
-	z-index:1;
-	font-weight: bold;
-	text-align: center;
-	user-select: none;
-	border-radius: 1rem;
-	left: 50%;
-  	transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 17rem;
+  height: 58px;
+  top: 4rem;
+  background: rgba(61, 61, 61, 0.9);
+  color: #fff;
+  position: fixed;
+  z-index: 1;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  border-radius: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease, opacity 0.4s ease;
+}
+
+/* 右側パネル非表示時：上へスライドアウト */
+div#right-side.hidden {
+  transform: translate(-50%, -200%);
+  opacity: 0;
+}
+
+div#bottom-right-corner {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 0.4rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+  border-radius: 0.5rem;
 }
 
 #back-btn{
@@ -292,7 +357,7 @@ a.btn_05 {
 	border: 2px solid #9f9f9f;
 	color: #9f9f9f;
 	user-select: none;
-	transition: 0.3s;
+	transition: 0s;
 	border-radius: 0.5rem;
 }
 a.btn_05:hover {
@@ -727,4 +792,52 @@ button:active {
 	to {
 		left: 0vw;
 	}
+}
+
+/* ===== Q&A ポップアップ ===== */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: popupFade 0.3s ease;
+}
+
+.qa-sikiri{
+    background: #81A7EE;
+  padding: 15px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.qa-question {
+  background: #B9D1FF;
+  padding: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.qa-answer {
+  display: none;
+  padding: 13px;
+  background: #fff8e6;
+  border-left: 4px solid orange;
+  border-radius: 0 0 6px 6px;
 }
